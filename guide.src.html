@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XCOM 2 Vanilla — Commander Playbook</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c232d; --edge:#30363d;
+    --ink:#e6edf3; --dim:#9aa7b4; --accent:#3fb950; --accent2:#58a6ff;
+    --crit:#f85149; --warn:#d29922; --high:#3fb950; --med:#58a6ff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);display:flex;min-height:100vh}
+  nav{position:sticky;top:0;align-self:flex-start;height:100vh;width:280px;flex:0 0 280px;
+    overflow-y:auto;background:var(--panel);border-right:1px solid var(--edge);padding:20px 16px}
+  nav h1{font-size:15px;margin:0 0 4px;color:var(--accent)}
+  nav .sub{font-size:12px;color:var(--dim);margin-bottom:16px}
+  .jump{margin-bottom:18px;padding:12px;background:var(--panel2);border:1px solid var(--edge);border-radius:8px}
+  .jump label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin-bottom:6px}
+  .jump select{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--edge);
+    border-radius:6px;padding:7px;font-size:14px}
+  nav a{display:block;color:var(--dim);text-decoration:none;padding:5px 8px;border-radius:6px;font-size:14px}
+  nav a:hover{background:var(--panel2);color:var(--ink)}
+  nav a.phase{color:var(--ink);font-weight:600;margin-top:10px}
+  nav a.cell{padding-left:20px;font-size:13px}
+  nav a.active{background:rgba(63,185,80,.12);color:var(--accent)}
+  nav .reflink{margin-top:14px;font-size:12px;border-top:1px solid var(--edge);padding-top:10px}
+  main{flex:1;max-width:980px;margin:0 auto;padding:32px 40px 120px}
+  .banner{font-size:12px;color:var(--warn);background:rgba(210,153,34,.08);
+    border:1px solid rgba(210,153,34,.3);border-radius:8px;padding:10px 14px;margin-bottom:24px}
+  h2.phase-h{font-size:26px;margin:8px 0 2px;padding-top:10px}
+  .phase-meta{color:var(--dim);font-size:13px;margin-bottom:10px}
+  .tempo{background:linear-gradient(90deg,rgba(63,185,80,.12),transparent);
+    border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0 20px;font-size:14px}
+  details{background:var(--panel);border:1px solid var(--edge);border-radius:10px;margin:14px 0;overflow:hidden}
+  details[open]{box-shadow:0 0 0 1px rgba(88,166,255,.15)}
+  summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:16px;list-style:none;
+    display:flex;align-items:center;gap:10px;user-select:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▶";color:var(--accent2);font-size:11px;transition:transform .15s}
+  details[open] summary::before{transform:rotate(90deg)}
+  .sec{color:var(--dim);font-weight:400;font-size:12px;margin-left:auto;text-transform:uppercase;letter-spacing:.05em}
+  .body{padding:0 18px 18px}
+  .thesis{font-size:13px;color:var(--dim);border-left:2px solid var(--edge);padding-left:12px;margin:4px 0 16px;font-style:italic}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 4px}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--edge);vertical-align:top}
+  th{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  td.n{color:var(--accent2);font-weight:700;width:24px}
+  td.pre{color:var(--dim);font-size:12px}
+  tr:hover td{background:rgba(255,255,255,.02)}
+  .pill{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:20px;white-space:nowrap}
+  .p-crit{background:rgba(248,81,73,.15);color:var(--crit)}
+  .p-high{background:rgba(63,185,80,.15);color:var(--high)}
+  .p-med{background:rgba(88,166,255,.15);color:var(--med)}
+  .p-gate{background:rgba(210,153,34,.15);color:var(--warn)}
+  .p-opt{background:rgba(154,167,180,.15);color:var(--dim)}
+  .trap{color:#ffb4ae}
+  h4{margin:18px 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--dim)}
+  .flag{background:rgba(248,81,73,.07);border:1px solid rgba(248,81,73,.25);border-radius:8px;padding:10px 14px;margin:14px 0;font-size:13px}
+  .flag.warn{background:rgba(210,153,34,.07);border-color:rgba(210,153,34,.3)}
+  .transition{background:var(--panel2);border:1px dashed var(--accent);border-radius:8px;padding:12px 16px;margin:18px 0 8px;font-size:14px}
+  .transition b{color:var(--accent)}
+  ul{margin:6px 0;padding-left:20px} li{margin:3px 0}
+  a.cite{color:var(--accent2);text-decoration:none;font-size:12px} a.cite:hover{text-decoration:underline}
+  code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+  .treebar{display:flex;align-items:center;gap:8px;margin:6px 0 8px;flex-wrap:wrap}
+  .ttbtn{background:var(--panel2);color:var(--ink);border:1px solid var(--edge);border-radius:6px;
+    padding:5px 11px;font-size:12px;cursor:pointer;text-decoration:none;display:inline-block}
+  .ttbtn:hover{border-color:var(--accent2)}
+  .ttbtn.link{color:var(--accent2)}
+  .tthint{color:var(--dim);font-size:11px}
+  .ttlegend{display:flex;gap:14px;flex-wrap:wrap;margin:2px 0 10px;font-size:12px;color:var(--dim)}
+  .ttlegend span{display:inline-flex;align-items:center;gap:5px}
+  .ttlegend i{width:13px;height:13px;border-radius:3px;display:inline-block;border:1px solid rgba(255,255,255,.15)}
+  /* pan/zoom canvas */
+  .treewrap{position:relative;border:1px solid var(--edge);border-radius:8px;background:#0a0d12;
+    overflow:hidden;height:80vh;cursor:grab;touch-action:none}
+  .treewrap.drag{cursor:grabbing}
+  #treehost{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
+  #treehost svg{display:block}
+  /* category colors (SVG's own <style> is stripped at build; re-added scoped) */
+  #treehost g.node rect{stroke:rgba(125,133,145,.6);stroke-width:1.5px}
+  #treehost g.node text{fill:rgb(33,33,33);font-size:14px}
+  #treehost g.building{fill:rgb(191,237,168)}
+  #treehost g.research{fill:rgb(237,166,175)}
+  #treehost g.proving{fill:rgb(237,218,166)}
+  #treehost g.item{fill:rgb(166,222,237)}
+  #treehost g.drop{fill:rgb(237,166,237)}
+  #treehost g.misc{fill:rgb(204,204,204)}
+  #treehost g.skill{fill:rgb(240,240,240)}
+  #treehost g.edgePath path{stroke:rgba(150,162,176,.5);stroke-width:1.5px;fill:none}
+  /* highlight / focus */
+  #treehost.focusing g.node{opacity:.20}
+  #treehost.focusing g.edgePath{opacity:.10}
+  #treehost g.node.hl,#treehost g.node.hl-before,#treehost g.node.hl-after,#treehost g.edgePath.hl-edge{opacity:1}
+  #treehost g.node.hl rect{stroke:#ffd400;stroke-width:4px;stroke-opacity:1;filter:drop-shadow(0 0 5px #ffd400)}
+  #treehost g.node.hl-before rect{stroke:#58a6ff;stroke-width:3px;stroke-opacity:1}
+  #treehost g.node.hl-after rect{stroke:#3fb950;stroke-width:3px;stroke-opacity:1}
+  #treehost g.edgePath.hl-edge path{stroke:#ffd400;stroke-width:2.5px;stroke-opacity:.95}
+  /* clickable tech names in tables/prose */
+  a.tlink{color:inherit;text-decoration:underline dotted rgba(88,166,255,.65);text-underline-offset:2px;cursor:pointer}
+  a.tlink:hover{color:var(--accent2);text-decoration-color:var(--accent2)}
+  .roles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+  .role{background:var(--panel2);border:1px solid var(--edge);border-radius:8px;padding:10px 12px;font-size:13px}
+  .role h5{margin:0 0 4px;font-size:13px;color:var(--accent2)}
+  .role.hack h5{color:var(--warn)} .role.med h5{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <h1>XCOM 2 — Vanilla</h1>
+  <div class="sub">Personal Commander Playbook · base + DLC, no WOTC</div>
+  <div class="jump">
+    <label>Jump to my current phase</label>
+    <select id="phaseJump" onchange="location.hash=this.value">
+      <option value="">— where am I? —</option>
+      <option value="early">Early · Gatecrasher → Skulljack</option>
+      <option value="mid">Mid · Skulljack → Avatar reveal</option>
+      <option value="late">Late · Avatar facilities → finale</option>
+    </select>
+  </div>
+  <a class="phase" href="#early">▍ EARLY GAME</a>
+  <a class="cell" href="#early-research">Research order</a>
+  <a class="cell" href="#early-facilities">Facilities order</a>
+  <a class="cell" href="#early-upgrades">Upgrades order</a>
+  <a class="phase" href="#mid">▍ MID GAME</a>
+  <a class="cell" href="#mid-research">Research order</a>
+  <a class="cell" href="#mid-facilities">Facilities order</a>
+  <a class="cell" href="#mid-upgrades">Upgrades order</a>
+  <a class="phase" href="#late">▍ LATE GAME</a>
+  <a class="cell" href="#late-research">Research order</a>
+  <a class="cell" href="#late-facilities">Facilities order</a>
+  <a class="cell" href="#late-upgrades">Upgrades order</a>
+  <a class="reflink" href="#techtree">📑 Tech-tree prereqs</a>
+</nav>
+
+<main>
+  <div class="banner">✅ <b>v3 — all three phases populated; prereqs locked.</b> Research prerequisites are now confirmed against the parsed darosh tech tree (159 nodes / 178 edges, via <code>parse_tree.py</code>). WOTC advice filtered out.</div>
+
+  <!-- ===================== EARLY ===================== -->
+  <h2 class="phase-h" id="early">▍ Early Game</h2>
+  <div class="phase-meta">Gatecrasher → first Skulljack / first Black Site</div>
+  <div class="tempo"><b>Tempo goal:</b> Be <b>6 soldiers strong in Magnetic Weapons + Predator Armor</b> <i>before</i> you Skulljack an ADVENT Officer.</div>
+
+  <details open id="early-research">
+    <summary>Research order <span class="sec">Early · Research</span></summary>
+    <div class="body">
+      <div class="thesis">Research time is your scarcest early resource. First scientist on cheap enablers → get a 2nd scientist fast → then commit the long block to Magnetic Weapons.</div>
+      <table>
+        <tr><th class="n">#</th><th>Research</th><th>Prereq</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Alien Biotech</b></td><td class="pre">start</td><td><span class="pill p-high">High</span></td><td>Short; opens autopsy line + Hybrid Materials</td><td class="trap">Losing cheap momentum</td></tr>
+        <tr><td class="n">2</td><td><b>Modular Weapons</b></td><td class="pre">start</td><td><span class="pill p-high">High</span></td><td>Weapon mod slots + prereq for Mag Weapons</td><td class="trap">Skipping a needed prereq</td></tr>
+        <tr><td class="n">3</td><td><b>Resistance Communications</b></td><td class="pre">early-available</td><td><span class="pill p-crit">Critical</span></td><td>Contacts = supply/intel/recruits; gates the timeline</td><td class="trap">Delaying → starvation</td></tr>
+        <tr><td class="n">4</td><td><b>Magnetic Weapons</b></td><td class="pre">Modular Weapons</td><td><span class="pill p-crit">Critical</span></td><td>First firepower spike — once 2nd scientist online</td><td class="trap">Rushing as turn-1 long project</td></tr>
+        <tr><td class="n">5</td><td><b>Plated (Predator) Armor</b></td><td class="pre">Hybrid Materials</td><td><span class="pill p-high">High</span></td><td>Survivability spike; pairs with Mag</td><td class="trap">Armor before Mag</td></tr>
+        <tr><td class="n">6</td><td><b>ADVENT Officer Autopsy</b></td><td class="pre">Biotech + Officer corpse</td><td><span class="pill p-high">High</span></td><td>Unlocks <b>Proving Grounds → Skulljack</b> — gateway out of early (+ MEC/Sectopod breakdowns)</td><td class="trap">Skulljacking under-geared</td></tr>
+      </table>
+      <div class="flag warn">⚠️ <b>Conflict — Mag Weapons timing.</b> One source rushes Mag; another says short research + 2nd scientist first. <b>Reconciled:</b> enablers → comms → 2nd scientist → <i>then</i> Mag.</div>
+      <div class="flag">✅ <b>Chain (locked):</b> Modular → Magnetic → Gauss; Hybrid Materials → Plated; Biotech+corpse → Officer Autopsy → Proving Grounds → <b>Skulljack → Officer → Codex</b>. See <a class="cite" href="#techtree">tech-tree prereqs</a>.</div>
+    </div>
+  </details>
+
+  <details id="early-facilities">
+    <summary>Facilities order <span class="sec">Early · Facilities</span></summary>
+    <div class="body">
+      <div class="thesis">GTS first is non-negotiable. After that, power is the real gate on every build — manage power coils deliberately. Excavate only when you need the slot.</div>
+      <table>
+        <tr><th class="n">#</th><th>Facility</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Guerrilla Tactics School</b></td><td><span class="pill p-crit">First</span></td><td>Squad +1 @ Sgt, +1 @ Cpt. <b>Rush with 1st engineer, don't excavate.</b> Need slot 5 by ~May</td><td class="trap">Excavating with that engineer</td></tr>
+        <tr><td class="n">2</td><td><b>Power Relay</b> (on coil)</td><td><span class="pill p-crit">Critical</span></td><td>Power gates all building; on a coil ≈10 vs 3</td><td class="trap">Off-coil / ignoring power</td></tr>
+        <tr><td class="n">3</td><td><b>Proving Ground</b><br><span class="pre">needs Officer Autopsy</span></td><td><span class="pill p-high">High</span></td><td>Experimental gear + builds the Skulljack. Build the moment Officer Autopsy lands</td><td class="trap">Treating it as optional</td></tr>
+        <tr><td class="n">4</td><td><b>Advanced Warfare Center</b><br><span class="pre">needs Biotech</span></td><td><span class="pill p-high">High</span></td><td>+50→100% heals; vanilla AWC grants free bonus abilities</td><td class="trap">Long injury timers</td></tr>
+        <tr><td class="n">5</td><td><b>Resistance Comms</b></td><td><span class="pill p-med">When capped</span></td><td>Build when contact-capped for the next region</td><td class="trap">Too early / too late</td></tr>
+      </table>
+      <div class="flag">🚫 <b>Hard traps:</b> <b>Never build a Workshop.</b> <b>Skip the Lab early.</b> <b>Don't over-excavate.</b></div>
+      <div class="flag warn">📦 <b>Scope:</b> Resistance Ring / Training Center are <b>WOTC</b> — not in vanilla; AWC is the equivalent.</div>
+    </div>
+  </details>
+
+  <details id="early-upgrades">
+    <summary>Upgrades order <span class="sec">Early · Upgrades</span></summary>
+    <div class="body">
+      <div class="thesis">The highest-value early "upgrade" isn't gear — it's the 5th squad slot. Then cheap weapon mods and a Proving Ground experimental grenade.</div>
+      <table>
+        <tr><th class="n">#</th><th>Upgrade</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>GTS: Squad Size I</b> (5th)</td><td><span class="pill p-crit">Critical</span></td><td>Extra body = biggest early power jump</td><td class="trap">Sitting on it</td></tr>
+        <tr><td class="n">2</td><td><b>Weapon mods</b></td><td><span class="pill p-high">High</span></td><td>Cheap accuracy/lethality while saving for Mag</td><td class="trap">Hoarding unslotted</td></tr>
+        <tr><td class="n">3</td><td><b>Exp. Grenade</b> (Proving Ground)</td><td><span class="pill p-high">High</span></td><td>AoE multiplies a 4–5 squad</td><td class="trap">Rolling exp. armor first, starving cores</td></tr>
+        <tr><td class="n">4</td><td><b>GTS: Squad Size II</b> (6th)</td><td><span class="pill p-high">High</span></td><td>Before Skulljack/Black Site so you go 6-strong</td><td class="trap">Attempting those at 4–5</td></tr>
+        <tr><td class="n">5</td><td><b>Build Mag/Predator</b></td><td><span class="pill p-high">High</span></td><td>Convert research into equipped gear now</td><td class="trap">Researching but not building</td></tr>
+        <tr><td class="n">6</td><td><b>Skulljack</b></td><td><span class="pill p-gate">Gateway</span></td><td>The literal exit to mid game</td><td class="trap">Skulljacking before Mag/Plated + 6</td></tr>
+      </table>
+      <h4>Ability picks — A-team leveling</h4>
+      <ul>
+        <li><b>Ranger:</b> Phantom → Shadowstrike/Conceal (scouting); Bladestorm situational.</li>
+        <li><b>Sniper:</b> Long Watch, Lightning Hands, Quick Draw; <b>Serial</b> later.</li>
+        <li><b>Grenadier:</b> <b>Shred</b> (mandatory), Demolition, Holotargeting.</li>
+      </ul>
+      <h4>Your two Specialists</h4>
+      <div class="roles">
+        <div class="role hack"><h5>① HACKER (offensive Gremlin)</h5>Combat Protocol → <b>Haywire Protocol</b> (seize turrets/MECs/Sectopods) → Capacitor Discharge → Guardian. Pump the <b>Hacking stat</b> so Haywire lands on hard robots.</div>
+        <div class="role med"><h5>② MEDIC (support)</h5>Medical Protocol → Revival Protocol → Field Medic → <b>Restoration</b> (AoE heal). Your sustain backbone.</div>
+      </div>
+      <div class="flag">🔧 <b>Raise the hacker's Hacking:</b> feed them the <b>skulljack</b> (Skullmining = permanent +Hacking/+Intel) · equip a <b>Hacking PCS</b> · battlefield hacks roll bonuses. <i>(method source blocked; verify)</i></div>
+    </div>
+  </details>
+
+  <div class="transition">➡️ <b>Transition to MID when:</b> you build the <b>Skulljack</b> and skulljack an ADVENT Officer — spawns a <b>Codex</b> and reveals the path toward the Avatar Project. <i>(Verify Codex-spawn.)</i></div>
+
+  <!-- ===================== MID ===================== -->
+  <h2 class="phase-h" id="mid">▍ Mid Game</h2>
+  <div class="phase-meta">Skulljack → Codex → Avatar Project reveal</div>
+  <div class="tempo"><b>Tempo goal:</b> Win the <b>race to Elerium</b> (needs Plated Armor + Gauss) while starting the <b>Shadow Chamber / Codex Brain</b> chain. Whole squad on mag/Gauss + Bluescreen before robot-heavy pods scale.</div>
+
+  <details id="mid-research">
+    <summary>Research order <span class="sec">Mid · Research</span></summary>
+    <div class="body">
+      <div class="thesis">Mid game is a race to Elerium — it gates every top tier. In parallel, start the Shadow Chamber / Codex Brain chain so the Avatar clock doesn't outrun you.</div>
+      <table>
+        <tr><th class="n">#</th><th>Research</th><th>Prereq</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Gauss Weapons</b></td><td class="pre">Magnetic Weapons</td><td><span class="pill p-high">High</span></td><td>Mag Cannon + Gauss sniper; prereq for Elerium</td><td class="trap">Gunner/sniper a tier behind</td></tr>
+        <tr><td class="n">2</td><td><b>Sectoid Autopsy</b></td><td class="pre">Sectoid corpse</td><td><span class="pill p-high">High*</span></td><td>→ Mindshield → Psionics (if going Psi)</td><td class="trap">Committing to Psi too late</td></tr>
+        <tr><td class="n">3</td><td><b>Key combat autopsies</b></td><td class="pre">corpse</td><td><span class="pill p-med">Med-High</span></td><td>Muton/Archon/Andromedon/Faceless — match the threat</td><td class="trap">Researching all & stalling Elerium</td></tr>
+        <tr><td class="n">4</td><td><b>Elerium</b></td><td class="pre">Gauss Weapons + Plated Armor</td><td><span class="pill p-crit">Critical</span></td><td><b>Gate to plasma + powered armor.</b> Top priority</td><td class="trap">Delaying for optional autopsies</td></tr>
+        <tr><td class="n">5</td><td><b>Codex Brain</b></td><td class="pre">Codex (from Skulljack)</td><td><span class="pill p-crit">Story</span></td><td>Starts the Shadow Chamber / Avatar chain</td><td class="trap">Ignoring the Avatar clock</td></tr>
+        <tr><td class="n">6</td><td><b>Psionics</b></td><td class="pre">Mindshield</td><td><span class="pill p-opt">Optional</span></td><td>Enables Psi Operatives — if building a Psi Lab</td><td class="trap">Psi path with no lab plan</td></tr>
+      </table>
+      <div class="flag">🔎 <b>Verify:</b> Gauss-before-Elerium &amp; Shadow-Project order — see <a class="cite" href="#techtree">tech-tree prereqs</a>.</div>
+    </div>
+  </details>
+
+  <details id="mid-facilities">
+    <summary>Facilities order <span class="sec">Mid · Facilities</span></summary>
+    <div class="body">
+      <div class="thesis">Mid adds the Shadow Chamber (mandatory + reveals enemy squads) and optionally the Psi Lab. Both are power-hungry — keep using coils and stay ahead of power.</div>
+      <table>
+        <tr><th class="n">#</th><th>Facility</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Shadow Chamber</b></td><td><span class="pill p-crit">Critical</span></td><td>Runs Avatar projects + <b>reveals mission enemy composition</b></td><td class="trap">Avatar clock / blind ambushes</td></tr>
+        <tr><td class="n">2</td><td><b>Power Relay #2</b> (coil)</td><td><span class="pill p-crit">Critical</span></td><td>Shadow Chamber + Psi Lab + production spike power</td><td class="trap">Building then going power-broke</td></tr>
+        <tr><td class="n">3</td><td><b>Psi Lab</b></td><td><span class="pill p-high">High*</span></td><td>Trains Psi Operatives (very strong); staff a scientist</td><td class="trap">No rookie/scientist to train</td></tr>
+        <tr><td class="n">4</td><td><b>Resistance Comms #2</b></td><td><span class="pill p-med">Medium</span></td><td>More regions/income; eases Avatar pressure</td><td class="trap">Falling behind contacts</td></tr>
+      </table>
+      <div class="flag warn">📦 <b>Scope:</b> Psi Lab + AWC + Shadow Chamber are the vanilla mid additions — no Resistance Ring / Training Center.</div>
+    </div>
+  </details>
+
+  <details id="mid-upgrades">
+    <summary>Upgrades order <span class="sec">Mid · Upgrades</span></summary>
+    <div class="body">
+      <div class="thesis">Get the whole squad off conventional gear, bank an experimental armor for scouts, bring Bluescreen rounds online for the robotic enemies that define mid game. Decide SPARK and Psi now.</div>
+      <table>
+        <tr><th class="n">#</th><th>Upgrade</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Equip full Mag + Gauss tier</b></td><td><span class="pill p-crit">Critical</span></td><td>Everyone off conventional before pods scale</td><td class="trap">Researching but not building cannons</td></tr>
+        <tr><td class="n">2</td><td><b>Bluescreen Rounds</b><br><span class="pre">Officer→MEC Breakdown→Bluescreen Protocol</span></td><td><span class="pill p-high">High</span></td><td>Mid is robot-heavy (Codex/MEC/Sectopod) — Bluescreen shreds them. It's a research chain, not a random roll</td><td class="trap">Expecting it from an ammo roll</td></tr>
+        <tr><td class="n">3</td><td><b>EXO / Spider Suit</b><br><span class="pre">from Plated Armor</span></td><td><span class="pill p-high">High</span></td><td>Spider Suit supercharges the Ranger scout; EXO adds rocket+armor. Built off Plated Armor (not the random vest roll)</td><td class="trap">Before Bluescreen/weapons</td></tr>
+        <tr><td class="n">4</td><td><b>SPARK</b> (Shen's Last Gift)</td><td><span class="pill p-high">High DLC</span></td><td>Durable robot trooper; won't wound/panic. Build + upgrade BIT</td><td class="trap">Under-leveled SPARK in hard fights</td></tr>
+        <tr><td class="n">5</td><td><b>Psi Operative training</b></td><td><span class="pill p-opt">Optional</span></td><td>Psi Ops snowball — start early (timed unlocks)</td><td class="trap">Starting too late to mature</td></tr>
+        <tr><td class="n">6</td><td><b>Hacking PCS</b> → Specialist ①</td><td><span class="pill p-med">Med-High</span></td><td>Pushes Hacking so <b>Haywire</b> seizes MECs/turrets/Sectopods</td><td class="trap">Putting the Hacking PCS on the medic</td></tr>
+      </table>
+      <div class="flag warn">📦 <b>Scope:</b> SPARK = Shen's Last Gift (in scope). No WOTC perks.</div>
+    </div>
+  </details>
+
+  <div class="transition">➡️ <b>Transition to LATE when:</b> <b>Elerium</b> is researched (top tier unlocked) and the <b>Avatar Project</b> is revealed via the Shadow Chamber chain.</div>
+
+  <!-- ===================== LATE ===================== -->
+  <h2 class="phase-h" id="late">▍ Late Game</h2>
+  <div class="phase-meta">Avatar facilities → final mission</div>
+  <div class="tempo"><b>Tempo goal:</b> Convert Elerium into the <b>top tier (Plasma + Warden)</b> and drive the <b>Shadow chain to the Avatar Autopsy</b> — then trigger the finale only once the A-team is fully equipped.</div>
+
+  <details id="late-research">
+    <summary>Research order <span class="sec">Late · Research</span></summary>
+    <div class="body">
+      <div class="thesis">Elerium's done — convert it into the top tier fast, then drive the Shadow chain to the Avatar Autopsy. Research only what the finale needs.</div>
+      <table>
+        <tr><th class="n">#</th><th>Research</th><th>Prereq</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Plasma Rifle</b></td><td class="pre">Elerium</td><td><span class="pill p-crit">Critical</span></td><td>Top weapon tier — biggest damage jump</td><td class="trap">Hoarding Elerium</td></tr>
+        <tr><td class="n">2</td><td><b>Powered Armor</b></td><td class="pre">Elerium</td><td><span class="pill p-crit">Critical</span></td><td>Warden Armor = finale survivability tier</td><td class="trap">Finale in Predator</td></tr>
+        <tr><td class="n">3</td><td><b>Beam Cannon / Plasma Lance / Storm Gun</b></td><td class="pre">Plasma Rifle</td><td><span class="pill p-high">High</span></td><td>Tops out gunner / sniper / shotgun-ranger (all branch off Plasma Rifle)</td><td class="trap">Only upgrading the rifle</td></tr>
+        <tr><td class="n">4</td><td><b>Shadow chain</b> (Blacksite Vial · Psionic Gate · Recovered Stasis Suit)</td><td class="pre">Codex Brain + Shadow Chamber + mission items</td><td><span class="pill p-crit">Story</span></td><td>The 3 Shadow Projects that gate the Avatar Autopsy</td><td class="trap">Avatar clock filling</td></tr>
+        <tr><td class="n">5</td><td><b>Avatar Autopsy</b></td><td class="pre">Neutralize Avatar + Psionic Gate + Recovered Stasis Suit</td><td><span class="pill p-crit">Story</span></td><td><b>→ Broadcast Tower → Final Mission.</b> The finish line</td><td class="trap">Triggering before gear-ready</td></tr>
+        <tr><td class="n">6</td><td><b>Mop-up autopsies</b></td><td class="pre">corpse</td><td><span class="pill p-opt">Low</span></td><td>Only if a late enemy is wrecking you</td><td class="trap">At expense of Shadow chain</td></tr>
+      </table>
+      <div class="flag">🔎 <b>Verify:</b> Shadow-Project handoff order (Blacksite → Forge → Psi Gate) — see <a class="cite" href="#techtree">tech-tree prereqs</a>.</div>
+    </div>
+  </details>
+
+  <details id="late-facilities">
+    <summary>Facilities order <span class="sec">Late · Facilities</span></summary>
+    <div class="body">
+      <div class="thesis">The Avenger is mostly built — late game is optimization and staffing, not new construction. Be ready for an Avenger Defense.</div>
+      <table>
+        <tr><th class="n">#</th><th>Action</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Full staffing pass</b></td><td><span class="pill p-crit">Critical</span></td><td>Every slot staffed = faster research/training/heals for the finale</td><td class="trap">Half-staffed bottlenecks</td></tr>
+        <tr><td class="n">2</td><td><b>Power headroom / redundant relay</b></td><td><span class="pill p-high">High</span></td><td>Max production + staffing draws max power</td><td class="trap">Zero surplus stall</td></tr>
+        <tr><td class="n">3</td><td><b>Finish/staff Psi Lab</b></td><td><span class="pill p-high">High*</span></td><td>Mature a 2nd Psi Op / finish ability unlocks</td><td class="trap">Half-trained Psi Op</td></tr>
+        <tr><td class="n">4</td><td><b>Avenger Defense readiness</b></td><td><span class="pill p-med">Medium</span></td><td>A late assault can trigger base defense</td><td class="trap">A-team wounded, no plan</td></tr>
+      </table>
+      <div class="flag">ℹ️ <b>No new core facilities</b> typically needed — if you skipped Psi Lab earlier it's likely too late; don't sink resources into a dead-end.</div>
+    </div>
+  </details>
+
+  <details id="late-upgrades">
+    <summary>Upgrades order <span class="sec">Late · Upgrades</span></summary>
+    <div class="body">
+      <div class="thesis">Finishing, not starting. Equip the top tier on the whole A-team, roll the best Proving Ground suits/ammo, and build a final-mission loadout for robotic/psionic enemies.</div>
+      <table>
+        <tr><th class="n">#</th><th>Upgrade</th><th>Priority</th><th>Why now</th><th>Trap</th></tr>
+        <tr><td class="n">1</td><td><b>Equip Plasma weapons</b> (squad)</td><td><span class="pill p-crit">Critical</span></td><td>Max damage for the finale's pods</td><td class="trap">One plasma, rest half-upgraded</td></tr>
+        <tr><td class="n">2</td><td><b>Equip Warden Armor</b></td><td><span class="pill p-crit">Critical</span></td><td>HP/utility tier for back-to-back final missions</td><td class="trap">Finale in Predator</td></tr>
+        <tr><td class="n">3</td><td><b>W.A.R. / Wraith Suit</b></td><td><span class="pill p-high">High</span></td><td>Wraith on the scout (phase walls, +dodge); W.A.R. on a frontliner</td><td class="trap">Duplicate suits</td></tr>
+        <tr><td class="n">4</td><td><b>Stock Bluescreen + best grenades</b></td><td><span class="pill p-crit">Critical</span></td><td>Finale is robotic/Avatar-heavy — Bluescreen + plasma grenades counter</td><td class="trap">Relying on raw damage</td></tr>
+        <tr><td class="n">5</td><td><b>Max SPARK</b></td><td><span class="pill p-high">High DLC</span></td><td>Tanky finale anchor that can't panic</td><td class="trap">Low-rank SPARK in finale</td></tr>
+        <tr><td class="n">6</td><td><b>Max Psi Operative(s)</b></td><td><span class="pill p-high">High*</span></td><td>Domination / Null Lance / Fortress — game-warping</td><td class="trap">Half-trained Psi Op</td></tr>
+        <tr><td class="n">7</td><td><b>Final-mission loadout pass</b></td><td><span class="pill p-crit">Critical</span></td><td>Build the squad deliberately (see roles below) + Bluescreen + Mimic Beacons</td><td class="trap">Default roster, no anti-robot plan</td></tr>
+      </table>
+      <div class="roles">
+        <div class="role hack"><h5>① HACKER finale role</h5>Maxed Hacking + <b>Haywire Protocol</b> seizes enemy MECs/Sectopods/turrets — one of the strongest tempo swings in the finale. Keep the Hacking PCS on them.</div>
+        <div class="role med"><h5>② MEDIC finale role</h5><b>Restoration</b> keeps the squad topped through the long final fights.</div>
+      </div>
+      <div class="flag warn">📦 <b>Scope:</b> SPARK = Shen's Last Gift. Alien Hunters boss-weapons (Bolt Caster, etc.) only if you ran that content.</div>
+    </div>
+  </details>
+
+  <div class="transition">➡️ <b>The finish line:</b> completing the <b>Avatar Autopsy</b> unlocks the final mission. Don't research it until gear + soldiers are finale-ready — you control the timing.</div>
+
+  <!-- ===================== TECH TREE ===================== -->
+  <h2 class="phase-h" id="techtree">📑 Tech-tree Prereqs</h2>
+  <div class="phase-meta">Recovered from the darosh XCom2TechTree data, reconciled with vanilla knowledge · items marked <code>(verify)</code></div>
+  <details id="techtree-detail">
+    <summary>Research dependency reference <span class="sec">Reference</span></summary>
+    <div class="body">
+      <h4>Core spine (parsed from the darosh SVG — locked ✓)</h4>
+      <ul>
+        <li><b>Weapons:</b> Modular → <b>Magnetic</b> → <b>Gauss Weapons</b> → <i>[Elerium]</i> → <b>Plasma Rifle</b> → Beam Cannon / Plasma Lance / Storm Gun</li>
+        <li><b>Armor:</b> Hybrid Materials → <b>Plated Armor</b> (→ Predator, EXO, Spider) → <i>[Elerium]</i> → <b>Powered Armor</b> (→ Warden, W.A.R., Wraith)</li>
+        <li><b>THE GATE — Elerium ← Gauss Weapons + Plated Armor.</b> Unlocks both top tiers.</li>
+        <li><b>Biotech</b> → every autopsy + AWC. <b>Officer Autopsy</b> → Proving Grounds, MEC Breakdown (→ <b>Bluescreen Rounds</b>), Sectopod Breakdown</li>
+        <li><b>Sectoid Autopsy</b> → Mindshield → <b>Psionics</b> → Psi Lab</li>
+        <li><b>Avatar spine:</b> Proving Grounds → Skulljack → Skulljack Officer → Kill a Codex → <b>Codex Brain</b> → (Neutralize Avatar) + (Psionic Gate) + (Recovered Stasis Suit) → <b>Avatar Autopsy</b> → Broadcast Tower → <b>Final Mission</b></li>
+      </ul>
+      <div class="flag">ℹ️ Every autopsy needs the unit's <b>corpse</b> + Biotech researched. Full edge list (159 nodes / 178 edges) in <code>specs/tech-tree.md</code>; regenerate via <code>python parse_tree.py</code>.</div>
+    </div>
+  </details>
+
+  <details open id="techtree-visual">
+    <summary>Visual tech tree <span class="sec">darosh SVG</span></summary>
+    <div class="body">
+      <div class="treebar">
+        <button onclick="ttZoom(1.25)" class="ttbtn">＋ Zoom in</button>
+        <button onclick="ttZoom(0.8)" class="ttbtn">－ Zoom out</button>
+        <button onclick="ttReset()" class="ttbtn">⤢ Fit</button>
+        <button onclick="ttClear()" class="ttbtn" id="ttClearBtn">✕ Clear highlight</button>
+        <a class="ttbtn link" href="xcom2-tech-tree.svg" target="_blank" rel="noopener">Open raw ↗</a>
+        <span class="tthint">scroll = zoom · drag = pan · click any tech name in the tables to spotlight it here</span>
+      </div>
+      <div class="ttlegend">
+        <span><i style="background:rgb(237,166,175)"></i>Research</span>
+        <span><i style="background:rgb(191,237,168)"></i>Facility</span>
+        <span><i style="background:rgb(237,218,166)"></i>Proving Ground</span>
+        <span><i style="background:rgb(166,222,237)"></i>Built item</span>
+        <span><i style="background:rgb(237,166,237)"></i>Corpse / mission drop</span>
+        <span><i style="background:rgb(240,240,240)"></i>GTS skill</span>
+        <span style="margin-left:auto">spotlight: <i style="background:#ffd400"></i>selected · <i style="background:#58a6ff"></i>before (prereqs) · <i style="background:#3fb950"></i>after (unlocks)</span>
+      </div>
+      <div class="treewrap" id="treewrap">
+        <div id="treehost"><!--TREE_SVG--></div>
+      </div>
+      <p style="color:var(--dim);font-size:12px;margin-top:8px">Source: <a class="cite" href="https://darosh.github.io/xcom2-tech-tree/">darosh.github.io/xcom2-tech-tree</a> — the same data parsed for the prereqs above.</p>
+    </div>
+  </details>
+</main>
+
+<script>
+  const links = [...document.querySelectorAll('nav a[href^="#"]')];
+  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = map.get(e.target.id);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-10% 0px -80% 0px', threshold:0});
+  document.querySelectorAll('details[id], h2[id]').forEach(el => obs.observe(el));
+
+  window.addEventListener('hashchange', () => {
+    const id = location.hash.slice(1);
+    const d = document.getElementById(id) || document.getElementById(id+'-research');
+    if (d && d.tagName === 'DETAILS') d.open = true;
+  });
+
+  // ---- Tech-tree pan/zoom engine ----
+  const wrap = document.getElementById('treewrap');
+  const host = document.getElementById('treehost');
+  const svg  = host && host.querySelector('svg');
+  let scale=1, tx=0, ty=0, SVGW=3195.125, SVGH=2929;
+  if(svg){ SVGW=parseFloat(svg.getAttribute('width'))||SVGW; SVGH=parseFloat(svg.getAttribute('height'))||SVGH; }
+  function apply(){ host.style.transform='translate('+tx+'px,'+ty+'px) scale('+scale+')'; }
+  function clampScale(s){ return Math.min(4, Math.max(0.12, s)); }
+  function ttReset(){ if(!wrap) return; scale=clampScale(wrap.clientWidth/SVGW); tx=0; ty=0; apply(); }
+  function zoomAt(px,py,f){ const r=wrap.getBoundingClientRect(); const x=px-r.left,y=py-r.top;
+    const nx=(x-tx)/scale, ny=(y-ty)/scale; scale=clampScale(scale*f); tx=x-nx*scale; ty=y-ny*scale; apply(); }
+  function ttZoom(f){ const r=wrap.getBoundingClientRect(); zoomAt(r.left+r.width/2, r.top+r.height/2, f); }
+  window.ttReset=ttReset; window.ttZoom=ttZoom;
+  if(wrap && host){
+    wrap.addEventListener('wheel', e=>{ e.preventDefault(); zoomAt(e.clientX,e.clientY, e.deltaY<0?1.12:1/1.12); }, {passive:false});
+    let drag=false,sx,sy,stx,sty;
+    wrap.addEventListener('mousedown', e=>{ drag=true; wrap.classList.add('drag'); sx=e.clientX;sy=e.clientY;stx=tx;sty=ty; e.preventDefault(); });
+    window.addEventListener('mouseup', ()=>{ drag=false; wrap.classList.remove('drag'); });
+    window.addEventListener('mousemove', e=>{ if(!drag)return; tx=stx+(e.clientX-sx); ty=sty+(e.clientY-sy); apply(); });
+    ttReset();
+  }
+
+  // ---- Node lookup + spotlight ----
+  const nodeByLabel = new Map();
+  if(svg) svg.querySelectorAll('g.node[data-label]').forEach(g=> nodeByLabel.set(g.getAttribute('data-label'), g));
+  const edgeEls = svg ? [...svg.querySelectorAll('g.edgePath[data-src]')] : [];
+  function ttClear(){ if(!host) return; host.classList.remove('focusing');
+    host.querySelectorAll('.hl,.hl-before,.hl-after,.hl-edge').forEach(e=>e.classList.remove('hl','hl-before','hl-after','hl-edge')); }
+  window.ttClear=ttClear;
+  function showNode(label){
+    const dv=document.getElementById('techtree-visual'); if(dv) dv.open=true;
+    if(!svg){ return; }
+    const g=nodeByLabel.get(label); if(!g) return;
+    ttClear(); host.classList.add('focusing'); g.classList.add('hl');
+    edgeEls.forEach(e=>{ const s=e.getAttribute('data-src'), t=e.getAttribute('data-dst');
+      if(t===label){ e.classList.add('hl-edge'); const p=nodeByLabel.get(s); if(p)p.classList.add('hl-before'); }
+      if(s===label){ e.classList.add('hl-edge'); const c=nodeByLabel.get(t); if(c)c.classList.add('hl-after'); }
+    });
+    requestAnimationFrame(()=>{
+      const hr=host.getBoundingClientRect(), nr=g.getBoundingClientRect();
+      const ncx=(nr.left+nr.width/2 - hr.left)/scale, ncy=(nr.top+nr.height/2 - hr.top)/scale;
+      scale=clampScale(Math.max(scale,1.1)); const r=wrap.getBoundingClientRect();
+      tx=r.width/2 - ncx*scale; ty=r.height/2 - ncy*scale; apply();
+      if(dv) dv.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  }
+
+  // ---- Auto-link tech names in the guide ----
+  const LINK = {
+    'magnetic weapons':'Magnetized Weapons','magnetized weapons':'Magnetized Weapons','mag weapons':'Magnetized Weapons',
+    'modular weapons':'Modular Weapons','weapon mods':'Apply Weapon Upgrades','weapon upgrades':'Apply Weapon Upgrades','apply weapon upgrades':'Apply Weapon Upgrades',
+    'gauss weapons':'Gauss Weapons','mag cannon':'Mag Cannon','gauss rifle':'Gauss Rifle',
+    'plasma rifle':'Plasma Rifle','beam cannon':'Beam Cannon','plasma lance':'Plasma Lance','storm gun':'Storm Gun',
+    'hybrid materials':'Hybrid Materials','plated armor':'Plated Armor','predator armor':'Predator Armor',
+    'powered armor':'Powered Armor','warden armor':'Warden Armor','elerium':'Elerium',
+    'e.x.o. suit':'E.X.O. Suit','exo suit':'E.X.O. Suit','exo':'E.X.O. Suit','spider suit':'Spider Suit','wraith suit':'Wraith Suit','w.a.r. suit':'W.A.R. Suit',
+    'resistance communications':'Resistance Communications','resistance comms':'Resistance Comms','resistance radio':'Resistance Radio',
+    'guerrilla tactics school':'Guerrilla Tactics School','gts':'Guerrilla Tactics School','squad size i':'Squad Size I','squad size ii':'Squad Size II',
+    'power relay':'Power Relay','advanced warfare center':'Advanced Warfare Center','awc':'Advanced Warfare Center',
+    'proving grounds':'Proving Grounds','proving ground':'Proving Grounds','shadow chamber':'Shadow Chamber','psi lab':'Psi Lab',
+    'alien biotech':'Biotech','biotech':'Biotech','psionics':'Psionics','mindshield':'Mindshield',
+    'skulljack officer':'Skulljack Officer','skulljack':'Skulljack','skullmining':'Skullmining',
+    'advent officer autopsy':'Officer Autopsy','officer autopsy':'Officer Autopsy','sectoid autopsy':'Sectoid Autopsy',
+    'muton autopsy':'Muton Autopsy','faceless autopsy':'Faceless Autopsy','archon autopsy':'Archon Autopsy','andromedon autopsy':'Andromedon Autopsy',
+    'berserker autopsy':'Berserker Autopsy','gatekeeper autopsy':'Gatekeeper Autopsy','viper autopsy':'Viper Autopsy','chryssalid autopsy':'Chryssalid Autopsy',
+    'stun lancer autopsy':'Stun Lancer Autopsy','trooper autopsy':'Trooper Autopsy','shieldbearer autopsy':'Shieldbearer Autopsy',
+    'mec breakdown':'MEC Breakdown','sectopod breakdown':'Sectopod Breakdown','bluescreen protocol':'Bluescreen Protocol','bluescreen rounds':'Bluescreen Rounds',
+    'experimental grenade':'Experimental Grenade','experimental ammo':'Experimental Ammo','experimental armor':'Experimental Armor',
+    'codex brain':'Codex Brain','kill a codex':'Kill a Codex','skulljack codex':'Skulljack Codex','neutralize avatar':'Neutralize Avatar',
+    'psionic gate':'Psionic Gate','blacksite vial':'Blacksite Vial','recovered stasis suit':'Recovered Stasis Suit','avatar autopsy':'Avatar Autopsy',
+    'broadcast tower':'Broadcast Tower','final mission':'Final Mission','mimic beacon':'Mimic Beacon','plasma grenade':'Plasma Grenade',
+    'nanoscale vest':'Nanoscale Vest','equip personal combat sims':'Equip Personal Combat Sims','hacking pcs':'Equip Personal Combat Sims','pcs':'Equip Personal Combat Sims'
+  };
+  const phrases = Object.keys(LINK).sort((a,b)=>b.length-a.length).map(p=>p.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  const RE = new RegExp('(?<![\\w])(' + phrases.join('|') + ')(?![\\w])','gi');
+  const SKIP = new Set(['A','CODE','SCRIPT','STYLE','svg','SVG','BUTTON','SUMMARY','SELECT','OPTION']);
+  function linkify(rootEl){
+    const walker=document.createTreeWalker(rootEl, NodeFilter.SHOW_TEXT, { acceptNode(n){
+      if(!n.nodeValue || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      let p=n.parentNode; while(p && p!==rootEl){ if(SKIP.has(p.nodeName)) return NodeFilter.FILTER_REJECT;
+        if(p.id==='techtree-visual'||p.id==='techtree-detail') return NodeFilter.FILTER_REJECT; p=p.parentNode; }
+      return NodeFilter.FILTER_ACCEPT; }});
+    const targets=[]; let n; while(n=walker.nextNode()) targets.push(n);
+    targets.forEach(node=>{
+      const txt=node.nodeValue; RE.lastIndex=0; if(!RE.test(txt)) return; RE.lastIndex=0;
+      const frag=document.createDocumentFragment(); let last=0,m;
+      while(m=RE.exec(txt)){
+        const c=LINK[m[1].toLowerCase()]; if(!c){ continue; }
+        if(m.index>last) frag.appendChild(document.createTextNode(txt.slice(last,m.index)));
+        const a=document.createElement('a'); a.className='tlink'; a.setAttribute('data-node',c);
+        a.title='Show "'+c+'" in the tech tree'; a.textContent=m[0];
+        a.addEventListener('click',ev=>{ ev.preventDefault(); showNode(c); });
+        frag.appendChild(a); last=m.index+m[0].length;
+      }
+      if(last<txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+      node.parentNode.replaceChild(frag,node);
+    });
+  }
+  try{ linkify(document.querySelector('main')); }catch(err){ console.warn('linkify failed', err); }
+</script>
+</body>
+</html>
