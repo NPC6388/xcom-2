@@ -1,0 +1,121 @@
+﻿{{xtoc|POI_Leviathan.jpg|Discovering New Alien Technology}}
+'''Research Projects''' are the primary way in which new technology, equipment and facilities are unlocked in ''[[XCOM 2]]'' and ''[[XCOM 2: War of the Chosen]]''. Research projects include the study and reverse-engineering of recovered alien technologies and autopsies on alien and ADVENT corpses. In '''War of the Chosen''', [[Breakthroughs and Inspirations]] may occur periodically with each discovery made.
+
+==Standard Research Projects==
+*[[Alien Biotech]]
+*[[Alien Encryption]]
+*[[Resistance Communications]]
+*[[Resistance Radio]]
+*[[Psionics]]
+*[[Hybrid Materials]]
+**[[Plated Armor]]
+*[[Modular Weapons]]
+**[[Magnetic Weapons]]
+***[[Gauss Weapons]]
+*[[Elerium (XCOM 2)|Elerium]] (in WotC also requires [[ADVENT MEC Breakdown]])
+**[[Powered Armor]]
+**[[Plasma Rifle (XCOM 2 Research)|Plasma Rifle]]
+***[[Storm Gun (Research)|Storm Gun]]
+***[[Beam Cannon (Research)|Beam Cannon]]
+***[[Plasma Lance (Research)|Plasma Lance]] (in WotC also requires [[Archon Autopsy]])
+*[[ADVENT Datapad Decryption]]
+*[[Alien Data Cache Decryption]]
+*[[Facility Lead]]
+*[[Experimental Weapons]]*
+*[[Assassin Weapons]]<sup>†</sup>
+*[[Hunter Weapons]]<sup>†</sup>
+*[[Warlock Weapons]]<sup>†</sup>
+''* Alien Hunters DLC<br /><sup>†</sup> War of the Chosen''
+
+==Shadow Chamber Projects==
+{{spoiler}}
+These research projects are only available once the [[Shadow Chamber]] is built. 
+
+Although accessed from a dedicated facility, ''Shadow Chamber Projects'' require [[Richard Tygan]]'s full attention, putting [[Research Projects (XCOM 2)#Standard Research Projects|standard research]] and [[Research Projects (XCOM 2)#Enemy Autopsies|autopsies]] on hold until they are completed. Once a ''Shadow Chamber Project'' is completed, normal research resumes where it left off.
+*[[Blacksite Vial]]
+*[[Codex Brain (Shadow Project)|Codex Brain]]
+*[[Encrypted Codex Data]]
+*[[Recovered ADVENT Stasis Suit]]
+*[[Psionic Gate (Research)|Psionic Gate]]
+*[[Avatar Autopsy]]
+
+==Enemy Autopsies==
+These research projects depend on the acquisition of a corresponding enemy corpse during a [[Missions (XCOM 2)|mission]]. Most autopsy research times can be reduced to 0 (instant) after XCOM have gathered sufficient corpses of the corresponding enemy.
+<table-progress-tracking table-id="1" unique-column-index="2">
+{| class="sortable fandom-table wikitable"
+|+ Autopsies in XCOM 2 and DLCs
+!Previous
+!Current
+!Next
+! colspan="4" |Corpses for instant completion per [[Game difficulty (XCOM 2)|difficulty]]
+!Items unlocked
+!Other unlocks
+|-
+!
+!
+!
+!{{tooltip|R|Rookie}}!!{{tooltip|V|Veteran}}!!{{tooltip|C|Commander}}!!{{tooltip|L|Legend}}!!
+!
+|-
+| rowspan="16" |[[Alien Biotech]]||[[ADVENT Officer Autopsy]]||<div style="margin-left:-30px;">
+#[[ADVENT MEC Breakdown]]
+#[[ADVENT Shieldbearer Autopsy]]
+#[[ADVENT Stun Lancer Autopsy]]
+#[[ADVENT Trooper Autopsy]]
+#[[ADVENT Turret Breakdown]]
+#[[ADVENT Priest Autopsy]]<sup>†</sup>
+#[[ADVENT Purifier Autopsy]]<sup>†</sup></div>
+| colspan="4" style="text-align:center;" | n/a || ||[[Proving Ground]]
+|-
+|[[Andromedon Autopsy]]|| rowspan="15" | ||5||5||5||8||[[Proximity Mine]]||
+|-
+|[[Archon Autopsy]]||5||5||5||8||[[Fusion Blade]], [[Hunter's Axe#Fusion Axe|Fusion Axe]]*, [[Ripjack#Fusion Ripjack|Fusion Ripjack]]<sup>†</sup>||[[Plasma Lance (Research)|Plasma Lance (research)]]<ref name=wotc_autopsy>This research requires completing the autopsy only in WotC.</ref> (requires [[Plasma Rifle (XCOM 2 Research)|Plasma Rifle (research)]])
+|-
+|[[Berserker Autopsy (XCOM 2)|Berserker Autopsy]]||6||6||6||9||[[Overdrive Serum]]
+|-
+|[[Chryssalid Autopsy (XCOM 2)|Chryssalid Autopsy]]||15||15||15||20||[[Hellweave (XCOM 2)|Hellweave]]
+|-
+|[[Faceless Autopsy]]||3||4||4||7||[[Mimic Beacon (XCOM 2)|Mimic Beacon]]
+|-
+|[[Gatekeeper Autopsy]]||3||6||6||9||[[Alien Psi Amp]]
+|-
+|[[Muton Autopsy (XCOM 2)|Muton Autopsy]]||5||6||6||9||[[Advanced Grenade Launcher (XCOM 2)|Advanced Grenade Launcher]]||[[Plasma Grenade (XCOM 2 Project)|Plasma Grenade]]
+|-
+|[[Sectoid Autopsy (XCOM 2)|Sectoid Autopsy]]||6||6||6||10||[[Mindshield (XCOM 2)|Mindshield]]||[[Psionics]]
+|-
+|[[Sectopod Breakdown (XCOM 2)|Sectopod Breakdown]]||3||6||6||9||[[GREMLIN Mark III]]||
+|-
+|[[Viper Autopsy]]||5||5||5||8|| ||[[Battlefield Medicine]]
+|-
+|[[Archon King Autopsy]]*|| colspan="4" rowspan="3" style="text-align:center;" | n/a ||[[Icarus Armor]]*|| rowspan="5" |
+|-
+|[[Berserker Queen Autopsy]]*||[[R.A.G.E. Suit]]*
+|-
+|[[Viper King Autopsy]]*||[[Serpent Suit]]*
+|-
+|[[Spectre Autopsy]]<sup>†</sup>||4||6||6||8||[[Refraction Field]]<sup>†</sup>
+|-
+|[[The Lost Autopsy]]<sup>†</sup>||65||80||80||120||[[Ultrasonic Lure]]<sup>†</sup>
+|-
+| rowspan="7" |[[ADVENT Officer Autopsy]]||[[ADVENT MEC Breakdown]]|| rowspan="7" | ||3||4||4||7||[[GREMLIN Mark II]]||[[Bluescreen Protocol]]<br />[[Elerium (XCOM 2)|Elerium]]<ref name=wotc_autopsy/> (also requires [[Gauss Weapons]] and [[Plated Armor]])
+|-
+|[[ADVENT Shieldbearer Autopsy]]||4||4||4||7|| ||[[Experimental Armor]]
+|-
+|[[ADVENT Stun Lancer Autopsy]]||4||6||6||9||[[Arc Blade]], [[Hunter's Axe#Ionic Axe|Ionic Axe]]*, [[Ripjack#Ionic Ripjack|Ionic Ripjack]]<sup>†</sup>||
+|-
+|[[ADVENT Trooper Autopsy]]||10||15||15||25||[[Battle Scanner]]||
+|-
+|[[ADVENT Turret Breakdown]]||3||3||3||6|| ||[[Defense Matrix (XCOM 2)|Defense Matrix]]
+|-
+|[[ADVENT Priest Autopsy]]<sup>†</sup>||6||8||8||12||[[Sustaining Sphere]]<sup>†</sup>||
+|-
+|[[ADVENT Purifier Autopsy]]<sup>†</sup>||4||6||6||9|| ||[[Reinforced Underlay]]<sup>†</sup>
+|}
+</table-progress-tracking>
+''* Alien Hunters DLC<br /><sup>†</sup> War of the Chosen''
+<div style="margin-left:-30px; margin-top:-25px;><references/></div>
+
+==Research Tree Diagram (Vanilla XCOM 2)==
+[[File:ResearchTreeDiagramV7.png|center|thumb|1280px]]
+
+[[Category:Research Projects (XCOM 2)]]

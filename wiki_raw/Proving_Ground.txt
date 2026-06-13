@@ -1,0 +1,101 @@
+﻿{{Infobox Facility
+|name = Proving Ground
+|image = File:XCOM2_facility_provinggrounds.png
+|requirements = [[ADVENT Officer Autopsy]]
+|resources = {{Supplies|100}} ({{Supplies|125}})
+|power = {{Power|3}}
+|time = 14 (28) days 
+|upkeep = {{Upkeep|25}}
+}}
+The '''Proving Ground''' is a {{IconHeader|Facility}} aboard the [[Avenger (XCOM 2)|Avenger]] in [[XCOM 2|''XCOM 2'']].
+{{Quote|An experimental work space where Shen can test and produce new, unique types of ammo, grenades and armor for our soldiers, as well as other specialized tactical items.|In-game description}}
+
+==Functionality==
+<section begin="Functionality" />
+* Allows for the creation of experimental equipment and specialized suits of armor for soldiers.
+<u>'''Staffing:'''</u>
+<br />{{IconHeader|Engineer}} - Decrease Proving Ground Project Time by 50%.<section end="Functionality" />
+
+==Experimental Projects==
+{| class="wikitable"
+!Project
+!Result
+|-
+|[[Experimental Ammo]]
+|Random item: [[A.P. Rounds (XCOM 2)|A.P. Rounds]], [[Dragon Rounds (XCOM 2)|Dragon Rounds]], [[Talon Rounds (XCOM 2)|Talon Rounds]], [[Tracer Rounds (XCOM 2)|Tracer Rounds]], or [[Venom Rounds (XCOM 2)|Venom Rounds]].
+|-
+| [[Experimental Grenade]]
+|Random item: [[Acid Grenade (XCOM 2)|Acid Grenade]], [[Gas Grenade (XCOM 2)|Gas Grenade]], or [[Incendiary Grenade (XCOM 2)|Incendiary Grenade]].
+|-
+| [[Experimental Grenade]] post-[[Advanced Explosives]]
+|Random item: [[Acid Bomb (XCOM 2)|Acid Bomb]], [[Gas Bomb (XCOM 2)|Gas Bomb]], or [[Incendiary Bomb (XCOM 2)|Incendiary Bomb]].
+|-
+|[[Experimental Armor]]
+|Random item: [[Hazmat Vest]], [[Plated Vest]], or [[Stasis Vest]].
+|-
+|[[Experimental Heavy Weapon]]
+|Random item: [[Flamethrower (XCOM 2)|Flamethrower]] or [[Shredder Gun]].
+|-
+|[[Experimental Powered Weapon]]
+|Random item: [[Blaster Launcher (XCOM 2)|Blaster Launcher]], [[Hellfire Projector (XCOM 2)|Hellfire Projector]], [[Plasma Blaster]], or [[Shredstorm Cannon]].
+|}
+
+==Specialized Suit Projects==
+{| class="wikitable"
+|-
+!Project
+!Result
+|-
+|[[E.X.O. Suit Project (XCOM 2)|E.X.O. Suit]]
+|Item: [[E.X.O. Suit]].<br />Unlocks [[Experimental Heavy Weapon]] project.*
+|-
+|[[Spider Suit Project (XCOM 2)|Spider Suit]]
+|Item: [[Spider Suit (XCOM 2)|Spider Suit]].
+|-
+|[[W.A.R. Suit Project (XCOM 2)|W.A.R. Suit]]
+|Item: [[W.A.R. Suit]].<br />Unlocks [[Experimental Powered Weapon]] project.
+|-
+|[[Wraith Suit Project (XCOM 2)|Wraith Suit]]
+|Item: [[Wraith Suit]].
+|-
+|Serpent Suit ([[XCOM 2: Alien Hunters|Alien Hunters]] DLC)
+|Item: [[Serpent Suit]].
+|-
+|R.A.G.E. Suit ([[XCOM 2: Alien Hunters|Alien Hunters]] DLC)
+|Item: [[R.A.G.E. Suit]].
+|-
+|Icarus Armor ([[XCOM 2: Alien Hunters|Alien Hunters]] DLC)
+|Item: [[Icarus Armor]].
+|}
+<nowiki>*</nowiki> In ''[[XCOM 2: War of the Chosen|War of the Chosen]]'' with [[Shen's Last Gift]] DLC Content Enabled the [[Experimental Heavy Weapon]] project is available after constructing the Proving Ground.
+
+==Misc Projects==
+{| class="wikitable"
+|-
+!Project
+!Result
+|-
+|[[Battlefield Medicine]]
+|Upgrades all [[Medikit (XCOM 2)|Medikits]] to [[Nanomedikit (XCOM 2)|Nanomedikits]].
+|-
+|[[Bluescreen Protocol]]
+|Unlocks instant-build items: [[Bluescreen Rounds (XCOM 2)|Bluescreen Rounds]] and [[EMP Grenade (XCOM 2)|EMP Grenades]].
+|-
+|[[Skulljack]]
+|Item: [[Skulljack (Item)|Skulljack]].
+|-
+|[[Skullmining]]
+|Upgrades all [[Skulljack (Item)|Skulljacks]].
+|-
+|[[Plasma Grenade (XCOM 2 Project)|Plasma Grenade]]
+|Upgrades all [[Frag Grenade (XCOM 2)|Frag Grenades]] to [[Plasma Grenade (XCOM 2)|Plasma Grenades]].
+|-
+| [[Advanced Explosives]]
+|Upgrades all Acid, EMP, Gas, Incendiary, and Smoke Grenades to Bombs.
+|-
+|Mechanized Warfare ([[Shen's Last Gift]] DLC)
+|Unlocks building [[SPARK (XCOM 2)|SPARKs]].*
+|}
+<nowiki>*</nowiki> In ''[[XCOM 2: War of the Chosen|War of the Chosen]]'' with [[Shen's Last Gift]] DLC Content Enabled the [[SPARK (XCOM 2)|SPARK]] project is available after constructing the Proving Ground.
+
+[[Category:Facilities (XCOM 2)]]

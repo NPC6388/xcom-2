@@ -1,0 +1,38 @@
+﻿{{Infobox_mission|title1 = Alien Facility Assault|game = ''XCOM 2''|type = Mission|objectives=* [[Action_(XCOM_2)#Plant X4|Plant X4]] to destroy Alien Facility.
+* [[Action_(XCOM_2)#EVAC|EVAC]] all [[Soldier (XCOM 2)|XCOM soldiers]].|timed = No|starts_in_concealment = Yes|key_plot_point = No|image1 = AlienFacilityGeoscape.jpg|caption1 = The Alien Facility logo on the Geoscape.}}'''Alien Facility Assaults '''are critical, non-plot driven missions in ''[[XCOM 2]]''. These missions are dedicated to destroying the Alien Facility and delaying the [[Avatar Project]].
+
+Alien Facilities are signified with a bright red triangular logo and the [[ADVENT]] logo on the [[Geoscape (XCOM 2)|Geoscape]].
+
+If successful, the [[Avatar Project#Doom_Counter|Doom Counter]] will be set back by however many bars of progress the facility had contributed to it. For example, if the Facility had contributed 5 pips, the progress will be reduced by 5.
+
+It is not important to neutralize all enemies, but the X4 charges must be placed at the designated area. It is not possible to place the X4 charges anywhere else except for the designated area, and there is only a one-tile radius where the charge may be placed. The player can place the [[EVAC zone]] anywhere on the map.
+
+== Unlocking Alien Facilities ==
+[[File:NewFacilityBuilt.jpg|thumb|298x298px|The popup which warns the Commander that a new Alien Facility has been built.]]
+There are only two ways to unlock Alien Facilities. ADVENT will never build new Facilities in regions XCOM has made contact with.
+* Make contact with the Resistance forces in the region, allowing for an assault on the facility.
+* Unlock an [[Facility Lead|Alien Facility lead]] via research or as a reward of a [[Hacking (XCOM 2)|hack]], allowing for an immediate assault without contacting the Resistance forces.
+
+== Location and Enemies ==
+[[File:AlienFacilityFromAbove.jpg|thumb|332x332px|A look at an Alien Facility from above, just before the ending cinematic. Alien Facilities usually feature multiple levels, with [[ADVENT Turret|ADVENT Turrets]] on the roof. The [[EVAC zone]] can be seen to the bottom of the facility, while a checkpoint can be seen at the top right. The ADVENT fences running around both ends of the facility are clearly visible.]]
+Alien Facilities are always found in the wilderness, far away from civilization. The X4 charges are nearly always placed on one of four pillars at the center of the facility. Alien Facilities are surrounded by ADVENT fences with Turrets equipped on them. The Facility itself may also have turrets on its roof. The windows of the Alien Facility are barred with lasers. On one side of the Alien Facility, a long access road runs along the entirety of the map.
+[[File:X4FullFireball.jpg|thumb|331x331px|The bright light of the first X4 charge igniting.]]
+Alien Facilities are heavily guarded, and often times will feature between three to five individual pods, along with some strong enemies. Mostly, the enemies will consist of [[ADVENT Trooper|ADVENT Troopers]], [[ADVENT Officer|Officers]], and [[ADVENT Stun Lancer|Stun Lancers]] on the ADVENT side, as well as [[Viper (XCOM 2)|Vipers]] and [[Muton (XCOM 2)|Mutons]] on the alien side.
+
+Cover is plentiful and abundant. Trees and lampposts provide a full cover bonus, while there are many rocks in the area for use as half-cover. Most of the Facilities will also have half-cover ADVENT fences that can be used as cover.
+
+== Tactics ==
+* As there are no turn timers for the entirety of the mission and the mission will always start in concealment, you can take your time and avoid rushing.
+* A good tactic is the “Overwatch crawl” - move soldiers up using only blue moves, then put them on Overwatch.
+* Once you take out an enemy pod, it's perfectly OK to stop, reload, Overwatch, and then move, to prepare your team for the rest of the mission.
+* It is not necessary to kill all of the hostiles, meaning that you can EVAC immediately after planting the X4 charges.
+
+== Trivia ==
+{{Quote|The aliens have constructed a facility deep in the wilderness. It is fueling progress towards the AVATAR project. We must destroy it.|Mission briefing on the Geoscape}}
+{{Quote|Menace, target coordinates are locked in. Move to designated position and plant the X4 charges.|Central at the start of the mission}}
+
+* Destroying an Alien Facility for the first time unlocks the “Bring It Down” achievement.
+* It's possible that ADVENT uses the little guard checkpoints to bring materials in and out of the facility. However, this has never been officially confirmed.
+* The X4's detonation sequence features four separate explosions, each one taking place at a different corner of the facility. The camera fades to black immediately after the fourth explosion.
+* It seems that the X4 charge is actually programmed to physically destroy parts of the map. This can be seen immediately after the first explosion.
+[[Category:Missions (XCOM 2)]]

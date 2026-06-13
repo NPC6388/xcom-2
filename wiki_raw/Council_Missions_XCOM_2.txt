@@ -1,0 +1,102 @@
+﻿{{Infobox_mission|title1 = Council Missions|game = XCOM 2|type = Mission|timed = Yes|starts_in_concealment = Mostly|key_plot_point = No}}In ''XCOM 2, '''''Council Missions''' are a series of missions that are given to the [[Commander]] by [[the Spokesman]] of [[the Resistance]]. 
+
+In each Council Mission, the player controls a squad of [[Soldier (XCOM 2)|soldier]]s to engage [[ADVENT]] and alien forces and complete mission objectives. XCOM must obtain or extract a VIP and evacuate within a certain number of turns, or the mission will forcibly terminate, and any remaining ''soldiers'' who have not yet evacuated will be captured by ''ADVENT'' forces. Council Missions are marked by a white logo of a building or vehicle on the Geoscape, with the type of mission determining the logo.
+
+There are three possible Council Missions. All of them are timed, and two of them begin in concealment. Unlike other mission types, XCOM cannot place its own evac zone anywhere on the map. A fixed EVACA zone is provided at the AO and ''cannot'' be changed unless it is physically destroyed (by explosives or other means), in which case it will be respawned at another position. 
+
+All Council Missions require interaction with a VIP. For a mission to succeed, the VIP must be extracted to the EVAC zone by the end of the turn limit. It is not necessary to eliminate all enemies in the area of operations.
+
+== Council Missions ==
+
+=== Rescue VIP ===
+This mission begins in concealment.
+
+In this mission, a VIP must be rescued from one of two locations - an ADVENT vehicle, or an ADVENT prison. 
+
+The player has twelve turns to rescue them and bring them to the EVAC zone, along with all XCOM ''soldiers''. At the end of the twelve turn limit, any ''soldier'' who has not evacuated will be captured.
+
+==== ADVENT vehicle variant==== 
+Requires a ''soldier'' to physically hack the doors of the vehicle (or blow them up, or otherwise destroy them) that the VIP is being held in, and has the EVAC point frequently (but not always) atop a building or other raised structure. 
+
+==== ADVENT prison variant====
+Requires a ''soldier'' to hack a prison cell that the VIP is being held in, and has the EVAC point frequently (but not always) placed on the ground.
+
+The vehicle door cannot be hacked unless a ''soldier'' is standing directly adjacent to it - Remote Hacking will not work in this case (but the prison cell has no such restrictions). In both cases, gaining sight or control of the VIP will trigger a group of enemy reinforcements, who will drop in by the next turn.
+
+The mission will fail if the VIP is killed, is not evacuated within twelve turns, every XCOM ''soldier'' is dead, or if every XCOM ''soldier'' has not evacuated within twelve turns.
+
+==== '''Objectives''' ====
+* Rescue VIP from ADVENT <location> (either "ADVENT vehicle" or "ADVENT prison.")
+* Extract VIP at designated location
+* Extract all XCOM ''soldiers''
+
+====Gallery====
+<gallery widths="500" position="center">
+File:Transportvanrescue.jpg|An ADVENT vehicle the VIP is being held in.
+File:RescueVIP.jpg|The VIP escapes to safety from the [[EVAC zone]] as an XCOM soldier stands guard.
+</gallery>
+
+====Quotes ====
+{{Quote|Menace, we have a confirmed location for the VIP. Move to rendezvous, eliminate all hostile contacts.|Central on mission start}}{{Quote|Menace, hostile interceptors are on high speed approach, your window for extraction is closing.|Central on 5 turns left.}}{{Quote|Menace, you're outta time. Get to the EVAC point, NOW!|Central on one turn left.}}{{Quote|ADVENT interceptors within striking distance in 30 seconds. Firebrand, clear the area!|Central at the end of the final turn. Any soldiers on the EVAC point will be automatically evacuated, any soldiers off the EVAC point will be captured.}}{{Quote|Status confirmed, target is eliminated.|Central upon mission failure}}{{Quote|This is firebrand, VIP is secure.|Firebrand upon successful EVAC of the VIP}}
+=== Extract VIP ===
+Unlike the other missions (and uniquely for Council Missions), this mission does '''not '''begin in concealment.
+
+In this mission, XCOM has the VIP in tow, and the VIP must be brought to the EVAC zone and evacuated, along with all XCOM ''soldiers''. At the end of the twelve-turn limit, any ''soldier'' who has not been evacuated will be captured by ADVENT forces. The EVAC point is frequently (but not always) located atop a building, and at least one pod is guaranteed to spawn at or near it.
+
+The mission will fail if the VIP is killed, is not evacuated within twelve turns, every XCOM ''soldier'' is dead, or if every XCOM ''soldier'' has not evacuated within twelve turns.
+
+==== '''Objectives''' ====
+* Extract the VIP at designated location
+* Extract all XCOM ''soldiers''
+
+==== Gallery ====
+<gallery widths="500" position="center">
+File:ExtractVIP.jpg|The VIP about to be reeled up into the [[Skyranger (XCOM 2)|Skyranger]].
+</gallery>
+
+==== Quotes ====
+{{stub}}
+
+=== Neutralize Enemy VIP ===
+This mission begins in concealment.
+
+In this mission, a VIP working for ADVENT must be neutralized (either killed outright or captured and carried to EVAC) and brought into XCOM custody. The player will receive Supplies in either case, and Intel if the VIP is recovered alive. At the end of the twelve turn limit, any ''soldier'' who has not been evacuated will be captured by ADVENT forces. 
+
+The VIP can be rendered unconscious using the special "Subdue" command, which will become available to any soldier standing within melee range of the VIP.
+
+Knocking out, killing, or taking control of the VIP will trigger a wave of reinforcements.
+
+The mission will fail if the VIP isn't evacuated within twelve turns or all XCOM ''soldiers'' die and the VIP cannot evacuate.
+
+==== '''Objectives''' ====
+* Capture or kill enemy VIP
+* Extract all XCOM ''soldiers''
+
+==== Gallery ====
+<gallery widths="500" position="center">
+File:EnemyVIP.jpg|An XCOM soldier carrying the unconscious body of the enemy VIP, about to be reeled up into the Skyranger,
+</gallery>
+
+==== Quotes ====
+{{stub}}
+
+== Rewards ==
+Council Missions are guaranteed to offer Intel as a reward, while VIP extraction missions may also award an Engineer, Scientist, or captured XCOM ''soldier'' as a reward. Neutralize Enemy VIP missions will award Supplies regardless of the VIP's status, and Intel if the VIP is captured alive.
+
+==Gallery==
+<gallery widths="500" position="center">
+File:Skipped Council Mission.png|If the Commander lets a ''Council Mission'' expire.
+</gallery>
+
+== Trivia ==
+
+* Similar to skipping (ignoring) or failing a Retaliation Mission, skipping or failing a Council Mission will lead to XCOM losing contact with the corresponding resistance region.
+* Every Council Mission uses the ''City Center'' plot type. They are the only kind of mission (excluding Operation Gatecrasher) that uses it.
+* Because every Council Mission requires the squad to evacuate within the timer, XCOM will never collect corpses from the battlefield.
+* In the ''Neutralize Enemy VIP'' mission, it is possible to Dominate the VIP and make them walk to the EVAC zone without any penalties.
+* Enemy VIPs in the ''Neutralize Enemy VIP'' mission do not use Cover.
+
+[[Category:Missions (XCOM 2)]]
+
+{{split|[[Rescue VIP (XCOM 2)]], [[Extract VIP (XCOM 2)]], [[Neutralize Enemy VIP (XCOM 2)]]}}
+{{cleanup}}{{Stub}}

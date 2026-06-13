@@ -1,0 +1,160 @@
+﻿'''Armor''' is a critical element of the game, providing resistance fighters with increased [[Hit Points (XCOM 2)|Hit Points]], additional utility slots, and eventually armor that reduces the magnitude of incoming damage. 
+
+All XCOM soldiers begin with a set of basic [[Kevlar Armor]], which confers no benefits beyond allowing a single [[Utility Items (XCOM 2)|Utility Item]] to be equipped. Advanced armor sets ([[Predator Armor|Predator]], [[Warden Armor|Warden]]) require completing [[Plated Armor]] and [[Powered Armor]] research projects correspondingly and then purchasing the researched armor at the Engineering. These purchases are squad-based, meaning that these armor sets will be available to all XCOM soldiers after the purchase.
+
+Specialized or unique armor sets will be available as [[Proving Ground]] projects after completing the aforementioned armor research projects or after conducting Alien bosses autopsies ([[Viper King Autopsy]], [[Berserker Queen Autopsy]], [[Archon King Autopsy]]). Each set of a specialized armor suit ([[Spider Suit (XCOM 2)|Spider Suit]], [[Wraith Suit]], [[E.X.O. Suit]], [[W.A.R. Suit]]) requires completing a Proving Ground project, 1 project per 1 armor suit set.
+
+Resistance factions soldiers - [[Reapers]], [[Skirmishers]], and [[Templars]] - can wear only their [[Resistance Armor|faction-specific]] armor sets. These armor sets share characteristics with Kevlar, Predator, and Warden armor, but have fewer Utility Item slots ([[Reapers]] have 1 locked Utility Item slot by default, which can be unlocked only by acquiring a randomly available [[Tactical Rigging]] ability). [[Skirmishers]] armor sets have built-in [[Grapple (XCOM 2)|Grapple]] ability. &nbsp;[ [[XCOM 2: War of the Chosen|''XCOM 2: War of the Chosen'' DLC]] ]
+
+[[SPARK (XCOM 2)|SPARK]] units are limited to SPARK armor sets which have slightly different characteristics than XCOM/Resistance armor sets, but totally lack Utility Item slots. &nbsp;[ [[Shen's Last Gift|''Shen's Last Gift'' DLC]] ]
+
+==Armor stats==
+<!-- Add armor-related parameters: Dodge, Mobility, Abilities, Utility/Heavy Weapons slots. -->
+===Health===
+{{Main|Hit Points (XCOM 2)}}
+
+All armor sets increase a soldier's '''Health''' value.
+
+===Armor points===
+{{Main|Armor Points (XCOM 2)}}
+
+'''Armor points''' is a concept separate from ''Health'' and wearable armors, and represents a soldier's [[Armor Points (XCOM 2)|damage reduction]] capability. Only select models increase the ''Armor'' value.
+
+==XCOM Armor==
+Besides the general characteristics listed below, the division of XCOM Armor into sub-classes is mostly superficial. The only instance when it matters what sub-class an armor set/suit belongs to is having completed an [[Breakthroughs_and_Inspirations#Armor|armor breakthrough research]], which increases the HP bonus of a certain armor sub-class (Light or Heavy) by +1.
+
+===Light Armor===
+Light Armor grants the wearer extra mobility and dodge, focusing less on ''Health'' and more on the movement flexibility of the wearer. All Light Armor shares the ability to deploy a [[Grapple (XCOM 2)|Grappling Hook]] to reach elevated surfaces, and in extreme cases will allow the user to pass through solid objects with [[Wraith Suit|Wraith]].
+
+===Medium Armor===
+Medium armor is general-purpose armor which balances mobility with protection, allowing for an additional [[Utility Items (XCOM 2)|Utility Item]] to be equipped, while [[Icarus Armor]] is able to quickly shift positions and vault over objects and walls.
+
+===Heavy Armor===
+Heavy Armor focuses on the survivability of the wearer, increasing both ''Health'' and ''Armor'' points, and each possesses the ability to mount a single [[Heavy Weapon]].
+
+{| class="wikitable sortable" style="text-align:center; width:100%;|
+! colspan="12" |XCOM Armor
+|-
+!Armor
+! class=unsortable |Armor class
+![[Hit Points (XCOM 2)|Hit Points]]!![[Armor Points (XCOM 2)|Armor Points]]!![[Mobility]]!![[Dodge (XCOM 2)|Dodge]]!![[Utility Items (XCOM 2)|Utility Item]] slots
+![[Heavy Weapon]] slot
+! class=unsortable |Abilities, properties
+!DLC
+!Research requirement
+!Quantity
+|-
+|[[Kevlar Armor]]||Basic|| || || || || 1
+| 1 | ||
+|
+|
+|∞
+|-
+|[[Spider Suit (XCOM 2)|Spider Suit]]|| rowspan="4" |Light||+4|| ||+1||+20|| rowspan="4" |1
+| rowspan="4" |
+|[[Grapple (XCOM 2)|Grapple]]
+| rowspan="2" |
+|[[Spider Suit Project (XCOM 2)|Spider Suit Project]]
+|1 per project
+|-
+|[[Wraith Suit]]||+6|| ||+2||+25
+|[[Grapple (XCOM 2)|Grapple]], [[Wraith]]
+|[[Wraith Suit Project (XCOM 2)|Wraith Suit Project]]
+|1 per project
+|-
+|[[Serpent Suit]]||+5|| ||+1||+35
+| rowspan="2" |[[Grapple (XCOM 2)|Grapple]], [[Frostbite]], Panic Vipers
+| rowspan="2" |[[Alien Hunters]]
+|[[Viper King Autopsy]]
+|1
+|-
+|[[Serpent Armor]]||+7|| ||+2||+40
+|[[Powered Armor]]
+|1 (replaces the Serpent Suit)
+|-
+|[[Predator Armor]]|| rowspan="3" |Medium||+4|| || || || rowspan="3" |2
+| rowspan="3" |
+| rowspan="2" |
+| rowspan="2" |
+|[[Plated Armor]]
+|∞
+|-
+|[[Warden Armor]]||+6||+1|| ||
+|[[Powered Armor]]
+|∞
+|-
+|[[Icarus Armor]]||+7||+1||+1||
+|[[Vault]], [[Icarus Jump]], Panic Archons
+|[[Alien Hunters]]
+|[[Archon King Autopsy]]
+|1
+|-
+|[[E.X.O. Suit]]|| rowspan="4" |Heavy||+5||+1|| || || rowspan="4" |1
+| rowspan="4" |+||
+| rowspan="2" |
+|[[E.X.O. Suit Project (XCOM 2)|E.X.O. Suit Project]]
+|1 per project
+|-
+|[[W.A.R. Suit]]||+6||+2|| ||
+||[[Shieldwall]]
+|[[W.A.R. Suit Project (XCOM 2)|W.A.R. Suit Project]]
+|1 per project
+|-
+|[[R.A.G.E. Suit]]||+6||+1||+1||
+| rowspan="2" | Rage Strike, Panic Mutons and Berserkers
+| rowspan="2" |[[Alien Hunters]]
+|[[Berserker Queen Autopsy]]
+|1
+|-
+|[[R.A.G.E. Armor]]||+7||+2||+1||
+|[[Powered Armor]]
+|1 (replaces the R.A.G.E. Suit)
+|}
+*[[Grenadier Class (XCOM 2)|Grenadier]] ability '''Blast Padding''' provides +1 [[Armor Points (XCOM 2)|Armor Point]] and reduces [[Damage Type (XCOM 2)|Explosion damage]] by 66%.
+
+===Vests===
+{{Vests}}
+
+==Resistance Armor==
+[[Reapers]], [[Skirmishers]], and [[Templars]] each have their own [[Resistance Armor|faction-specific]] set of armor, which share characteristics with Kevlar, Predator, and Warden armor minus a few Utility Item slots (while [[Skirmishers]] have [[Grapple (XCOM 2)|Grapple]] ability by default). They are only available in the ''[[XCOM 2: War of the Chosen]]'' expansion.
+
+{| class="wikitable" style="width: 99%; text-align: center;"
+! colspan="8" |Resistance Armor
+|-
+! rowspan="2" width="26%"|Name !! rowspan="2" width="10%"|Health !! rowspan="2" width="10%"|Armor !! rowspan="2" width="10%"|Mobility !! rowspan="2" width="10%"| Dodge !! colspan="2" |Utility Slots
+|-
+! width="17%"|Reapers
+! width="17%"|Skirmishers, Templars
+|-
+|Resistance Armor|| || || || || rowspan="3" |0*|| rowspan="3" |1*
+|-
+|Plated Resistance Armor||+4|| || ||
+|-
+|Powered Resistance Armor||+6||+1|| ||
+|}
+:<nowiki>*</nowiki> [[Tactical Rigging]] ability, randomly available to [[Reapers]] and [[Skirmishers]] as an XCOM skill (costs 11 Ability Points), provides +1 additional Utility Item slot.
+
+==SPARK Armor==
+SPARK Armor is exclusive to ''[[Shen's Last Gift|Shen's Last Gift DLC]]'', and can only be equipped on [[SPARK (XCOM 2)|SPARK]] units. It does not confer any particular attributes or abilities, but each iteration will grant additional ''Health'', mobility, and an extra point of '''Armor'''.
+
+{| class="wikitable" style="width: 99%; text-align: center;"
+! colspan="7" |SPARK Armor
+|-
+! width="26%"|Name !! width="10%"|Health !! width="10%"|Armor !! width="10%"|Mobility !! width="10%"|Dodge !! width="34%"|Utility Slots
+|-
+|SPARK Armor|| || || || rowspan="3" | || rowspan="3" |n/a
+|-
+|Reinforced Frame||+3||+1||+1
+|-
+|Annodized Chassis||+5||+2||+2
+|}
+*[[SPARK (XCOM 2)|SPARK]] ability '''Bulwark''' provides +1 armor.
+*[[SPARK (XCOM 2)|SPARK]] ability '''Sacrifice''' provides +2 armor and +20 defense every 3 turns.
+
+==Trivia==
+===Legacy Armor===
+[[Kevlar Armor#Resistance Warrior Kevlar Armor|Resistance Warrior Kevlar Armor]], Improvised Field Armor, Enhanced Field Plate, and Experimental Power Armor are alternate appearances for standard armor that share identical characteristics; they are included in the [[XCOM 2#Pre-Order Bonus and Digital Deluxe Edition|Resistance Warrior Pack]] and [[XCOM 2: War of the Chosen – Tactical Legacy Pack|Tactical Legacy Pack]].
+
+{{cleanup|add missing information, double check some statements}}
+
+[[Category:Armors (XCOM 2)]]

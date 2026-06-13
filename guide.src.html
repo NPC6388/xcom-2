@@ -107,6 +107,19 @@
   .role{background:var(--panel2);border:1px solid var(--edge);border-radius:8px;padding:10px 12px;font-size:13px}
   .role h5{margin:0 0 4px;font-size:13px;color:var(--accent2)}
   .role.hack h5{color:var(--warn)} .role.med h5{color:var(--accent)}
+  /* database / wiki */
+  .wiki-intro{font-size:13px;color:var(--dim);background:var(--panel);border:1px solid var(--edge);
+    border-radius:10px;padding:4px 16px 10px;margin:6px 0 14px}
+  .wiki-intro p{margin:10px 0}
+  .wikisearch{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;
+    margin:8px 0 16px;padding:8px 0;background:var(--bg)}
+  .wikisearch input{flex:1;background:var(--panel2);color:var(--ink);border:1px solid var(--edge);
+    border-radius:8px;padding:11px 14px;font-size:14px}
+  .wikisearch input:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 0 2px rgba(88,166,255,.15)}
+  tr.nomatch,li.nomatch{display:none}
+  #wikiroot details summary{font-size:15px}
+  .wiki-foot{font-size:12px;color:var(--dim);border-top:1px solid var(--edge);margin-top:18px;padding-top:12px}
+  .wiki-foot code{font-size:11px}
 </style>
 </head>
 <body>
@@ -135,10 +148,16 @@
   <a class="cell" href="#late-facilities">Facilities order</a>
   <a class="cell" href="#late-upgrades">Upgrades order</a>
   <a class="reflink" href="#techtree">📑 Tech-tree prereqs</a>
+  <a class="phase" href="#wiki">▍ DATABASE · WIKI</a>
+  <a class="cell" href="#wiki-missions">Missions</a>
+  <a class="cell" href="#wiki-research">Research</a>
+  <a class="cell" href="#wiki-facilities">Facilities</a>
+  <a class="cell" href="#wiki-armor">Armor</a>
+  <a class="cell" href="#wiki-weapons">Weapons</a>
 </nav>
 
 <main>
-  <div class="banner">✅ <b>v3 — all three phases populated; prereqs locked.</b> Research prerequisites are now confirmed against the parsed darosh tech tree (159 nodes / 178 edges, via <code>parse_tree.py</code>). WOTC advice filtered out.</div>
+  <div class="banner">✅ <b>v4 — searchable Database · Wiki added.</b> The full Fandom-wiki dataset (missions, research, facilities, armor, weapons, all prereqs) is compiled from <code>specs/database.md</code> into the <a class="cite" href="#wiki">Database · Wiki</a> below — searchable, with tech names still clickable into the tree. Phase playbook + prereqs unchanged. WOTC filtered out.</div>
 
   <!-- ===================== EARLY ===================== -->
   <h2 class="phase-h" id="early">▍ Early Game</h2>
@@ -372,6 +391,11 @@
       <p style="color:var(--dim);font-size:12px;margin-top:8px">Source: <a class="cite" href="https://darosh.github.io/xcom2-tech-tree/">darosh.github.io/xcom2-tech-tree</a> — the same data parsed for the prereqs above.</p>
     </div>
   </details>
+
+  <!-- ===================== DATABASE / WIKI ===================== -->
+  <h2 class="phase-h" id="wiki">📚 Database · Wiki</h2>
+  <div class="phase-meta">Complete reference — every mission, research, facility, armor &amp; weapon with prereqs &amp; stats. Type to search across all tables; matching sections open automatically. Tech names stay clickable → tech tree.</div>
+  <!--WIKI-->
 </main>
 
 <script>
@@ -493,6 +517,50 @@
     });
   }
   try{ linkify(document.querySelector('main')); }catch(err){ console.warn('linkify failed', err); }
+
+  // ---- Database / Wiki live search ----
+  const wq=document.getElementById('wikiq');
+  const wroot=document.getElementById('wikiroot');
+  const wcount=document.getElementById('wikicount');
+  if(wq && wroot){
+    const wdetails=[...wroot.querySelectorAll('details')];
+    function resetWiki(){
+      wroot.querySelectorAll('.nomatch').forEach(e=>e.classList.remove('nomatch'));
+      wdetails.forEach(d=>{ d.style.display=''; d.open=false; });
+      wcount.textContent='';
+    }
+    function runWikiSearch(){
+      const q=wq.value.trim().toLowerCase();
+      if(!q){ resetWiki(); return; }
+      let total=0;
+      wdetails.forEach(d=>{
+        let hits=0;
+        d.querySelectorAll('table').forEach(tb=>{
+          [...tb.rows].forEach((r,i)=>{ if(i===0) return;
+            const m=r.textContent.toLowerCase().includes(q);
+            r.classList.toggle('nomatch', !m); if(m) hits++; });
+        });
+        d.querySelectorAll('li').forEach(li=>{
+          const m=li.textContent.toLowerCase().includes(q);
+          li.classList.toggle('nomatch', !m); if(m) hits++; });
+        // also let the summary text itself be a match (keeps the section visible)
+        const titleHit=d.querySelector('summary')?.textContent.toLowerCase().includes(q);
+        const show = hits>0 || titleHit;
+        d.style.display = show ? '' : 'none';
+        d.open = show;
+        total += hits;
+      });
+      wcount.textContent = total + ' row' + (total===1?'':'s') + ' across ' +
+        wdetails.filter(d=>d.style.display!=='none').length + ' section(s)';
+    }
+    wq.addEventListener('input', runWikiSearch);
+    // deep-link: #wiki-q=term focuses + runs a search
+    function readWikiHash(){
+      const m=/wiki-q=([^&]+)/.exec(location.hash);
+      if(m){ wq.value=decodeURIComponent(m[1]); runWikiSearch(); wq.focus(); }
+    }
+    window.addEventListener('hashchange', readWikiHash); readWikiHash();
+  }
 </script>
 </body>
 </html>

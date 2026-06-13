@@ -107,6 +107,19 @@
   .role{background:var(--panel2);border:1px solid var(--edge);border-radius:8px;padding:10px 12px;font-size:13px}
   .role h5{margin:0 0 4px;font-size:13px;color:var(--accent2)}
   .role.hack h5{color:var(--warn)} .role.med h5{color:var(--accent)}
+  /* database / wiki */
+  .wiki-intro{font-size:13px;color:var(--dim);background:var(--panel);border:1px solid var(--edge);
+    border-radius:10px;padding:4px 16px 10px;margin:6px 0 14px}
+  .wiki-intro p{margin:10px 0}
+  .wikisearch{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;
+    margin:8px 0 16px;padding:8px 0;background:var(--bg)}
+  .wikisearch input{flex:1;background:var(--panel2);color:var(--ink);border:1px solid var(--edge);
+    border-radius:8px;padding:11px 14px;font-size:14px}
+  .wikisearch input:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 0 2px rgba(88,166,255,.15)}
+  tr.nomatch,li.nomatch{display:none}
+  #wikiroot details summary{font-size:15px}
+  .wiki-foot{font-size:12px;color:var(--dim);border-top:1px solid var(--edge);margin-top:18px;padding-top:12px}
+  .wiki-foot code{font-size:11px}
 </style>
 </head>
 <body>
@@ -135,10 +148,16 @@
   <a class="cell" href="#late-facilities">Facilities order</a>
   <a class="cell" href="#late-upgrades">Upgrades order</a>
   <a class="reflink" href="#techtree">📑 Tech-tree prereqs</a>
+  <a class="phase" href="#wiki">▍ DATABASE · WIKI</a>
+  <a class="cell" href="#wiki-missions">Missions</a>
+  <a class="cell" href="#wiki-research">Research</a>
+  <a class="cell" href="#wiki-facilities">Facilities</a>
+  <a class="cell" href="#wiki-armor">Armor</a>
+  <a class="cell" href="#wiki-weapons">Weapons</a>
 </nav>
 
 <main>
-  <div class="banner">✅ <b>v3 — all three phases populated; prereqs locked.</b> Research prerequisites are now confirmed against the parsed darosh tech tree (159 nodes / 178 edges, via <code>parse_tree.py</code>). WOTC advice filtered out.</div>
+  <div class="banner">✅ <b>v4 — searchable Database · Wiki added.</b> The full Fandom-wiki dataset (missions, research, facilities, armor, weapons, all prereqs) is compiled from <code>specs/database.md</code> into the <a class="cite" href="#wiki">Database · Wiki</a> below — searchable, with tech names still clickable into the tree. Phase playbook + prereqs unchanged. WOTC filtered out.</div>
 
   <!-- ===================== EARLY ===================== -->
   <h2 class="phase-h" id="early">▍ Early Game</h2>
@@ -373,6 +392,97 @@
       <p style="color:var(--dim);font-size:12px;margin-top:8px">Source: <a class="cite" href="https://darosh.github.io/xcom2-tech-tree/">darosh.github.io/xcom2-tech-tree</a> — the same data parsed for the prereqs above.</p>
     </div>
   </details>
+
+  <!-- ===================== DATABASE / WIKI ===================== -->
+  <h2 class="phase-h" id="wiki">📚 Database · Wiki</h2>
+  <div class="phase-meta">Complete reference — every mission, research, facility, armor &amp; weapon with prereqs &amp; stats. Type to search across all tables; matching sections open automatically. Tech names stay clickable → tech tree.</div>
+  <div class="wiki-intro"><p><b>Source:</b> the official Fandom wiki (<code>xcom.fandom.com</code>), pulled <b>2026-06-12</b> via the MediaWiki API (<code>api.php?action=parse&amp;prop=wikitext</code>) — the normal page URLs 403 to bots, but the API endpoint returns clean wikitext. Cached wikitext lives in <code>wiki_raw/</code>.</p>
+<p><b>Scope filter:</b> base game <b>+ Alien Hunters + Shen's Last Gift</b> (the integrated DLC this playbook covers). <b>War of the Chosen content is excluded</b> and flagged where it appears in shared wiki tables. DLC items are tagged <code>[AH]</code> (Alien Hunters) / <code>[SLG]</code> (Shen's Last Gift).</p>
+<p><b>Companion file:</b> <code>specs/tech-tree.md</code> holds the <i>authoritative prerequisite graph</i> parsed from the darosh SVG. This file adds the wiki's quantitative data (rewards, costs, corpse counts, stats) and the <b>mission database</b>, which the tech tree doesn't cover.</p></div>
+<div class="wikisearch"><input id="wikiq" type="search" autocomplete="off" spellcheck="false" placeholder="Search the database — e.g. &quot;Blacksite&quot;, &quot;Elerium&quot;, &quot;Bluescreen&quot;, &quot;Proving Ground&quot;…"><span id="wikicount" class="tthint"></span></div>
+<div id="wikiroot"><details id="wiki-missions"><summary>Missions <span class="sec">Database</span></summary><div class="body"><p>Missions split into <b>Generic</b> (repeatable, don't advance the plot) and <b>Key</b> (story spine). Plus DLC one-offs and the non-optional Avenger Defense.</p>
+<h4>1.1 Generic missions</h4>
+<table><tr><th>Mission family</th><th>Sub-mission</th><th>Timed?</th><th>Conceal start?</th><th>Trigger / how it appears</th><th>Objective</th><th>Guaranteed rewards</th></tr><tr><td><b>Guerrilla Ops</b></td><td>Recover Item</td><td>Yes (6 turns)</td><td>Yes</td><td>Spawns to counter a pending <b>Dark Event</b>; 2–3 offered at once, only <b>one</b> completable</td><td>Hack &amp; disable self-detonating charges; don't let the object be destroyed</td><td>Cancels the chosen Dark Event</td></tr><tr><td>Guerrilla Ops</td><td>Hack Workstation</td><td>Yes (8 turns)</td><td>Yes</td><td>″</td><td>Hack ADVENT workstation before network lockout</td><td>Cancels Dark Event</td></tr><tr><td>Guerrilla Ops</td><td>Destroy Alien Relay</td><td>Yes (8 turns)</td><td>Yes</td><td>″</td><td>Destroy the relay (6–8 HP, scales w/ difficulty) before data transfer ends</td><td>Cancels Dark Event</td></tr><tr><td>Guerrilla Ops</td><td>Protect Device</td><td>Implicit (~9–12 turns)</td><td>Yes</td><td>″</td><td>Defend a 30-HP data tap until secured</td><td>Cancels Dark Event</td></tr><tr><td><b>Council Missions</b></td><td>Rescue VIP</td><td>Yes (12 turns)</td><td>Yes</td><td>Council offers periodically</td><td>Recover VIP from van/cell, EVAC all soldiers</td><td><b>Intel</b> + (Engineer / Scientist / recovered captured soldier)</td></tr><tr><td>Council Missions</td><td>Extract VIP</td><td>Yes (12 turns)</td><td><b>No</b></td><td>″</td><td>Start holding the VIP; EVAC all</td><td><b>Intel</b> + Resistance-VIP reward</td></tr><tr><td>Council Missions</td><td>Neutralize Enemy VIP</td><td>Yes (12 turns)</td><td>Yes</td><td>″</td><td>Kill/subdue enemy VIP &amp; EVAC; killing forfeits Intel</td><td><b>Supplies</b> (alive/dead) + Intel (if captured alive)</td></tr><tr><td><b>Supply Raids</b></td><td>Supply Raid</td><td><b>No</b></td><td>Yes</td><td>Resistance sabotages an ADVENT supply line</td><td>Kill all hostiles; loot scattered crates (don't blow them up)</td><td><b>Supplies + Alien Alloys + Elerium Crystals</b>, chance of Elerium Core</td></tr><tr><td>Supply Raids</td><td>Landed UFO</td><td><b>No</b></td><td>Yes</td><td>″ (UFO sabotaged)</td><td>Secure UFO; after reveal, 6 turns to disable distress beacon</td><td>Same as Supply Raid</td></tr><tr><td><b>Alien Facility Assault</b></td><td>—</td><td><b>No</b></td><td>Yes</td><td>Make <b>contact</b> with the facility's region, <b>or</b> unlock a <b>Facility Lead</b> (rare hack reward / ADVENT Datapad research) for an immediate assault</td><td>Plant <b>X4</b> on the facility, EVAC; killing all enemies not required</td><td><b>Reduces Avatar Project</b> by the pips that facility contributed; resets timer to next facility</td></tr><tr><td><b>ADVENT Retaliation</b></td><td>—</td><td><b>No</b></td><td><b>No</b></td><td>Auto every <b>4–5 weeks</b> vs a Resistance Haven</td><td>Rescue ≥6 of 13 civilians <b>and</b> kill all hostiles</td><td>+3 income/civ saved (4 on Easy). Only generic mission where <b>Faceless &amp; Chryssalids</b> spawn naturally</td></tr></table>
+<p><b>Skip/fail penalties:</b> Guerrilla Op skipped/failed → <i>all</i> pending Dark Events fire. Council / Supply Raid / Retaliation skipped or failed → <b>lose contact</b> with that region (higher Intel cost + time to re-establish).</p>
+<h4>1.2 Key (story) missions — the golden path</h4>
+<p>Ordered along the campaign spine. Each Key mission reduces the Avatar Project (if underway) and usually drops a key research item.</p>
+<table><tr><th>#</th><th>Mission</th><th>Unlocked by (prerequisite)</th><th>Timed?</th><th>Conceal?</th><th>Objective</th><th>Reward → next step</th></tr><tr><td>1</td><td><b>Operation Gatecrasher</b> (Sabotage ADVENT Monument)</td><td>Game start (after intro). Tutorial adds <i>Recover the ADVENT Power Converter</i> as a 2nd scripted op</td><td>No</td><td>Yes</td><td>4 soldiers kill 6 hostiles, plant X4 on the Elder statue</td><td>Opens the campaign / Avenger</td></tr><tr><td>2</td><td><b>ADVENT Blacksite Assault</b></td><td>Spokesman's Avatar-Project cutscene <b>+ research Resistance Communications + make contact with the Blacksite region</b> (no Facility-Lead shortcut here)</td><td>No</td><td>Yes</td><td>Recover the Blacksite Vial, EVAC the carrier</td><td><b>125 Supplies, −1 Avatar (−2 Legend), Blacksite Vial item.</b> Activates the <b>Doom Counter</b></td></tr><tr><td>3</td><td><b>ADVENT Forge Facility Assault</b></td><td>Complete the <b>Blacksite Vial</b> Shadow Project (needs Shadow Chamber) <b>+ contact the Forge region</b></td><td>No</td><td>Yes</td><td>Reach Clean Room, steal <b>ADVENT Stasis Suit</b>, carry to EVAC</td><td><b>Supplies, −3 Avatar, Recovered Stasis Suit item.</b> 20–30 days later → <b>UFO triggers Avenger Defense</b></td></tr><tr><td>4</td><td><b>Codex Data Coordinates Investigation</b></td><td>Complete the <b>Codex Brain</b> Shadow Project <b>+ contact the coordinate region</b></td><td>No</td><td>Yes</td><td>Reach the alien <b>Psi Gate</b>, kill all (Chryssalids + a Gatekeeper emerges)</td><td><b>Supplies, −3 Avatar, Psionic Gate item.</b> 20–30 days later → <b>UFO triggers Avenger Defense</b></td></tr><tr><td>5</td><td><b>ADVENT Network Tower Assault</b></td><td>Complete the <b>Avatar Autopsy</b> Shadow Project</td><td>No</td><td>Yes</td><td>Hack the Network Tower workstation. Spend <b>Intel</b> pre-mission for up to 4 squad bonuses; squad capped at 3 unless you buy the size bonus</td><td>No reward — leads straight to the finale</td></tr><tr><td>6</td><td><b>Alien Fortress Assault</b> (Operation Leviathan)</td><td>Immediately after the Network Tower. <b>Locks out all other Geoscape activity</b></td><td>No</td><td><b>No</b></td><td>Reach the Psi Gate hub, kill 3 Avatars, keep the Commander's Avatar alive</td><td><b>Win the game</b></td></tr></table>
+<p><b>Avenger Defense</b> (non-optional, <i>not</i> a story mission): triggers from the <b>Hunt XCOM</b> Dark Event UFO <b>or</b> 20–30 days after Forge <b>or</b> Codex-Coordinates (whichever finishes first). No reward; <b>failure = instant game over</b>. Doesn't start concealed, no timer; destroy the Disruptor and keep enemies off the ramp. Bradford feeds reinforcements every other turn; the <b>Defense Matrix</b> facility donates 4 recycled ADVENT Turrets.</p>
+<h4>1.3 Skulljack-driven mid-game beats</h4>
+<p>These aren't separate map types but gate the late story (see <code>tech-tree.md</code> Avatar spine):</p>
+<ul><li><b>Skulljack an ADVENT Officer</b> (carry a Skulljack, melee a stunned/standing Officer) →</li></ul>
+<p>spawns a <b>Codex</b> → kill it for the <b>Codex Brain</b> item → research opens Encryption / Shadow Chamber line.</p>
+<ul><li><b>Skulljack a Codex</b> (after <b>Encrypted Codex Data</b> research) → spawns the <b>Avatar</b> →</li></ul>
+<p><b>Neutralize Avatar</b>, a prereq of the <b>Avatar Autopsy</b>.</p>
+<h4>1.4 DLC missions (one-off, optional, persist on the Geoscape)</h4>
+<table><tr><th>Mission</th><th>DLC</th><th>Forced squadmate</th><th>Objective</th><th>Unlocks on success</th></tr><tr><td><b>Alien Nest Investigation</b> (Operation Regal Beast)</td><td>Alien Hunters <code>[AH]</code></td><td>Bradford (Colonel Ranger, Blademaster) — must survive</td><td>Kill/repel the <b>Viper King</b> in Vahlen's old facility, then clear Vipers</td><td>Begins <b>Alien Ruler</b> spawns; unlocks <b>Bolt Caster / Shadowkeeper / Hunter's Axe</b> upgrades + Supplies</td></tr><tr><td><b>Lost Towers Investigation</b> (Operation Last Gift)</td><td>Shen's Last Gift <code>[SLG]</code></td><td>Lily Shen (Colonel Specialist) + the SPARK — both must survive</td><td>Clear an abandoned ADVENT facility, activate the SPARK prototype, destroy <b>Julian</b></td><td>Rewards 1 <b>SPARK</b> + unlocks <b>SPARK production</b> in the Proving Ground + Supplies</td></tr></table>
+<p><i>(WotC's "Lost and Abandoned", Ambush, Recover ADVENT Crates, and the Chosen Avenger-Defense variant are out of scope.)</i></p>
+<h4>1.5 Mission grade (end-of-mission rating)</h4>
+<p>Flawless (no wounds) · Excellent (wounds, no deaths) · Good (1–2 lost) · Fair (½ squad lost) · Poor (failure or most of squad lost).</p></div></details>
+<details id="wiki-research"><summary>Research <span class="sec">Database</span></summary><div class="body"><p>Prerequisite <b>graph</b> is authoritative in <code>specs/tech-tree.md</code>. Below is the wiki's project list + what each unlocks. <code>(corpse)</code> = also needs that unit's corpse recovered.</p>
+<h4>2.1 Standard projects (Lab)</h4>
+<table><tr><th>Research</th><th>Requires</th><th>Key unlocks</th></tr><tr><td><b>Alien Biotech</b></td><td>Gatecrasher (start)</td><td>Gates <b>every autopsy</b>; <b>Advanced Warfare Center</b></td></tr><tr><td><b>Modular Weapons</b></td><td>Gatecrasher</td><td>Weapon upgrade slots; → <b>Magnetic Weapons</b></td></tr><tr><td><b>Magnetic Weapons</b></td><td>Modular Weapons</td><td>Mag Rifle / Shard Gun / Mag Pistol / Mag Cannon-line; → <b>Gauss Weapons</b></td></tr><tr><td><b>Gauss Weapons</b></td><td>Magnetic Weapons</td><td>Gauss Rifle (sniper), Mag Cannon; feeds <b>Elerium</b></td></tr><tr><td><b>Hybrid Materials</b></td><td>Gatecrasher</td><td>Nanoscale Vest; → <b>Plated Armor</b></td></tr><tr><td><b>Plated Armor</b></td><td>Hybrid Materials</td><td>Predator Armor + EXO/Spider suit projects; feeds <b>Elerium</b></td></tr><tr><td><b>Elerium</b></td><td><b>Gauss Weapons + Plated Armor</b></td><td>→ <b>Plasma Rifle</b>, <b>Powered Armor</b>, Elerium Conduit. <i>(WotC also needs ADVENT MEC Breakdown — not in vanilla)</i></td></tr><tr><td><b>Plasma Rifle</b></td><td>Elerium</td><td>Plasma Rifle/Pistol; → <b>Beam Cannon / Plasma Lance / Storm Gun</b></td></tr><tr><td>Beam Cannon / Plasma Lance / Storm Gun</td><td>Plasma Rifle</td><td>Top-tier cannon / sniper / shotgun</td></tr><tr><td><b>Powered Armor</b></td><td>Elerium</td><td>Warden Armor + WAR/Wraith suit projects</td></tr><tr><td><b>Resistance Communications</b></td><td>(early, via Guerrilla Ops)</td><td><b>Resistance Comms</b> facility, Make Contact, Blacksite region</td></tr><tr><td><b>Resistance Radio</b></td><td>Resistance Communications</td><td>Cheaper/faster contact &amp; comms range</td></tr><tr><td><b>Alien Encryption</b></td><td>(story item)</td><td><b>Shadow Chamber</b> facility</td></tr><tr><td><b>Psionics</b></td><td><b>Sectoid Autopsy</b></td><td><b>Psi Lab</b> facility (Psi Operatives)</td></tr><tr><td><b>Facility Lead</b></td><td>ADVENT Datapad (loot)</td><td>Reveals an Alien Facility for immediate assault</td></tr><tr><td>ADVENT Datapad Decryption / Alien Data Cache Decryption</td><td>loot items</td><td>Intel / Supplies / chance of Facility Lead</td></tr><tr><td><b>Experimental Weapons</b> <code>[AH]</code></td><td>Alien Hunters intro</td><td>Bolt Caster / Shadowkeeper / Hunter's Axe lines</td></tr></table>
+<h4>2.2 Shadow Chamber projects (built in the Shadow Chamber)</h4>
+<p>Pause all standard research while active. The Avatar spine:</p>
+<table><tr><th>Shadow Project</th><th>Requires (item from mission)</th><th>Unlocks / next</th></tr><tr><td><b>Blacksite Vial</b></td><td>Blacksite Vial (from Blacksite Assault)</td><td>→ <b>Forge Facility</b> mission available</td></tr><tr><td><b>Codex Brain</b></td><td>Codex Brain (kill a Skulljacked-Officer's Codex)</td><td>→ <b>Codex Data Coordinates</b> mission</td></tr><tr><td><b>Encrypted Codex Data</b></td><td>Codex Brain line</td><td>→ enables <b>Skulljack a Codex</b> → spawns Avatar</td></tr><tr><td><b>Recovered ADVENT Stasis Suit</b></td><td>ADVENT Stasis Suit (from Forge)</td><td>A prereq of Avatar Autopsy</td></tr><tr><td><b>Psionic Gate</b></td><td>Psi Gate (from Codex Coordinates)</td><td>A prereq of Avatar Autopsy</td></tr><tr><td><b>Avatar Autopsy</b></td><td><b>Neutralize Avatar + Psionic Gate + Recovered Stasis Suit</b></td><td>→ <b>Network Tower</b> → <b>Final Mission</b></td></tr></table>
+<h4>2.3 Autopsies (each ← Alien Biotech + the unit's corpse)</h4>
+<p>"Corpses for instant" = corpses banked to make the research instant, per difficulty (R/V/<b>C</b>/L — Commander is the 3rd value). WotC-only autopsies (Priest, Purifier, Spectre, The Lost) omitted.</p>
+<table><tr><th>Autopsy</th><th>Corpses for instant (R/V/<b>C</b>/L)</th><th>Item unlocked</th><th>Other unlock</th></tr><tr><td><b>ADVENT Officer</b></td><td>n/a</td><td>—</td><td><b>Proving Ground</b> + opens MEC/Shieldbearer/Stun Lancer/Trooper/Turret breakdowns</td></tr><tr><td><b>Sectoid</b></td><td>6/6/<b>6</b>/10</td><td>Mindshield</td><td><b>Psionics</b></td></tr><tr><td><b>Muton</b></td><td>5/6/<b>6</b>/9</td><td>Advanced Grenade Launcher</td><td>Plasma Grenade (project)</td></tr><tr><td><b>Viper</b></td><td>5/5/<b>5</b>/8</td><td>—</td><td>Battlefield Medicine</td></tr><tr><td><b>Faceless</b></td><td>3/4/<b>4</b>/7</td><td><b>Mimic Beacon</b></td><td>—</td></tr><tr><td><b>Berserker</b></td><td>6/6/<b>6</b>/9</td><td>Overdrive Serum</td><td>—</td></tr><tr><td><b>Archon</b></td><td>5/5/<b>5</b>/8</td><td>Fusion Blade</td><td>—</td></tr><tr><td><b>Gatekeeper</b></td><td>3/6/<b>6</b>/9</td><td><b>Alien Psi Amp</b></td><td>—</td></tr><tr><td><b>Andromedon</b></td><td>5/5/<b>5</b>/8</td><td>Proximity Mine</td><td>—</td></tr><tr><td><b>Chryssalid</b></td><td>15/15/<b>15</b>/20</td><td><b>Hellweave</b></td><td>—</td></tr><tr><td><b>Sectopod Breakdown</b></td><td>3/6/<b>6</b>/9</td><td><b>GREMLIN Mark III</b></td><td>—</td></tr><tr><td>ADVENT MEC Breakdown</td><td>3/4/<b>4</b>/7</td><td><b>GREMLIN Mark II</b></td><td><b>Bluescreen Protocol</b>; feeds Elerium (WotC only)</td></tr><tr><td>ADVENT Shieldbearer</td><td>4/4/<b>4</b>/7</td><td>—</td><td><b>Experimental Armor</b> (vests)</td></tr><tr><td>ADVENT Stun Lancer</td><td>4/6/<b>6</b>/9</td><td><b>Arc Blade</b></td><td>—</td></tr><tr><td>ADVENT Trooper</td><td>10/15/<b>15</b>/25</td><td><b>Battle Scanner</b></td><td>—</td></tr><tr><td>ADVENT Turret Breakdown</td><td>3/3/<b>3</b>/6</td><td>—</td><td><b>Defense Matrix</b></td></tr></table>
+<h4>Alien Hunters boss autopsies <code>[AH]</code> (instant; from the Ruler kills)</h4>
+<table><tr><th>Autopsy</th><th>Armor unlocked</th></tr><tr><td><b>Viper King Autopsy</b></td><td><b>Serpent Suit</b></td></tr><tr><td><b>Berserker Queen Autopsy</b></td><td><b>R.A.G.E. Suit</b></td></tr><tr><td><b>Archon King Autopsy</b></td><td><b>Icarus Armor</b></td></tr></table></div></details>
+<details id="wiki-facilities"><summary>Facilities (The Avenger) <span class="sec">Database</span></summary><div class="body"><p><b>Power note:</b> Power Relay <i>produces</i> power; everything else consumes it. Costs are <b>vanilla</b> Supplies (the wiki lists <code>vanilla (WotC)</code>; WotC values dropped). Only <b>Resistance Comms</b> and <b>Power Relay</b> may be built more than once. Upgrades are instant (no build time).</p>
+<h4>3.1 Static facilities (pre-built, can't be removed)</h4>
+<p>Bridge · Research · Engineering · Armory · Living Quarters · Bar/Memorial · Commander's Quarters.</p>
+<h4>3.2 Buildable facilities (12 clearable rooms: 4 rows × 3 cols)</h4>
+<table><tr><th>Facility</th><th>Cost (Supplies)</th><th>Power</th><th>Upkeep/mo</th><th>Build time</th><th>Research prereq</th><th>Purpose</th></tr><tr><td><b>Guerrilla Tactics School</b></td><td>85</td><td>3</td><td>25</td><td>14 d</td><td>—</td><td>Squad Size I &amp; II, class training, Equip PCS</td></tr><tr><td><b>Proving Ground</b></td><td>100</td><td>3</td><td>25</td><td>14 d</td><td><b>ADVENT Officer Autopsy</b></td><td>Experimental ammo/grenades/armor, Skulljack, suits, SPARKs</td></tr><tr><td><b>Power Relay</b></td><td>80</td><td>— (produces)</td><td>10</td><td>12 d</td><td>—</td><td>+power; Power/Elerium Conduit on exposed coils</td></tr><tr><td><b>Resistance Comms</b></td><td>110</td><td>3</td><td>25</td><td>16 d</td><td><b>Resistance Communications</b></td><td>+contact capacity (build multiples)</td></tr><tr><td><b>Advanced Warfare Center</b></td><td>80</td><td>3</td><td>35</td><td>21 d</td><td><b>Alien Biotech</b></td><td>Heal wounded faster; random bonus ability per soldier <i>(removed in WotC)</i></td></tr><tr><td><b>Laboratory</b></td><td>150</td><td>3</td><td>35</td><td>20 d</td><td>—</td><td>+research speed</td></tr><tr><td><b>Workshop</b></td><td>250</td><td>3</td><td>35</td><td>20 d</td><td>—</td><td>Gremlin engineers staff adjacent facilities</td></tr><tr><td><b>Defense Matrix</b></td><td>75</td><td>2</td><td>10</td><td>14 d</td><td><b>Defense Matrix</b> (← Turret Breakdown)</td><td>Turrets for Avenger Defense</td></tr><tr><td><b>Psi Lab</b></td><td>175</td><td>5</td><td>55</td><td>21 d</td><td><b>Psionics</b></td><td>Train Psi Operatives</td></tr><tr><td><b>Shadow Chamber</b></td><td>125</td><td>5</td><td>30</td><td>14 d</td><td><b>Alien Encryption</b></td><td>Hosts Shadow Projects (Avatar spine)</td></tr></table>
+<p><i>(WotC-only facilities — Resistance Ring, Training Center, Infirmary — excluded.)</i></p>
+<h4>3.3 Proving Ground projects (built once Proving Ground exists)</h4>
+<table><tr><th>Project</th><th>Result</th></tr><tr><td><b>Experimental Ammo</b></td><td>Random: AP / Dragon / Talon / Tracer / Venom Rounds</td></tr><tr><td><b>Experimental Grenade</b></td><td>Random: Acid / Gas / Incendiary Grenade (→ Bombs after <b>Advanced Explosives</b>)</td></tr><tr><td><b>Experimental Armor</b></td><td>Random: Hazmat / Plated / Stasis <b>Vest</b> (needs Shieldbearer Autopsy)</td></tr><tr><td><b>Experimental Heavy Weapon</b></td><td>Random: Flamethrower or Shredder Gun (unlocked by EXO Suit project)</td></tr><tr><td><b>Experimental Powered Weapon</b></td><td>Random: Blaster Launcher / Hellfire Projector / Plasma Blaster / Shredstorm Cannon (unlocked by WAR Suit project)</td></tr><tr><td><b>E.X.O. Suit</b> / <b>Spider Suit</b></td><td>Heavy / Light suit (needs <b>Plated Armor</b>)</td></tr><tr><td><b>W.A.R. Suit</b> / <b>Wraith Suit</b></td><td>Heavy / Light suit (needs <b>Powered Armor</b>)</td></tr><tr><td>Serpent / R.A.G.E. / Icarus Armor <code>[AH]</code></td><td>From the matching boss autopsy</td></tr><tr><td><b>Battlefield Medicine</b></td><td>All Medikits → Nanomedikits (needs Viper Autopsy)</td></tr><tr><td><b>Bluescreen Protocol</b></td><td>Unlocks Bluescreen Rounds + EMP Grenades (needs MEC Breakdown)</td></tr><tr><td><b>Skulljack</b> → <b>Skullmining</b></td><td>Builds/upgrades the Skulljack (+25 Hack, enables skullmining)</td></tr><tr><td><b>Plasma Grenade</b></td><td>All Frag Grenades → Plasma Grenades (needs Muton Autopsy)</td></tr><tr><td><b>Advanced Explosives</b></td><td>Upgrades grenades → Bombs</td></tr><tr><td><b>Mechanized Warfare</b> <code>[SLG]</code></td><td>Unlocks building SPARKs (after Lost Towers mission)</td></tr></table></div></details>
+<details id="wiki-armor"><summary>Armor <span class="sec">Database</span></summary><div class="body"><p><code>+</code> values are bonuses over Kevlar. Suits marked "1 per project" are built individually in the Proving Ground; Predator/Warden are squad-wide Engineering purchases. (Resistance/SPARK armor + WotC excluded except SPARK below.)</p>
+<table><tr><th>Armor</th><th>Class</th><th>+HP</th><th>+Armor</th><th>+Mob</th><th>+Dodge</th><th>Util slots</th><th>Heavy wpn</th><th>Notes</th><th>Research / source</th></tr><tr><td><b>Kevlar Armor</b></td><td>Basic</td><td>—</td><td>—</td><td>—</td><td>—</td><td>1</td><td>—</td><td>Starting armor</td><td>—</td></tr><tr><td><b>Predator Armor</b></td><td>Medium</td><td>+4</td><td>—</td><td>—</td><td>—</td><td>2</td><td>—</td><td>Squad-wide</td><td><b>Plated Armor</b></td></tr><tr><td><b>Warden Armor</b></td><td>Medium</td><td>+6</td><td>+1</td><td>—</td><td>—</td><td>2</td><td>—</td><td>Squad-wide</td><td><b>Powered Armor</b></td></tr><tr><td><b>Spider Suit</b></td><td>Light</td><td>+4</td><td>—</td><td>+1</td><td>+20</td><td>1</td><td>—</td><td>Grapple</td><td>Spider Suit Project (← Plated Armor)</td></tr><tr><td><b>Wraith Suit</b></td><td>Light</td><td>+6</td><td>—</td><td>+2</td><td>+25</td><td>1</td><td>—</td><td>Grapple + <b>Wraith</b> (phase through)</td><td>Wraith Suit Project (← Powered Armor)</td></tr><tr><td><b>E.X.O. Suit</b></td><td>Heavy</td><td>+5</td><td>+1</td><td>—</td><td>—</td><td>1</td><td>✔</td><td>Mounts a Heavy Weapon</td><td>EXO Suit Project (← Plated Armor)</td></tr><tr><td><b>W.A.R. Suit</b></td><td>Heavy</td><td>+6</td><td>+2</td><td>—</td><td>—</td><td>1</td><td>✔</td><td><b>Shieldwall</b></td><td>WAR Suit Project (← Powered Armor)</td></tr><tr><td><b>Serpent Suit</b> <code>[AH]</code></td><td>Light</td><td>+5</td><td>—</td><td>+1</td><td>+35</td><td>1</td><td>—</td><td>Grapple, Frostbite, panics Vipers</td><td><b>Viper King Autopsy</b></td></tr><tr><td><b>Icarus Armor</b> <code>[AH]</code></td><td>Medium</td><td>+7</td><td>+1</td><td>+1</td><td>—</td><td>2</td><td>—</td><td>Vault, Icarus Jump, panics Archons</td><td><b>Archon King Autopsy</b></td></tr><tr><td><b>R.A.G.E. Suit</b> <code>[AH]</code></td><td>Heavy</td><td>+6</td><td>+1</td><td>+1</td><td>—</td><td>1</td><td>✔</td><td>Rage Strike, panics Mutons/Berserkers</td><td><b>Berserker Queen Autopsy</b></td></tr></table>
+<p><i>(Serpent/R.A.G.E. upgrade to "Serpent Armor / R.A.G.E. Armor" — +HP/Armor — once <b>Powered Armor</b> is researched.)</i></p>
+<h4>Vests (Experimental Armor / Proving Ground, utility-slot items)</h4>
+<p>Nanoscale Vest (← Hybrid Materials) · Plated Vest · Hazmat Vest · Stasis Vest · Hellweave (← Chryssalid Autopsy).</p>
+<h4>SPARK Armor <code>[SLG]</code> (SPARK units only, no utility slots)</h4>
+<table><tr><th>Tier</th><th>+HP</th><th>+Armor</th><th>+Mob</th></tr><tr><td>SPARK Armor</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Reinforced Frame</td><td>+3</td><td>+1</td><td>+1</td></tr><tr><td>Anodized Chassis</td><td>+5</td><td>+2</td><td>+2</td></tr></table></div></details>
+<details id="wiki-weapons"><summary>Weapons <span class="sec">Database</span></summary><div class="body"><p>Three tech tiers everywhere: <b>Conventional → Magnetic/Gauss → Beam/Plasma</b>. Tiers gate on the research in §2.1. Ranges/clips constant within a class. WotC tiers (Disruptor, Arashi, Darklance, Darkclaw, Katana), Tactical Legacy weapons, and the WotC hero classes (Reaper/Skirmisher/Templar) are excluded.</p>
+<h4>5.1 Primary weapons</h4>
+<p><b>Assault Rifles</b> — Rookie, Specialist, Psi Op, Ranger · clip 4 · Medium range</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th><th>Mod slots</th></tr><tr><td>Assault Rifle</td><td>3–5</td><td>+2</td><td>1</td></tr><tr><td>Magnetic Rifle</td><td>5–7</td><td>+3</td><td>2</td></tr><tr><td>Plasma Rifle</td><td>7–9</td><td>+4</td><td>2</td></tr></table>
+<p><b>Shotguns</b> — Ranger only · clip 4 · Short range</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th><th>Crit %</th><th>Mod slots</th></tr><tr><td>Shotgun</td><td>4–6</td><td>+3</td><td>+10%</td><td>1</td></tr><tr><td>Shard Gun</td><td>6–8</td><td>+4</td><td>+15%</td><td>2</td></tr><tr><td>Storm Gun</td><td>8–10</td><td>+5</td><td>+20%</td><td>2</td></tr></table>
+<p><b>Cannons</b> — Grenadier only · clip 3 · Medium range</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th><th>Shred*</th><th>Mod slots</th></tr><tr><td>Cannon</td><td>4–6</td><td>+2</td><td>1</td><td>1</td></tr><tr><td>Mag Cannon</td><td>6–8</td><td>+3</td><td>2</td><td>2</td></tr><tr><td>Beam Cannon</td><td>8–10</td><td>+4</td><td>3</td><td>2</td></tr></table>
+<p>* with Shredder ability.</p>
+<p><b>Sniper Rifles</b> — Sharpshooter only · clip 3 · Long range · +10% crit · 2 AP to fire</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th><th>Mod slots</th></tr><tr><td>Sniper Rifle</td><td>4–6</td><td>+2</td><td>1</td></tr><tr><td>Gauss Rifle</td><td>6–8</td><td>+3</td><td>2</td></tr><tr><td>Plasma Lance</td><td>8–10</td><td>+4</td><td>2</td></tr></table>
+<p><b>Bolt Casters</b> <code>[AH]</code> — Rookie/Specialist/Psi Op/Ranger · clip 1, reload each shot · no mod slots · +15 aim · ignores Dodge · 20% Stun (50% vs Rulers)</p>
+<table><tr><th>Tier</th><th>Damage</th></tr><tr><td>Bolt Caster</td><td>6–8</td></tr><tr><td>Magnetic Bolt Caster</td><td>8–10</td></tr><tr><td>Plasma Bolt Caster</td><td>10–12</td></tr></table>
+<p><b>Heavy Autocannons</b> <code>[SLG]</code> — SPARK only · clip 3 · Medium range (mirror Grenadier cannons)</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Shred</th></tr><tr><td>Heavy Autocannon</td><td>4–6</td><td>1</td></tr><tr><td>Helix Rail-Cannon</td><td>6–8</td><td>2</td></tr><tr><td>Elerium Phase-Cannon</td><td>8–10</td><td>3</td></tr></table>
+<h4>5.2 Secondary weapons</h4>
+<p><b>Pistols</b> — Sharpshooter · no reload · Short-optimal</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th></tr><tr><td>Pistol</td><td>2–3</td><td>+1</td></tr><tr><td>Mag Pistol</td><td>3–4</td><td>+1</td></tr><tr><td>Beam Pistol</td><td>3–6</td><td>+2</td></tr></table>
+<p><b>Shadowkeeper Pistols</b> <code>[AH]</code> — Sharpshooter · +10 aim, +15% crit, grants <b>Shadowfall</b> (guaranteed hit; re-conceal on kill). One per playthrough.</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th></tr><tr><td>Shadowkeeper</td><td>2–3</td><td>+1</td></tr><tr><td>Enhanced Shadowkeeper</td><td>3–4</td><td>+1</td></tr><tr><td>Powered Shadowkeeper</td><td>3–6</td><td>+2</td></tr></table>
+<p><b>Swords</b> — Ranger · Melee · +20 aim</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th><th>Crit %</th><th>Effect</th></tr><tr><td>Sword</td><td>3–5</td><td>+2</td><td>+10%</td><td>—</td></tr><tr><td>Arc Blade</td><td>4–6</td><td>+2</td><td>+15%</td><td>25% stun/disorient</td></tr><tr><td>Fusion Blade</td><td>5–7</td><td>+3</td><td>+20%</td><td>100% set Burning</td></tr></table>
+<p><b>Axes</b> <code>[AH]</code> — Ranger · Melee · +20 aim · throwable once/mission (free action). One set per playthrough.</p>
+<table><tr><th>Tier</th><th>Damage</th><th>Crit dmg</th><th>Crit %</th><th>Effect</th></tr><tr><td>Hunter's Axe</td><td>4–6</td><td>+2</td><td>+10%</td><td>—</td></tr><tr><td>Ionic Axe</td><td>5–7</td><td>+2</td><td>+15%</td><td>25% stun/disorient</td></tr><tr><td>Fusion Axe</td><td>6–8</td><td>+3</td><td>+20%</td><td>100% set Burning</td></tr></table>
+<p><b>Grenade Launchers</b> — Grenadier · extends range/radius of thrown grenades</p>
+<table><tr><th>Tier</th><th>+Range</th><th>+Radius</th></tr><tr><td>Grenade Launcher</td><td>+4</td><td>+1</td></tr><tr><td>Advanced Grenade Launcher</td><td>+5</td><td>+2</td></tr></table>
+<p><b>Psi Amps</b> — Psi Operative</p>
+<table><tr><th>Tier</th><th>+Psi Offense</th></tr><tr><td>Psi Amp</td><td>+0</td></tr><tr><td>Advanced Psi Amp</td><td>+20</td></tr><tr><td>Alien Psi Amp</td><td>+40</td></tr></table>
+<p><b>GREMLINs</b> — Specialist · drives Aid/Medical/Combat/Scan/Capacitor protocols + Hack</p>
+<table><tr><th>Tier</th><th>Hack</th><th>Combat Protocol (org/rob)</th><th>Capacitor (org/rob)</th></tr><tr><td>GREMLIN</td><td>+0</td><td>2 / 4–5</td><td>3–6 / …</td></tr><tr><td>GREMLIN Mark II</td><td>+20</td><td>4 / 7–8</td><td>5–8 / …</td></tr><tr><td>GREMLIN Mark III</td><td>+40</td><td>6 / 10–11</td><td>7–10 / …</td></tr></table>
+<p><b>SPARK BITs</b> <code>[SLG]</code> — SPARK · Bombard/Nova + Hack (Nova ignores armor)</p>
+<table><tr><th>Tier</th><th>Bombard</th><th>Nova</th><th>Hack</th></tr><tr><td>SPARK BIT</td><td>3–4</td><td>6</td><td>+0</td></tr><tr><td>Plated BIT</td><td>5–6</td><td>6</td><td>+10</td></tr><tr><td>Powered BIT</td><td>7–8</td><td>6</td><td>+20</td></tr></table>
+<h4>5.3 Heavy Weapons (mounted on Heavy Armor / EXO·WAR·SPARK)</h4>
+<table><tr><th>Weapon</th><th>Damage</th><th>Crit dmg</th><th>Shred</th><th>Radius</th><th>Range</th><th>Notes</th><th>Source</th></tr><tr><td>Rocket Launcher</td><td>4–7</td><td>+2</td><td>2</td><td>4</td><td>27</td><td>Needs direct path</td><td>EXO/WAR base</td></tr><tr><td>Flamethrower</td><td>4–7</td><td>+2</td><td>—</td><td>7</td><td>25</td><td>Biological only, 20° cone, Burning + Panic</td><td>Exp. Heavy Weapon</td></tr><tr><td>Hellfire Projector</td><td>6–9</td><td>+2</td><td>—</td><td>7</td><td>25</td><td>″ (upgraded)</td><td>Exp. Powered Weapon</td></tr><tr><td>Shredder Gun</td><td>6–9</td><td>+1</td><td>2</td><td>12</td><td>25</td><td>Ignores ½ armor, 20° cone</td><td>Exp. Heavy Weapon</td></tr><tr><td>Shredstorm Cannon</td><td>8–11</td><td>+2</td><td>4</td><td>12</td><td>25</td><td>″ (upgraded)</td><td>Exp. Powered Weapon</td></tr><tr><td>Plasma Blaster</td><td>7–10</td><td>+3</td><td>—</td><td>12</td><td>25</td><td>Ignores 4 armor, straight line</td><td>Exp. Powered Weapon</td></tr><tr><td>Blaster Launcher</td><td>7–10</td><td>+2</td><td>3</td><td>6</td><td>45</td><td>No LoS needed, paths around corners</td><td>Exp. Powered Weapon</td></tr></table>
+<h4>5.4 Skulljack (hacking tool)</h4>
+<p>Equipping a Skulljack with <b>Skullmining</b> researched gives <b>+25 Hack</b>. GREMLIN/BIT hack bonuses do <b>not</b> apply to Skulljack/Skullmine attempts.</p></div></details></div>
+<div class="wiki-foot"><h4>Provenance / regenerate</h4>
+<p>All tables transcribed from <code>wiki_raw/*.txt</code> (MediaWiki API dumps, 2026-06-12). To refresh: re-run the API fetch in PowerShell (<code>api.php?action=parse&amp;page=&lt;Title&gt;&amp;prop=wikitext</code>) with a browser User-Agent — the direct <code>/wiki/</code> URLs 403. Prereq conflicts defer to <code>specs/tech-tree.md</code>.</p></div>
 </main>
 
 <script>
@@ -494,6 +604,50 @@
     });
   }
   try{ linkify(document.querySelector('main')); }catch(err){ console.warn('linkify failed', err); }
+
+  // ---- Database / Wiki live search ----
+  const wq=document.getElementById('wikiq');
+  const wroot=document.getElementById('wikiroot');
+  const wcount=document.getElementById('wikicount');
+  if(wq && wroot){
+    const wdetails=[...wroot.querySelectorAll('details')];
+    function resetWiki(){
+      wroot.querySelectorAll('.nomatch').forEach(e=>e.classList.remove('nomatch'));
+      wdetails.forEach(d=>{ d.style.display=''; d.open=false; });
+      wcount.textContent='';
+    }
+    function runWikiSearch(){
+      const q=wq.value.trim().toLowerCase();
+      if(!q){ resetWiki(); return; }
+      let total=0;
+      wdetails.forEach(d=>{
+        let hits=0;
+        d.querySelectorAll('table').forEach(tb=>{
+          [...tb.rows].forEach((r,i)=>{ if(i===0) return;
+            const m=r.textContent.toLowerCase().includes(q);
+            r.classList.toggle('nomatch', !m); if(m) hits++; });
+        });
+        d.querySelectorAll('li').forEach(li=>{
+          const m=li.textContent.toLowerCase().includes(q);
+          li.classList.toggle('nomatch', !m); if(m) hits++; });
+        // also let the summary text itself be a match (keeps the section visible)
+        const titleHit=d.querySelector('summary')?.textContent.toLowerCase().includes(q);
+        const show = hits>0 || titleHit;
+        d.style.display = show ? '' : 'none';
+        d.open = show;
+        total += hits;
+      });
+      wcount.textContent = total + ' row' + (total===1?'':'s') + ' across ' +
+        wdetails.filter(d=>d.style.display!=='none').length + ' section(s)';
+    }
+    wq.addEventListener('input', runWikiSearch);
+    // deep-link: #wiki-q=term focuses + runs a search
+    function readWikiHash(){
+      const m=/wiki-q=([^&]+)/.exec(location.hash);
+      if(m){ wq.value=decodeURIComponent(m[1]); runWikiSearch(); wq.focus(); }
+    }
+    window.addEventListener('hashchange', readWikiHash); readWikiHash();
+  }
 </script>
 </body>
 </html>

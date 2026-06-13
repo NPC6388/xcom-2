@@ -72,3 +72,48 @@ specs/  00-backbone.md · tech-tree.md · {early,mid,late}-{research,facilities,
 
 ### This session's final task
 - **Publish ("push live")** + this session log. Publishing destination/visibility pending user choice.
+
+## Session 2 — 2026-06-12 — Full wiki database pass
+
+### Goal
+User: "go through the [Fandom] wiki and build a table of all the missions and their pre-reqs …
+same for tech, facilities, armor, weapons, etc." — a complete reference DB for recommendations.
+
+### Key unblock — Fandom 403 bypass
+Session 1 had marked Fandom inaccessible (403). Found the workaround: the direct `/wiki/*`
+URLs block bots (WebFetch *and* browser-UA `Invoke-WebRequest`), **but the MediaWiki API
+`api.php?action=parse&prop=wikitext` returns clean wikitext** with a browser User-Agent.
+Used `list=search` to resolve exact page titles, then bulk-pulled wikitext to `wiki_raw/`.
+
+### What was built
+- **`specs/database.md`** — the deliverable. Six sections, all prereqs/triggers/stats:
+  1. **Missions** — generic (Guerrilla Ops, Council, Supply Raid, Alien Facility, Retaliation)
+     + the 6-step **Key/story spine** (Gatecrasher → Blacksite → Forge → Codex Coords →
+     Network Tower → Final), each with its unlock prereq, timer, concealment, rewards; plus
+     Avenger Defense + the two DLC ops.
+  2. **Research** — standard tree, Shadow Chamber projects (Avatar spine), full **autopsy
+     table** (Commander corpse-counts + items/unlocks).
+  3. **Facilities** — cost/power/upkeep/time/research-prereq for all 10 buildables + PG projects.
+  4/5. **Armor & Weapons** — every tier across all 5 classes + Alien Hunters/SLG gear.
+- Scope filter enforced: base + Alien Hunters + Shen's Last Gift kept; **WotC excluded** and flagged.
+- Raw wikitext cached in `wiki_raw/` (provenance). `sources.md` updated with the API method.
+
+### Relationship to existing files
+`database.md` complements `specs/tech-tree.md` (the authoritative SVG-parsed prereq *graph*) —
+the DB adds quantitative data the graph lacks and the entire mission layer. Prereq conflicts
+defer to `tech-tree.md`.
+
+### Surfaced into the guide as a searchable wiki
+Per user follow-up ("surface the database inside the guide, basically a wiki"):
+- `build_guide.py` now fills a second placeholder **`<!--WIKI-->`** in `guide.src.html`. Added a
+  small markdown→HTML converter (headings, GFM pipe tables, bold/italic, code, links,
+  `[[wikilinks]]`, lists) that compiles **`specs/database.md`** into themed `<details>` cells —
+  one per top-level section (Missions / Research / Facilities / Armor / Weapons). Single source
+  of truth: edit the markdown, `python build_guide.py`, the wiki regenerates.
+- New **Database · Wiki** section in the guide with a **sticky live search** (`#wikiq`): filters
+  rows across all 26 tables + list items, auto-opens matching sections, shows a hit count, and
+  supports deep links (`#wiki-q=elerium`). Tech names inside the wiki remain **clickable into the
+  tech tree** (existing `linkify` runs over it). Nav got a Database·Wiki group.
+- Build output: `166 nodes, 168 edges; wiki: 5 cells, 26 tables`. Verified valid strict UTF-8
+  (en-dashes/arrows intact — the `�` seen in console prints is just cp1252 stdout, not the file),
+  tags balanced, all JS hooks present. README updated.

@@ -1,0 +1,29 @@
+﻿{{Infobox mission
+|title1=
+|image1=Forge Facility suit.png
+|caption1=XCOM recovers an [[Recovered ADVENT Stasis Suit|ADVENT stasis suit]] from the Forge Facility
+|game=[[XCOM 2]]
+|type=Facility assault
+|timed=No
+|starts_in_concealment=Yes
+|key_plot_point=Yes
+}}
+'''{{PAGENAME}}''' is a critical plot mission in [[XCOM 2]]. 
+
+==Background==
+After the [[ADVENT Blacksite Assault|assault on the ADVENT Blacksite]] and the discovery of a facility dedicated solely to the processing of thousands of humans into their base genetic material, the Resistance has recovered a significant amount of information that allowed it to pinpoint another, altogether different facility: The so-called Forge. Assaulting this facility could provide the information necessary to understand the scope of the [[Avatar Project]] and acquire critical information about it.
+
+==Mission==
+The mission plays out like a more or less standard facility assault. The [[XCOM]] team starts in concealment and has to negotiate the outer security layers before reaching the ADVENT Forge Facility itself, demarcated by a bridge over a small creek. Upon entering the facility proper, a short cutscene will trigger, showing the growth pods open and revealing the [[ADVENT]] hybrids maturing inside (at the stage where troopers are outfitted with uniforms and combat webbing already). 
+
+At this point, the objective switches to accessing the clean room inside the facility and accessing the stasis tube within, to steal the prototype and escape the facility. A fixed EVAC point will appear to the side of the facility - the route can be shortened with creative use of explosives to make an improvised exit. This is doubly important due to one of the soldiers carrying the package out. Two dropships will appear delivering reinforcements, but they should hardly be a problem. 
+
+==Outcome==
+The rewards for this mission are fixed: 
+* {{Supplies|}}
+* reduction to the ''Avatar Project'' by 3
+* recovered [[ADVENT Stasis Suit]], a key item for [[Recovered ADVENT Stasis Suit]]
+
+20 to 30 days after this mission is completed, a UFO will spawn and eventually catch the [[Avenger (XCOM 2)|Avenger]], triggering the [[Avenger Defense]] mission. This is one of two missions that will trigger the UFO... 
+
+[[Category:Missions (XCOM 2)]]

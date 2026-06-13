@@ -1,0 +1,1079 @@
+﻿'''Weapons''' take many forms in ''[[XCOM 2]]''. The [[ADVENT]]-backed [[Aliens (XCOM 2)|alien]] in twenty year occupation of Earth has helped introduce more advanced small arms technology to the planet, quite altering the technological landscape from that of the time of the foundation of [[XCOM (Organization)|XCOM]].
+
+Note: if a weapon class or type doesn't have a Crit Chance value stated, it means that the weapon doesn't contribute to the overall Crit Chance (i.e. it adds 0%).
+
+==Weapons Stats vs Armor==
+===Armor Shredding===
+'''Shredding''' is the ability to permanently destroy a target's '''Armor''', mitigating or eliminating its damage reduction capabilities. Grenades, Heavy Weapons, SPARKS and the [[Grenadier Class (XCOM 2)|Grenadier]]'s Shredder ability all have the potential to inflict such vulnerabilties.
+
+===Armor Piercing===
+'''Piercing''' damage is armor-ignoring damage, also referred to as nullification, and is frequently featured on [[Psi Operative (XCOM 2)|Psionic]] abilities vs Organics and those of the [[Specialist Class (XCOM 2)|Specialist]] which target Robotic units. Any such ability will ignore a specified amount or even completely nullify the target's '''Armor''' for a single attack.
+
+==XCOM Weaponry==
+As an underground resistance movement, XCOM has to use (at least initially) conventional firearms, most likely salvaged from the armories of now-defunct militaries of Earth's nation-states.
+
+Such weapons include [[Assault_Rifle_(XCOM_2)|fully automatic assault rifles]], available for XCOM [[Rookie (rank) (XCOM 2)|Rookies]] and later for fighters of [[Ranger_Class_(XCOM_2)|Ranger]], [[Specialist_Class_(XCOM_2)|Specialist]] and [[Psi_Operative_(XCOM_2)|Psi-Operative]] classes, while XCOM Rangers also have access to the [[Shotgun_(XCOM_2)|compact pump-action shotgun]], deadly in the CQB combat. XCOM [[Sharpshooter_Class_(XCOM_2)|Sharpshooters]] utilize a powerful bolt-action [[Sniper Rifle (XCOM 2)|sniper rifle]] as a primary weapon, and a [[Pistol_(XCOM_2)|high-caliber revolver handgun]] as their backup firearm. XCOM [[Grenadier_Class_(XCOM_2)|Grenadiers]] arm themselves with the [[Cannon|man-portable rotary cannon]] and the [[Grenade_Launcher_(XCOM_2)|revolver-action grenade launcher]] for lobbing fragmentation [[Grenades (XCOM 2)|grenades]] at their enemies.
+
+As the research and development aboard the [[Avenger (XCOM 2)|Avenger]], XCOM's Mobile HQ, progresses, Magnetic/Gauss weaponry and, finally, Plasma weaponry becomes available for the XCOM operatives in the field.
+
+XCOM Weaponry can be divided into [[Primary Weapons]] and [[Secondary Weapons]]. The main differences between primary and secondary weapons are that primary weapons can be extensively modded with [[Weapon Upgrades (XCOM 2)|weapon upgrades]] (once [[Modular Weapons]] is researched) but have limited ammo and need to be reloaded periodically in battle (note: [[Burning]] status effect disables the option to reload). Secondary weapons do not benefit from weapon mods but do not require reloading either. Which weapons a soldier can equip as primary or secondary weapons is dependent on their Soldier Class.
+
+Additionally, soldiers can gain access to Heavy Weapons which are neither primary nor secondary weapons but can only mounted on Heavy Armors. Heavy Weapons are devastating AOE options with a very limited ammo count, so be careful not to squander them needlessly.
+
+For weapons variants added by [[XCOM 2: War of the Chosen – Tactical Legacy Pack]] DLC, see [[Central's Archives#Weapons|this page]].
+
+Notes:
+*Experimental ammo (e.g. Dragon Rounds, Talon Rounds etc) affect both primary weapons and Pistol-type secondary weapons.
+*PCS: Perception (and its Advanced/Superior versions) affect both primary weapons, Sword- and Pistol-type secondary weapons.
+
+===Primary Weapons===
+All primary weapons receive a second mod slot at the second tier. A third slot is only possible by obtaining the '''Armed to the Teeth''' [[Continent Bonus (XCOM 2)|Continent Bonus]]. (In the [[XCOM 2: War of the Chosen|War of the Chosen]] expansion, certain [[Breakthroughs and Inspirations|Breakthroughs]] can unlock an additional upgrade slot for one specific class of weapons.)
+
+Firing the primary weapon ends the unit's [[Turn (XCOM 2)|turn]], unless special abilities are acquired as permitted per class.
+
+====Assault Rifles====
+<section begin="Assault Rifles" />
+Assault Rifles are a primary weapon type accessible to [[Rookie (rank) (XCOM 2)|Rookies]], [[Specialist Class (XCOM 2)|Specialists]], [[Psi Operative (XCOM 2)|Psi-Operatives]], and [[Ranger Class (XCOM 2)|Rangers]].
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="8" |Assault Rifles
+|-
+!Name
+! class=unsortable |DLC
+!Damage
+!Crit DMG
+! class=unsortable |Clip Size
+! class=unsortable |Range
+!Mod Slots
+! class=unsortable |Additional effect
+|-
+| style="text-align: left;" |[[Assault Rifle (XCOM 2)|Assault Rifle]]
+| rowspan="3" |
+|3–5
+| +2
+| rowspan="4" |4
+| rowspan="4" |Medium
+|1
+|
+|-
+| style="text-align: left;" |[[Magnetic Rifle]]
+|5–7
+| +3
+|2
+|
+|-
+| style="text-align: left;" |[[Plasma Rifle (XCOM 2)|Plasma Rifle]]
+|7–9
+| +4<br />(+3 WotC)
+|2
+|
+|-
+| style="text-align: left;" |[[Disruptor Rifle]]
+|[[XCOM 2: War of the Chosen|WotC]]
+|7–9
+| +4
+| style="text-align: left;" |&nbsp;Superior Scope<br />&nbsp;Superior Magazine<br />&nbsp;Superior Hair Trigger<br />&nbsp;Superior Stock
+| style="text-align: left;" |&nbsp;Guaranteed Critical hits on Psionic enemies
+|}
+<section end="Assault Rifles" />
+=====<h4>Bolt Casters</h4>=====
+<section begin="Bolt Casters" />
+'''Alien Hunters DLC content'''. Bolt Casters are a primary weapon type accessible to [[Rookie (rank) (XCOM 2)|Rookies]], [[Specialist Class (XCOM 2)|Specialists]], [[Psi Operative (XCOM 2)|Psi-Operatives]], and [[Ranger Class (XCOM 2)|Rangers]]. Bolt Casters count as Assault Rifles for [[Breakthroughs and Inspirations|Research Breakthroughs]]. Each attack has a chance to stun the target, and cannot be dodged. Genetically-empowered aliens are highly susceptible to being stunned. Launches a single, high-damaging projectile, but must be reloaded after each use. Bolt Casters do not have mod slots and cannot have [[Weapon Upgrades (XCOM 2)|Weapon Upgrades]] installed.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="6" |Bolt Casters
+|-
+!Name
+!Damage
+! class=unsortable |Clip Size
+! class=unsortable |Range
+! class=unsortable |Aim
+! class=unsortable |Additional effects
+|-
+| style="text-align: left;" |[[Bolt Caster]]
+|6–8
+| rowspan="3" |1
+| rowspan="3" |Medium
+| rowspan="3" |+15%
+| rowspan="3" style="text-align: left;" |[[Stunned|Stun]]: 20% (50% against Alien Rulers)<br />Ignores [[Dodge (XCOM 2)|Dodge]]
+|-
+| style="text-align: left;" |[[Magnetic Bolt Caster]]
+|8–10
+|-
+| style="text-align: left;" |[[Plasma Bolt Caster]]
+|10–12
+|}
+<section end="Bolt Casters" />
+====Shotguns====
+<section begin="Shotguns" />
+Shotguns are a primary weapon type restricted to [[Ranger Class (XCOM 2)|Rangers]]. Shotguns are extremely effective at close range but their accuracy drops off quickly at long range.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="8" |Shotguns
+|-
+!Name
+! class=unsortable |DLC
+!Damage
+!Crit DMG
+!Crit Chance
+! class=unsortable |Clip Size
+! class=unsortable |Range
+!Mod Slots
+|-
+| style="text-align: left;" |[[Shotgun (XCOM 2)|Shotgun]]
+| rowspan="3" |
+|4–6
+| +3
+| +10%
+| rowspan="4" |4
+| rowspan="4" |Short*
+|1
+|-
+| style="text-align: left;" |[[Shard Gun]]
+|6–8
+| +4
+| +15%<br />(10% WotC)
+|2
+|-
+| style="text-align: left;" |[[Storm Gun]]
+|8–10
+| +5<br />(+4 WotC)
+| +20%<br />(10% WotC)
+|2
+|-
+| style="text-align: left;" |[[Arashi]]
+|[[XCOM 2: War of the Chosen|WotC]]
+|8–10
+| +5
+| +10%
+| style="text-align: left;" |&nbsp;Superior Laser Sight<br />&nbsp;Superior Magazine<br />&nbsp;Superior Hair Trigger<br />&nbsp;Superior Stock
+|}
+<nowiki>*</nowiki> +40% Aim at 1 tile away, +23% at 5 tiles, +3% at 10 tiles, -10% at 15 tiles, -18% at 20 tiles, -30% at 25 tiles.
+<section end="Shotguns" />
+====Cannons====
+<section begin="Cannons" />
+Cannons are a primary weapon type restricted to [[Grenadier Class (XCOM 2)|Grenadiers]].
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="8" |Cannons
+|-
+!Name
+!Damage
+!Crit DMG
+! class=unsortable |Clip Size
+! class=unsortable |Range
+!Mod Slots
+!Armor Shredding*
+|-
+| style="text-align: left;" |[[Cannon]]
+|4–6
+| +2
+| rowspan="3" |3
+| rowspan="3" |Medium
+|1
+|1
+|-
+| style="text-align: left;" |[[Mag Cannon]]
+|6–8
+| +3
+|2
+|2
+|-
+| style="text-align: left;" |[[Beam Cannon]]
+|8–10
+| +4<br />(+3 WotC)
+|2
+|3
+|}
+<nowiki>*</nowiki> If '''Shredder''' ability is chosen.
+<section end="Cannons" />
+====Sniper Rifles====
+<section begin="Sniper Rifles" />
+Sniper Rifles are a primary weapon type restricted to [[Sharpshooter Class (XCOM 2)|Sharpshooters]]. Sniper Rifles, except for Darklance, always require two action points to fire (i.e. using a Teamwork perk or a similar ability will enable a sharpshooter to shoot only a pistol; however, scoring a kill with activated Serial ability will allow shooting a sniper rifle again, and a kill when Death From Above ability is acquired will not end the turn {{explain|test if granting a sharpshooter an action point after the Death From Above kill would allow him to shoot a non-Chosen sniper rifle on the same turn}}) and suffers a penalty to hit at close range.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="9" |Sniper Rifles
+|-
+!Name
+! class=unsortable |DLC
+!Damage
+!Crit DMG
+! class=unsortable |Crit Chance
+! class=unsortable |Clip Size
+! class=unsortable |Range
+!Mod Slots
+! class=unsortable |Notes
+|-
+| style="text-align: left;" |[[Sniper Rifle (XCOM 2)|Sniper Rifle]]
+| rowspan="3" |
+|4–6
+| +2
+| rowspan="4" |+10%
+| rowspan="4" |3
+| rowspan="4" |Long*
+|1
+|
+|-
+| style="text-align: left;" |[[Gauss Rifle]]
+|6–8
+| +3
+|2
+|
+|-
+| style="text-align: left;" |[[Plasma Lance]]
+|8–10
+| +4
+|2
+|
+|-
+| style="text-align: left;" |[[Darklance]]
+|[[XCOM 2: War of the Chosen|WotC]]
+|8–10
+| +4
+| style="text-align: left;" |Superior Scope<br />Superior Auto-loader<br />Superior Hair Trigger<br />Superior Stock
+| style="text-align: left;" |Only needs one action to fire, though firing still ends turn
+|}
+<nowiki>*</nowiki> Aim penalty when shooting at close range.
+<section end="Sniper Rifles" />
+====Heavy Autocannons====
+<section begin="Heavy Autocannons" />
+<noinclude>'''Shen's Last Gift DLC content'''. </noinclude>Heavy Autocannons are a primary weapon type restricted to [[SPARK (XCOM 2)|SPARKs]]. They cannot utilize weapon upgrades, unless you are playing the [[XCOM 2: War of the Chosen|War of the Chosen]] update.  They are otherwise identical to the cannons wielded by [[Grenadier Class (XCOM 2)|grenadier]]s.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="6" |Heavy Autocannons
+|-
+!Name
+!Damage
+! class=unsortable |Clip Size
+! class=unsortable |Range
+!Mod Slots<br />(WOTC only)
+!Armor Shredding
+|-
+| style="text-align: left;" |[[Heavy Autocannon]]
+|4–6
+| rowspan="3" |3
+| rowspan="3" |Medium
+|1
+|1
+|-
+| style="text-align: left;" |[[Helix Rail-Cannon]]
+|6–8
+|2
+|2
+|-
+| style="text-align: left;" |[[Elerium Phase-Cannon]]
+|8–10
+|2
+|3
+|}
+<section end="Heavy Autocannons" />
+===Secondary Weapons===
+====Pistols====
+<section begin="Pistols" />
+Pistols are a secondary weapon type restricted to [[Sharpshooter Class (XCOM 2)|Sharpshooters]]. Pistols cannot be used in conjunction with Squadsight ability.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="6" |Pistols
+|-
+!Name
+! class=unsortable |DLC
+!Damage
+!Crit DMG
+! class=unsortable |Range
+! class=unsortable |Additional effect
+|-
+| style="text-align: left;" |[[Pistol (XCOM 2)|Pistol]]
+| rowspan="3" |
+|2–3
+| +1
+| rowspan="4" |Short*
+|
+|-
+| style="text-align: left;" |[[Mag Pistol]]
+|3–4
+| +1
+|
+|-
+| style="text-align: left;" |[[Beam Pistol]]
+|3–6
+| +2
+|
+|-
+| style="text-align: left;" |[[Darkclaw]]
+|[[XCOM 2: War of the Chosen|WotC]]
+|4–7
+| +2
+| style="text-align: left;" |&nbsp;Ignores 5 armor
+|}
+<nowiki>*</nowiki> Aim penalty when shooting at far range.
+<section end="Pistols" />
+=====<h4>Shadowkeeper Pistols</h4>=====
+<section begin="Shadowkeeper Pistols" />
+'''Alien Hunters DLC content'''. Pistols are a secondary weapon type restricted to [[Sharpshooter Class (XCOM 2)|Sharpshooters]]. Comparable to each tier pistol, but has improved aim (+10%) and chance to critical hit (+15%). Has the special ability of Shadowfall, a pistol shot that is guaranteed to hit, and if the target is killed, the shooter gains concealment.
+
+Only a single Shadowkeeper pistol is available per play-through for all upgrade tiers, so if the Shadowkeeper is lost during a mission a replacement cannot be built, though it can be ''recovered'' <u>just the once</u> during the Enhanced and Powered Shadowkeeper upgrade in Engineering -- Built Item -- Weapons purchase. 'Captured' soldiers and their limited equipment may be rescued during a possible Rescue VIP mission that may spawn at a later time.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="7" |Shadowkeeper Pistols
+|-
+!Name
+!Damage 
+!Crit DMG
+! class=unsortable |Crit Chance
+! class=unsortable |Range
+! class=unsortable |Aim
+! class=unsortable |Notes
+|-
+| style="text-align: left;" |[[Shadowkeeper]]
+|2–3
+| +1
+| rowspan="3" |+15%
+| rowspan="3" |Short*
+| rowspan="3" |+10%
+| rowspan="3" style="text-align: left;" |&nbsp;Grants [[Shadowfall]] ability
+|-
+| style="text-align: left;" |[[Shadowkeeper#Enhanced Shadowkeeper|Enhanced Shadowkeeper]]
+|3–4
+| +1
+|-
+| style="text-align: left;" |[[Shadowkeeper#Powered Shadowkeeper|Powered Shadowkeeper]]
+|3–6
+| +2
+|}
+<nowiki>*</nowiki> Aim penalty when shooting at far range.
+<section end="Shadowkeeper Pistols" />
+====Swords====
+<section begin="Swords" />
+Swords are a secondary weapon type restricted to [[Ranger Class (XCOM 2)|Rangers]].
+
+{| class="wikitable sortable" style="text-align: center;"
+!colspan="8" |Swords
+|-
+!Name
+! class=unsortable |DLC
+!Damage
+!Crit DMG
+!Crit Chance
+! class=unsortable |Range
+! class=unsortable |Aim*
+! class=unsortable |Additional effect
+|-
+| style="text-align: left;" |[[Sword]]
+| rowspan="3" |
+|3–5
+| +2
+| +10%
+| rowspan="4" |Melee
+| +20%
+|
+|-
+| style="text-align: left;" |[[Arc Blade]]
+|4–6
+| +2
+| +15%<br />(10% WotC)
+| +20%
+| style="text-align: left;" |25% chance to stun or disorient target
+|-
+| style="text-align: left;" |[[Fusion Blade]]
+|5–7<br />(6–8 WotC)
+| +3
+| +20%<br />(10% WotC)
+| +20%
+| style="text-align: left;" |100% chance to set target on [[Burning|fire]]
+|-
+| style="text-align: left;" |[[Katana]]
+|[[XCOM 2: War of the Chosen|WotC]]
+|8–9
+| +3
+| +0%
+| +100%
+| style="text-align: left;" |&nbsp;Cannot be dodged (always deals full damage)<br />&nbsp;Ignores 5 armor points
+|}
+<nowiki>*</nowiki> All swords have +20% bonus Aim (even though it is not stated in-game), with the exception of the Katana which grants +100% Aim.<br />&#x2022; Rangers' ability [[Ranger_Class_(XCOM_2)#Abilities|Blademaster]] makes all sword attacks deal +2 damage and gain +10% Aim.
+<section end="Swords" />
+=====<h4>Axes</h4>=====
+<section begin="Axes" />
+Axes are a secondary weapon type restricted to [[Ranger Class (XCOM 2)|Rangers]]. One axe can be thrown from range (once per mission) for a 'free action' for an instant burst of damage. This ranged attack counts as melee damage, so a Chosen with the "Immunity: Melee" takes no damage from it. Note: Aim, Range, Cover, Dodge and Armor chances/penalties apply.
+
+Only one set of axes are available per play-through for all upgrade tiers, so if the axes are lost during a mission a replacement cannot be built, though it can be ''recovered'' <u>just the once</u> during the Ionic and Fusion axe upgrade in Engineering -- Built Item -- Weapons purchase.
+
+'''Note:''' The game text describes the weapon as a "pair of axes", one of which can be thrown as a free action. However, that ranged attack is treated in all respects as a one-charge-per-mission ability; the second axe cannot be "lost" unless you lose the core weapon. For example, if a soldier throws the axe, then you evacuate the mission (losing all the alien bodies on the scene), you do ''not'' lose the "second axe"; the next time you equip the pair of axes, the soldier will still have a single free ranged attack per mission.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="7" |Axes
+|-
+!Name
+!Damage
+!Crit DMG
+!Crit Chance
+! class=unsortable |Range
+! class=unsortable |Aim*
+! class=unsortable |Additional effect
+|-
+| style="text-align: left;" |[[Hunter's Axe]]
+|4–6
+| +2
+| +10%
+| rowspan="3" |Melee
+| rowspan="3" |+20%
+| style="text-align: left;" |
+|-
+| style="text-align: left;" |[[Hunter's Axe#Ionic Axe|Ionic Axe]]
+|5–7
+| +2
+| +15%
+| style="text-align: left;" |25% chance to stun or disorient target
+|-
+| style="text-align: left;" |[[Hunter's Axe#Fusion Axe|Fusion Axe]]
+|6–8
+| +3
+| +20%
+| style="text-align: left;" |100% chance to set target on [[Burning|fire]]
+|}
+<nowiki>*</nowiki> Axes have +20% bonus Aim (even though it is not stated in-game).<br />&#x2022; Rangers' ability [[Ranger_Class_(XCOM_2)#Abilities|Blademaster]] makes all axe attacks deal +2 damage and gain +10% Aim.
+<section end="Axes" />
+====Grenade Launchers====
+<section begin="Grenade Launchers" />
+Grenade Launchers are a secondary weapon type restricted to [[Grenadier Class (XCOM 2)|Grenadiers]]. Although they don't increase grenade damage, they can lob grenades much further than hand-thrown, and have a larger explosion radius to damage multiple enemies.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="3" |Grenade Launchers
+|-
+!Name
+!Grenade Range
+!Grenade Radius
+|-
+| style="text-align: left;" |[[Grenade Launcher (XCOM 2)|Grenade Launcher]]
+| +4
+| +1
+|-
+| style="text-align: left;" |[[Advanced Grenade Launcher (XCOM 2)|Advanced Grenade Launcher]]
+| +5
+| +2
+|}
+<section end="Grenade Launchers" />
+====Psi Amps====
+<section begin="Psi Amps" />
+Psi Amps are restricted to [[Psi Operative (XCOM 2)|Psi Operatives]], and are used to channel the user's psi energy in order to cast psionic abilities on targets. More advanced Psi Amps not only increase the damage for psionic abilities, but also increase the Psi Offense for psionic abilities.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="2" |Psi Amps
+|-
+!Name
+!Psi Offense
+|-
+| style="text-align: left;" |[[Psi Amp]]
+| +0
+|-
+| style="text-align: left;" |[[Advanced Psi Amp]]
+| +20
+|-
+| style="text-align: left;" |[[Alien Psi Amp]]
+| +40
+|}
+<section end="Psi Amps" />
+====GREMLINs====
+<section begin="GREMLINs" />
+GREMLINs are restricted to [[Specialist Class (XCOM 2)|Specialists]], and are used to aid allies, zap enemies, or remotely hack targets. More advanced GREMLINS increase the effect or damage of various protocols and give a bonus to Hack Score for remote hacking or Haywire Protocol. GREMLINS do not provide Hack bonus for [[Hacking (XCOM 2)|Skulljacking/Skullmining]]. 
+
+{| class="wikitable sortable" style="text-align: center;" width="99%"
+! colspan="10" |GREMLINs
+|-
+! rowspan="2" |GREMLIN Tier
+! rowspan="2" |Hack Stat
+! rowspan="2" |Aid Protocol
+! rowspan="2" |Medical Protocol
+! rowspan="2" |Restoration
+! rowspan="2" |Scanning Protocol
+! colspan="2" |Combat Protocol
+! colspan="2" |Capacitor Discharge
+|- class="sorttop"
+! vs organic
+! vs robots
+! vs organic
+! vs robots
+|-
+| style="text-align: left;" |[[GREMLIN]]
+| +0
+| +20 [[Defense (XCOM 2)|Defense]]
+| +0 HP healed (6 HP max)
+|4 HP healed
+|1 charge
+|2
+|4–5
+|3-6
+|...
+|-
+| style="text-align: left;" |[[GREMLIN Mark II]]
+| +20
+| +30 [[Defense (XCOM 2)|Defense]]
+| +1 HP healed (7 HP max)
+|5 HP healed
+|1 charge
+|4
+|7–8
+|5–8
+|...
+|-
+| style="text-align: left;" |[[GREMLIN Mark III]]
+| +40
+| +40 [[Defense (XCOM 2)|Defense]]
+| +2 HP healed (8 HP max)
+|6 HP healed
+|2 charges
+|6
+|10–11
+|7–10
+|...
+|}
+<section end="GREMLINs" />
+====SPARK BITs====
+<section begin="SPARK BITs" />
+<noinclude>'''Shen's Last Gift DLC content'''. </noinclude>SPARK BITs are restricted to [[SPARK (XCOM 2)|SPARKs]] robotic soldier class. SPARK BITs can be used to [[Hacking (XCOM 2)|Hack]] security towers and terminals, albeit at relatively low hacking skill values.<noinclude> A SPARK BIT is able to carry a single [[Weapons_(XCOM_2)#Heavy_Weapons|Heavy Weapon]] for use during combat.</noinclude>
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="2" |SPARK BITs
+|-
+!SPARK BIT Tier
+!Hack Stat
+|-
+| style="text-align: left;" |SPARK BIT
+| +0
+|-
+| style="text-align: left;" |Plated BIT
+| +10
+|-
+| style="text-align: left;" |Powered BIT
+| +20
+|}
+<section end="SPARK BITs" />
+===Heavy Weapons===
+{{:Heavy Weapons}}
+==Hero Class Weapons==
+The hero classes introduced in [[XCOM 2: War of the Chosen]] each have their own primary and secondary weapons. These weapons can be upgraded at a lower cost than the core XCOM weapons. The Reapers and Skirmishers primary weapons can use modular [[Weapon Upgrades (XCOM 2)|weapon upgrades]].
+
+===Reapers Weaponry===
+====Vektor Rifles====
+<section begin="Vektor Rifles" />
+Vektor Rifles are a primary weapon type restricted to the [[Reapers|Reaper]] hero class. It functions similarly to an assault rifle, with the same range and a smaller clip, and its damage in comparison is radically different.  The baseline vektor is a baseline assault rifle with -1 to max damage and +1 to crit damage, but Reapers are the best class in the game at getting into flanking position.  Once you start upgrading both weapons, though, vektors fall off a cliff in comparison - their damage output keeps lagging farther and farther behind.  A Shadow Lance's average output is reasonably comparable to [[Darkclaw]]'s (trading armor piercing 5 for superior crit damage and superior range).
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="5" |Vektor Rifles
+|-
+!Name
+!Damage
+!Crit DMG
+! class=unsortable |Clip Size
+! class=unsortable |Range
+|-
+| style="text-align: left;" |[[Vektor Rifle]]
+|3–4
+| +3
+| rowspan="3" |3
+| rowspan="3" |Medium
+|-
+| style="text-align: left;" |[[Temnotic Rifle]]
+|4–5
+| +4
+|-
+| style="text-align: left;" |[[Shadow Lance]]
+|5–6
+| +5
+|}
+<section end="Vektor Rifles" />
+====Claymore====
+<section begin="Claymore" />
+[[Claymore (XCOM 2)|Claymore]] - is a secondary weapon type restricted to the [[Reapers|Reaper]] hero class. It is a throwable environmental explosive mine that always does 5 damage and shreds 2 armor points (the Reaper ability Shrapnel grants +3 damage, +1 shredding, and +1 radius). Throwing and shooting a Claymore explosive by a Reaper does not break individual or group concealment.
+<section end="Claymore" />
+===Skirmishers Weaponry===
+====Bullpups====
+<section begin="Bullpups" />
+Bullpups are a primary weapon type restricted to the [[Skirmishers|Skirmisher]] hero class. This type of assault rifle does less damage than the usual Assault Rifle and has an aim penalty at long range, but only uses one action to fire and does not end the turn. 
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="5" |Bullpups
+|-
+!Name
+!Damage
+!Crit DMG
+! class=unsortable |Clip Size
+! class=unsortable |Range
+|-
+| style="text-align: left;" |[[Kal-7 Bullpup]]
+|3–4
+| +1
+| rowspan="3" |3
+| rowspan="3" |Short*
+|-
+| style="text-align: left;" |[[Kal-15 Bullpup]]
+|5–6
+| +1
+|-
+| style="text-align: left;" |[[Kal-90 Bullpup]]
+|6–7
+| +2
+|}
+<nowiki>*</nowiki> Aim penalty when shooting at far range.<br />&#x2022; Tip: [[Kal-15 Bullpup]] offers a bigger step up in damage from the previous tier, coupled with the Skirmisher ability to shoot twice in a turn, means a big improvement in damage output. 
+<section end="Bullpups" />
+====Ripjacks====
+<section begin="Ripjacks" />
+Ripjacks are a secondary weapon type restricted to the [[Skirmishers|Skirmisher]] hero class. The standard [[Ripjack]] is simply inferior to a [[Sword]], but the upgraded variants will usually outperform upgraded swords, because they functionally sacrifice an improved critical chance for a guaranteed chance to deal maximum damage (the standard, base ripjack deals average damage instead of maximum).
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="6" |Ripjacks
+|-
+!Name
+!Damage
+!Crit DMG
+! class=unsortable |Range
+! class=unsortable |Aim*
+! class=unsortable |Additional effect
+|-
+| style="text-align: left;" |[[Ripjack]]
+|4
+| +1
+| rowspan="3" |Melee
+| rowspan="3" |+20%
+| style="text-align: left;" |
+|-
+| style="text-align: left;" |[[Ionic Ripjack]]
+|6
+| +2
+| style="text-align: left;" |25% chance to stun or disorient target
+|-
+| style="text-align: left;" |[[Fusion Ripjack]]
+|8
+| +3
+| style="text-align: left;" |100% chance to set target on [[Burning|fire]]
+|}
+<nowiki>*</nowiki> Ripjacks have +20% bonus Aim (even though it is not stated in-game).<section end="Ripjacks" />
+===Templars Weaponry===
+====Gauntlets====
+<section begin="Gauntlets" />
+Gauntlets are a primary weapon type restricted to the [[Templars|Templar]] hero class. These special gauntlets channel the psionic energy into a pair of melee blades. The melee attack cannot miss (but can be countered by [[Muton (XCOM 2)|Mutons]]) and deals increasing damage the more Focus a Templar has. 
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="6" |Gauntlets
+|-
+!Name
+!Damage
+! class=unsortable |Crit DMG
+! class=unsortable |Crit Chance
+! class=unsortable |Range
+! class=unsortable |Notes
+|-
+| style="text-align: left;" |[[Shard Gauntlets]]
+|4–5
+| rowspan="3" |+2
+| rowspan="3" |+10%
+| rowspan="3" |Melee
+| rowspan="3" style="text-align: left;" |&nbsp;Rend cannot miss<br />&nbsp;+1 Damage per level of Focus<br />&nbsp;5% chance to Stun per level of Focus<br />&nbsp;10% chance to Disorient per level of Focus<!-- 'DefaultGameData_WeaponData.ini' file points to the +20 Aim Bonus for the weapon, but doesn't it always have 100% hit chance? --> <!-- @to-do: test if Rend can deal a partial (Dodged) damage instead of full if the Templar's Aim is reduced by 25%+ via debuffs -->
+|-
+| style="text-align: left;" |[[Tempest Gauntlets]]
+|5–6
+|-
+| style="text-align: left;" |[[Celestial Gauntlets]]
+|7–8
+|}
+<section end="Gauntlets" />
+====Autopistols====
+<section begin="Autopistols" />
+Autopistols are a secondary weapon type restricted to the [[Templars|Templar]] hero class. Autopistols are nearly identical in function to the Sharpshooter's Pistol.
+
+{| class="wikitable sortable" style="text-align: center;"
+! colspan="4" |Autopistols
+|-
+!Name
+!Damage
+!Crit DMG
+! class=unsortable |Range
+|-
+| style="text-align: left;" |[[Autopistol]]
+|2–3
+| +1
+| rowspan="3" |Short*
+|-
+| style="text-align: left;" |[[Mag Autopistol]]
+|3–4
+| +1
+|-
+| style="text-align: left;" |[[Beam Autopistol]]
+|3–6
+| +2
+|}
+<nowiki>*</nowiki> Aim penalty when shooting at far range.
+<section end="Autopistols" />
+==Enemy Weaponry==
+===ADVENT Weaponry===
+The [[ADVENT]] administration arms its troops with standardized factory-produced Gauss rifles. These rifles accelerate bullets, made of ferromagnetic alloys to velocities largely unattainable by ballistic firearms. While the basic principles of such technology were well known to Earth's scientists before the invasion, it was technology donated by the aliens to their [[ADVENT]] puppets that solved the inherent problems of making reliable gauss-based man-portable weaponry. Namely, the lack of portable power sources or compact and lightweight discharge capacitors.
+
+ADVENT's standard-issue gauss rifles also have a built-in genetic lock connected to the ADVENT network, (preventing a rifle being fired by any non-authorized user) as well as a self-destruct mechanism, activating a short time after the weapon's user dies in action and rendering the weapon permanently inoperable. These measures were installed to prevent any resistance fighters and [[XCOM (Organization)|XCOM]] from using captured ADVENT-made weapons.
+
+===Alien Weaponry===
+The aliens appear to retain what is majorly the same weaponry as that of the original invasion, but the new troop variants seem to possess variations of the familiar patterns, such as the [[Muton (XCOM 2)|Muton's]] bayonet. Sectoids, however, still carry their wrist-mounted plasma blaster. Despite its age in technological terms, alien plasma weaponry has not advanced very far, implying that plasma-based weaponry is the most effective possible armaments without risking excessive destruction.
+
+However, it is noted that alien plasma weaponry is highly unstable, with a very fine line between 'functioning' and 'overloading', and complexity in trying to operate certain weapons. This shows the [[Ethereal (XCOM: Enemy Unknown)|Elder's]] overall lack of effort to produce safe weaponry for their troops to use in the field in favor of more power, in comparison to XCOM, whose beam weaponry is designed far more safely and much more user-friendly.
+
+The aliens also appear to have developed 'fusion'-based technology for use in melee weapons such as the Muton's Bayonet and the Archon's Staff. It is notable for its high heat during usage, something XCOM takes full advantage of when designing the [[Fusion Blade]].
+
+==Combined Tables==
+{{cleanup|Update the Combined Tables: add missing stats columns, add links, correct values where applicable}}
+{| class="wikitable sortable"
+!Type
+!Name !!Damage!!Clip Size
+!Critical<br />Chance (%)
+!Other
+|-
+| rowspan="4" |Rifle
+|Assault Rifle
+| |03-05
+| rowspan="4" |4
+| rowspan="4" |
+|
+|-
+|Magnetic Rifle
+| |05-07
+|
+|-
+|Plasma Rifle
+| |07-09
+|
+|-
+|Disruptor Rifle
+(WotC)
+| |07-09
+|Guaranteed Critical hits on Psionic enemies, 4 upgrades
+|-
+| rowspan="3" |Bolt Caster
+|Bolt Caster
+| |06-08
+| rowspan="3" |1
+| rowspan="3" |
+|
+|-
+|Magnetic Bolt Caster
+| | 08-10
+|
+|-
+|Plasma Bolt Caster
+| |10-12
+|
+|-
+| rowspan="4" |Shotgun
+|Shotgun
+| | 04-06
+| rowspan="4" |4
+| |10
+|
+|-
+|Shard Gun
+| | 06-08
+| |15
+|
+|-
+|Storm Gun
+| |08-10
+| |20
+|
+|-
+|Arashi (WotC)
+| |08-10
+| |10
+|4 upgrades
+|-
+| rowspan="3" |Cannon
+|Cannon
+| |04-06
+| rowspan="3" |3
+| rowspan="3" |
+|
+|-
+|Mag Cannon
+| |06-08
+|
+|-
+|Beam Cannon
+| |08-10
+|
+|-
+| rowspan="4" | Sniper Rifle
+|Sniper Rifle
+| |04-06
+| rowspan="4" |3
+| |10
+|
+|-
+|Gauss Rifle
+| |06-08
+| |10
+|
+|-
+| Plasma Lance
+| | 08-10
+| |10
+|
+|-
+| Darklance (WotC)
+| | 08-10
+| |10
+|Only one action to fire, 4 upgrades
+|-
+| rowspan="7" |Pistol
+|Pistol
+| |02-03
+| rowspan="7" |∞
+| rowspan="3" |
+|
+|-
+|Mag Pistol
+| |03-04
+|
+|-
+|Beam Pistol
+| |03-06
+|
+|-
+|Darkclaw (WotC)
+| |04-07
+| |5
+|Ignores 5 armor
+|-
+| Shadowkeeper
+| |02-03
+| rowspan="3" |15
+| rowspan="3" |Grants Shadowfall
+Aim +10%
+|-
+|Enhanced Shadowkeeper
+| |03-04
+|-
+|Powered Shadowkeeper
+| |03-06
+|-
+| rowspan="3" |SPARK
+Weapons
+|Heavy Autocannon
+| |04-06
+| rowspan="3" | 3
+| rowspan="3" |
+|
+|-
+|Helix Rail-Cannon
+| | 06-08
+|
+|-
+|Elerium Phase-Cannon
+| |08-10
+|
+|-
+| rowspan="3" |Reaper Rifle
+|Vektor Rifle
+| |03-04
+| |3
+| |
+|
+|-
+|Temnotic Rifle
+| |04-05
+| | 3
+| |
+|
+|-
+|Shadow Lance
+| |5-6
+| |3
+| |?
+|?
+|-
+| rowspan="3" |Skirmisher Bullpup
+|KAL-7 Bullpup
+| |3-4
+| |3
+| |?
+|?
+|-
+| KAL-15 Bullpup
+| |5-6
+| |3
+| |?
+|?
+|-
+|KAL-90 Bullpup
+| |6-7
+| | 3
+| | ?
+| ?
+|-
+| rowspan="3" |Templar Autopistol
+|Autopistol
+| |2-3
+| rowspan="3" |∞
+| | 0
+|Critical damage +1
+|-
+|Mag Autopistol
+| |3-4
+| | 0
+|Critical damage +1
+|-
+|Beam Autopistol
+| |3-6
+| |0
+|Critical damage +2
+|}
+
+===Melee===
+{| class="wikitable sortable"
+! Type
+!Name!! Damage!!Critical<br />Chance (+%)
+!Stun<br />Chance (+%)
+!Other
+|-
+| rowspan="4" |Swords
+|Sword
+| |3-5
+| |10
+| |
+| |
+|-
+|Arc Blade
+| |4-6
+| |15
+| |25
+| |
+|-
+|Fusion Blade
+| |5-7
+| |20
+| |
+| |Has a chance to set targets on fire
+|-
+|Katana (WotC)
+| | 8-9
+| |
+| |
+| |Ignores 5 armor
+Guaranteed to hit
+|-
+| rowspan="3" | Axe
+|Hunter's Axe
+| |4-6
+| | 10
+| |
+| |
+|-
+|Ionic Axe
+| |5-7
+| | 15
+| |25
+| |
+|-
+|Fusion Axe
+| |6-8
+| |20
+| |
+| | Has a chance to set targets on fire
+|-
+| rowspan="3" |Skirmisher
+Ripjack
+|Ripjack
+| |4
+| |0
+| |0
+|Critical damage +1, Aim +20%
+|-
+|Ionic Ripjack
+| |6
+| |0
+| |25
+| Critical damage +2, Aim +20%
+|-
+|Fusion Ripjack
+| | 8
+| |0
+| |0
+|Critical damage +3, Aim +20%
+Has a chance to set targets on fire
+|-
+| rowspan="3" |Templar
+Gauntlets
+|Shard Gauntlets
+| |4-5
+| |10
+| |0
+|Critical damage +2, Aim +20%
+|-
+|Tempest Gauntlets
+| |5-6
+| |10
+| |0
+|Critical damage +2, Aim +20%
+|-
+|Celestial Gauntlets
+| |7-8
+| |10
+| |0
+|Critical damage +2, Aim +20%
+|}
+
+===Hacking Tools===
+Equipping a [[Skulljack (Item)|Skulljack]], when [[Skullmining]] is researched, increases the Hacking stat by +25.
+
+{| class="wikitable sortable"
+!Type!!Name!!Hacking stat
+|-
+| rowspan="3" |GREMLIN
+| |GREMLIN
+| | +0
+|-
+| |GREMLIN Mark II
+| | +20
+|-
+| |GREMLIN Mark III
+| | +40
+|-
+| rowspan="3" |SPARK BIT
+| |SPARK BIT
+| | +0
+|-
+| | SPARK BIT Mark II
+| | +10
+|-
+| |SPARK BIT Mark III
+| | +20
+|}
+
+===Grenade Launcher===
+{| class="wikitable sortable"
+!Name!!Grenade Range!!Grenade Radius
+|-
+| |Grenade Launcher
+| | +4
+| | +1
+|-
+| |Advanced Grenade Launcher
+| | +5
+| | +2
+|}
+
+===Psi-Amps===
+The Psi Operative class uses a hand-held [[Psi Amp]] as their secondary weapon, which they will automatically use when casting psionic abilities. Upgrading the ''Psi Amp'' will increase the effectiveness of certain psionic abilities.{{Explain}}
+
+{| class="wikitable sortable"
+!Name!![[Psi Points (XCOM 2)|Psi]]
+|-
+| | [[Psi Amp]]
+| | +0
+|-
+| |[[Advanced Psi Amp]]
+| | +20
+|-
+| |[[Alien Psi Amp]]
+| | +40
+|}
+<noinclude>
+----
+{{Weapons (XCOM 2)}}
+
+[[Category:Weapons (XCOM 2)]]
+</noinclude>

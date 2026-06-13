@@ -18,7 +18,15 @@ Status legend: ⬜ not fetched · 🔄 fetched, mining · ✅ extracted · ⚠�
 - 🟡 [Steam discussion 412447613564404061](https://steamcommunity.com/app/268500/discussions/0/412447613564404061/) — actually **soldier ability picks** (Ranger/Sniper/Grenadier/Specialist). Useful for UPGRADES specs, not research/facilities.
 
 ## Facilities
-- ⚠️ [Proving Ground (Fandom)](https://xcom.fandom.com/wiki/Proving_Ground) — 403. Project list recovered via search (Fextralife/SegmentNext/GamePressure mirrors).
+- ✅ [Proving Ground (Fandom)](https://xcom.fandom.com/wiki/Proving_Ground) — direct URL 403s, but pulled clean via the **MediaWiki API** (see below). Project list now authoritative in `specs/database.md`.
+
+## Fandom wiki — full database pass (2026-06-12)
+The direct `xcom.fandom.com/wiki/*` URLs 403 to bots (WebFetch + browser-UA `Invoke-WebRequest` both blocked), **but `api.php?action=parse&prop=wikitext` returns clean wikitext** with a browser User-Agent. Used this to build `specs/database.md` (missions / research / facilities / armor / weapons, all prereqs). Raw dumps cached in `wiki_raw/`:
+- ✅ [Missions (XCOM 2)](https://xcom.fandom.com/wiki/Missions_(XCOM_2)) + Council/Guerilla/Supply/Alien-Facility/Blacksite/Forge sub-pages → full mission DB with triggers, timers, rewards.
+- ✅ [Research Projects (XCOM 2)](https://xcom.fandom.com/wiki/Research_Projects_(XCOM_2)) → standard/Shadow-Chamber projects + autopsy table (corpse counts, unlocks).
+- ✅ [Avenger (XCOM 2)](https://xcom.fandom.com/wiki/Avenger_(XCOM_2)) + [Proving Ground](https://xcom.fandom.com/wiki/Proving_Ground) → facility costs/power/upkeep/time/prereqs + PG projects.
+- ✅ [Armors (XCOM 2)](https://xcom.fandom.com/wiki/Armors_(XCOM_2)) + [Weapons (XCOM 2)](https://xcom.fandom.com/wiki/Weapons_(XCOM_2)) + [Data Tables](https://xcom.fandom.com/wiki/Data_Tables) → full armor/weapon stat tables by tier.
+- Filter applied: base + Alien Hunters + Shen's Last Gift kept; **WotC tiers/classes/facilities/autopsies excluded** and flagged.
 
 ## Upgrades / soldiers / SPARK
 - ⚠️ [Reddit: soldier XP & leveling](https://www.reddit.com/r/Xcom/comments/eutkny/...) — Reddit blocks fetch. (Mid/late upgrades.)

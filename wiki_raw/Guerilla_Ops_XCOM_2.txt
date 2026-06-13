@@ -1,0 +1,127 @@
+﻿{{Infobox mission|game = XCOM 2|type = Mission|timed = Yes|starts_in_concealment = Yes|key_plot_point = No}}
+
+In [[XCOM 2]] '''Guerilla Ops''' are a standard series of [[Missions (XCOM 2)|missions]] that are aimed at countering ADVENT's [[Dark Events]]. 
+
+In each Guerilla Op, the player controls a squad of elite [[Soldier (XCOM 2)|soldiers]] with the aim of engaging ADVENT and alien forces to complete mission objectives. Their location is marked by a green ADVENT trooper ([[File:MissionIcon GOPS.png|20px|link=File:MissionIcon_GOPS.png]]) on the [[Geoscape (XCOM 2)|Geoscape]], and they will only spawn on locations you have established contact with. In ''extremely'' rare cases, a single Guerilla Op may be spawned through a Rumor<ref>http://www.vigaroe.com/2021/12/xcom-2-mission-analysis-guerrilla-ops.html</ref>.
+
+Depending on the expansion, there are up to six Guerilla Ops missions (four in XCOM 2, with two added in War of the Chosen). Every mission starts in concealment, and with one sole exception, every mission is timed. The timer is lifted when the objective is complete or has been failed.
+
+Although up to three Guerilla Op missions spawn each month, only one may be completed at a time, meaning that only one Dark Event may be successfully countered. Their associated Dark Events, map biomes, types, rewards (Intel, Supplies, Scientists, Engineers, or Soldiers), difficulty levels, SITREPs (in War of the Chosen) and operation names are generally mutually exclusive and are randomized each time a new one is spawned. The first Guerilla Op that XCOM encounters will always have an engineer as a reward.
+
+For the mission to succeed, the objective must be completed within the time limit (either 6 or 8 turns by default) to count as a success - and all enemies in the area of operations (AO) must be eliminated. Completing a Guerilla Op will automatically cancel its associated Dark Event, while skipping (ignoring) or failing it will cause [https://youtu.be/YjphZHA-f_8 all pending Dark Events to trigger in quick succession].
+
+If the primary objective is one that can be completed without eliminating all hostiles in the AO (most objectives other than Protect the Device), completing the primary objective and then evacuating the squad without eliminating all hostiles will be announced as a Mission Fail and not gain the mission reward, but will still counter the associated Dark Event.
+
+==Hack the Hidden Resistance Computer==
+{{stub|Objectives, Gallery, Quotes}}
+In the Hack the Hidden Resistance Computer mission, XCOM must hack and recover the data from a workstation critical to ADVENT's latest Dark Event. This mission may take place in the Slums or the Small Town (base game) or the Abandoned City, Sewers, or Subway (''War of the Chosen''). XCOM has eight turns to hack the data and disable the timer or the computer locks itself out and the mission fails.
+
+Once the workstation is hacked, the soldier who hacked it is given a star above their head. If they are killed, they will drop loot (the "loot" being the recovered data). XCOM has four turns to pick up the loot or the mission will automatically fail. However, evacuating the hacker ''themselves'' without evacuating the entire squad will not fail the mission if every enemy has been killed beforehand.
+
+The mission will fail if the hacker has died and the timed loot was not picked up within four turns, XCOM evacuates without killing every enemy in the AO, the workstation is destroyed, or every XCOM soldier is killed.
+<!---=== Hack the Workstation (ADVENT Facility) ===
+This mission is nearly functionally identical to the Hack the Hidden Resistance Computer mission, but may only spawn in two biomes - Slum and Small Town. Turrets are more common on the map, and the failure conditions are identical to that of the Hack the Hidden Resistance Computer mission.
+
+=== Hack the Workstation (ADVENT Train) ===
+This mission is nearly identical to that of the previous two Hack the Workstation missions, but turrets are far more likely to spawn on the map.
+
+=== Recover Item (ADVENT Facility) ===
+In the Recover Item from ADVENT Facility mission, ADVENT has placed down a self-destructing object containing data critical to their latest Dark Event, and XCOM has eight turns to infiltrate and seize the data before it goes up in flames.--->
+== Recover Item ==
+In the Recover Item mission, ADVENT has placed an object containing data critical to their latest Dark Event in a location (usually a building, vehicle, or train). 
+
+The object has self-detonating charges. Players have 8 turns to hack the object and disarm the charges. If the charges are not disarmed, they will explode at the end of the 8-turn timer, dealing 5 HP of damage to anyone within a 1-tile radius. If the object is in a vehicle, the vehicle will explode and damage adjacent units.
+
+The mission will fail if the object is destroyed (via the built-in charges, grenades, or enemy action), or if XCOM EVACs without killing all enemies and satisfying the objective.
+
+=== '''Objectives''' ===
+*Neutralize all enemy targets
+*Recover <item> from <location>
+
+=== Gallery ===
+<gallery widths="500" position="center">
+File:Recoveritem.jpg|The item on an ADVENT train, one possible location for this mission.
+</gallery>
+
+=== Quotes ===
+{{Quote|Menace, we've got a bead on the ADVENT data vault near your position. Be advised, self-detonating charges are in place at the target. Move to disarm and extract the package before its contents are destroyed.|Central on mission start}}
+{{Quote|Menace, this is Avenger. We have positive confirmation of the target package. Move to acquire.|Central upon seeing the package}}
+{{Quote|Menace, the clock is ticking - that detonator isn't going to wait. Get to the vault and disarm it before we run out of time.|Central at 3 turns left with no hack}}
+{{Quote|Menace, status confirmed, the charges are inactive and the package is secure. Eliminate any remaining hostiles near the AO.|Central upon successful hacking}}
+{{Quote|Menace, the package has been destroyed - we're not going to recover anything from that site. Eliminate any remaining hostiles in the AO.|Central if the package is destroyed}}
+
+== Hack the Workstation ==
+In the Hack the Workstation mission, a workstation is relaying data critical to ADVENT's latest Dark Event. This workstation will usually be located in a building, but may also be on an ADVENT train.
+
+Players have 8 turns to hack the workstation and recover the data before data lockout. If the workstation isn't hacked within 8 turns, it will lock out and the mission will fail.
+
+The mission will fail if the terminal locks out or is destroyed (via grenades or enemy action), or if XCOM EVACs without satisfying the objective and eliminating all enemies in the AO.
+
+=== '''Objectives''' ===
+*Neutralize all enemy targets
+*Download <item> from exposed access point
+
+=== Gallery ===
+<gallery widths="500" position="center">
+File:HackWorkstationTrain.jpg|The work station on an ADVENT train, one possible location for this mission.
+</gallery>
+
+=== Quotes ===
+{{Quote|Menace, this is Avenger. The access point we're after is just ahead. Move to secure the area, expect hostile resistance.|Central upon mission start}}
+{{Quote|Menace, the ADVENT network terminal is shutting down. This is your last chance to recover the data!|Central at 1 turn left}}
+{{Quote|Transponder readings have gone dark. Enemy forces have locked out the terminal.|Central if the terminal is not hacked within 8 turns}}
+{{Quote|We've confirmed successful acquisition of the ADVENT files, eliminate any remaining hostiles in the area.|Central upon successful hacking}}
+
+== Destroy the Alien Relay ==
+In the Destroy Alien Relay mission, XCOM must destroy a relay critical to ADVENT's operations in order to disrupt ADVENT's latest Dark Event.
+
+Players have 8 turns to destroy the relay before it concludes its transmission. If the relay isn't destroyed within 8 turns, the mission will fail. The health of the device varies with the game difficulty level - it will have between 6 and 8 HP.
+
+The mission will also fail if XCOM EVACs without destroying the relay and eliminating all enemies in the AO.
+
+=== '''Objectives''' ===
+*Neutralize all enemy targets
+* Destroy the Alien Relay
+
+=== Gallery ===
+<gallery widths="500" position="center">
+File:Destroyrelay.jpg|The Alien Relay, which will need to be destroyed for XCOM to complete the mission.
+</gallery>
+
+=== Quotes ===
+{{Quote|Menace, the communications relay is up ahead. Move in and destroy the target.|- Central upon mission start}}
+{{Quote|Menace, we've confirmed destruction of the relay - the alien transmission is down. Eliminate any remaining hostiles and move to EVAC.|- Central upon relay destruction}}
+
+== Protect the Device ==
+In the Protect the Device mission, the resistance forces have set up a data tap that is delivering data to XCOM in order to disrupt ADVENT's latest Dark Event. However, ADVENT forces are attempting to destroy the data tap.
+
+Unlike the other Guerilla Ops mission types, this mission has no explicit timer. The device has a fixed health bar, and one enemy will attack it each turn until it is destroyed. 
+
+If the device is destroyed, the mission will fail. The mission will also fail if XCOM EVACs without eliminating all enemies in the AO.
+
+As more powerful enemies are continually introduced over the course of a game, and the health of the device does not change, these missions tend to be easier earlier in the game and harder later.
+
+=== '''Objectives''' ===
+*Neutralize all enemy targets
+*One of:
+**Protect Data Interceptor Device
+**Secure and protect the transmitter
+
+=== Gallery ===
+<gallery widths="500" position="center">
+File:DataTap.jpg|The data tap.
+</gallery>
+
+=== Quotes ===
+{{Quote|Menace, neutralize all remaining enemies and secure the AO. Commander, the data tap has been destroyed. We've lost whatever information it managed to pull from the ADVENT network.|- Central on mission failure}}
+
+== Sabotage Transmitter ==
+{{Stub|Information about this mission type}}
+
+== Neutralize Field Commander ==
+{{Stub|Information about this mission type}}
+
+==References ==
+<references />
+{{cleanup}}
+[[Category:Missions (XCOM 2)]]

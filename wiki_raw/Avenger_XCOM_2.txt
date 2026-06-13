@@ -1,0 +1,305 @@
+﻿{{About|the aircraft in [[XCOM 2]]|other uses|Avenger}}
+[[File:POI_Avenger.jpg|600px|thumb|<center>The Avenger landed in a forested area</center>]]__TOC__
+
+The '''Avenger''' is a converted alien supply craft that serves as [[XCOM]] mobile base of operations, featured in [[XCOM 2]]. Formerly used by the aliens to transport large amounts of supplies, the vessel that would become the Avenger was recovered by the reborn ''XCOM'' crew, who quickly turned it into their new base of operations.
+
+Though the ship remained grounded due to a lack of key components, preventing it from becoming fully operational, it nevertheless remained key to the struggle against the alien forces occupying Earth.
+
+Following the rescue of The [[Commander]], the reinstated leader of ''XCOM'' directs the organization's troops to recover an alien power core, capable of getting the ship off the ground. Following the recovery and installation of the component, with the Avenger flight-ready, the crew prepares to return to service once again.
+
+Functionally similar to XCOM's original underground base, the Avenger utilizes an 'ant-farm' interior, where the ship's facilities and rooms are located. First requiring that the debris within be cleared, once empty, the various rooms of the ship's depths can be turned into facilities needed to fight the war against the aliens. Certain facilities provide bonuses to others, necessitating proper placement of these rooms, while some parts of the ship have exposed power wiring, providing either a significant boost to the ship's overall power output or a facility receiving power for free, depending on player choices.
+
+An [[Avenger Defense]] [[Missions (XCOM 2)|mission]] during the campaign revolves around defending the Avenger against attacking alien forces; the mission does not take place within the ship itself.
+
+==Static Facilities==
+The [[Avenger (XCOM 2)|Avenger]] features seven static facilities:
+#[[Bridge]]
+#[[Research]]
+#[[Engineering (XCOM 2)|Engineering]]
+#[[Armory]]
+#[[Living Quarters]]
+#[[Bar/Memorial]]
+#[[Commander's Quarters]]
+
+==Additional Facilities==
+{{Cleanup|The facility build cost values in the tables are provided for WotC (where applicable) and need to be checked whether they are different in vanilla game for the same-type facilities. Give priority to the WotC values and add a ref note after the value if it differs for vanilla game. // For a ref note example, see the paragraph in the Technical Notes section; or simply leave a comment below the article (providing a screenshot)}}
+<br />
+<table-progress-tracking table-id="1" unique-column-index="1">{{Additional Facilities}}</table-progress-tracking>
+<br />
+There are 12 rooms in the ''Avenger'', made up of 4 rows and 3 columns, that can be cleared to allow the player to build additional optional facilities.
+
+Construction Cost, Required Power, and Monthly Upkeep apply only to the facility in their initial state, i.e. without the upgrades.
+
+{| class="fandom-table"
+! colspan="3" |Facilities
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Resistance Ring]]</h3> 
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility_TheRing.png|256px]]<br />
+| rowspan="5" style="text-align: left;" |(WotC Only)<br /> {{#section:Resistance_Ring_(War_of_the_Chosen)|Functionality}}
+|-
+|'''Cost'''
+|{{Supplies|80}} ({{Supplies|100}})
+|-
+|'''Upkeep'''
+|{{Upkeep|10}} Monthly
+|-
+| '''Power'''
+|{{Power|3}}
+|-
+| '''Time'''
+|12 (24) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Training Center]]</h3> 
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility_RecoveryCenter.png|256px]]<br />
+| rowspan="5" style="text-align: left;" |(WotC Only)<br /> {{#section:Training_Center|Functionality}}
+|-
+|'''Cost'''
+|
+{{Supplies|125}} ({{Supplies|175}})
+|-
+|'''Upkeep'''
+|{{Upkeep|30}} Monthly
+|-
+| '''Power'''
+|{{Power|3}}
+|-
+| '''Time'''
+|12 (24) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Infirmary]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility AdvancedWarCenter.png|256px]]
+| rowspan="5" style="text-align: left;" |(WotC Only)<br /> {{#section:Infirmary|Functionality}}
+|-
+|'''Cost'''
+|{{Supplies|115}} ({{Supplies|175}})
+|-
+|'''Upkeep'''
+|{{Upkeep|35}} Monthly
+|-
+|'''Power'''
+|{{Power|3}}
+|-
+|'''Time''' 
+|21 (42) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal"> [[Advanced Warfare Center]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility AdvancedWarCenter.png|256px]]
+| rowspan="5" style="text-align: left;" |(Removed in WotC)<br /> {{#section:Advanced_Warfare_Center|Functionality}}
+|-
+|'''Cost'''
+| {{Supplies|80}} ({{Supplies|175}})
+|-
+|'''Upkeep'''
+|{{Upkeep|35}} Monthly
+|-
+|'''Power'''
+|{{Power|3}}
+|-
+|'''Time''' 
+|21 (42) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal"> [[Guerrilla Tactics School]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility GuerrilaTacticsSchool.png|256px]]
+| rowspan="5" style="text-align: left;" |{{#section:Guerrilla_Tactics_School|Functionality}}
+|-
+|'''Cost'''
+|{{Supplies|85}} ({{Supplies|100}}) 
+|-
+|'''Upkeep'''
+|{{Upkeep|25}} Monthly
+|-
+|'''Power'''
+|{{Power|3}}
+|-
+|'''Time'''
+|14 (28) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Proving Ground]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility ProvingGrounds.png|256px]]
+| rowspan="5" style="text-align: left;" |{{#section:Proving_Ground|Functionality}} 
+|-
+|'''Cost'''
+|{{Supplies|100}} ({{Supplies|125}})
+|-
+|'''Upkeep'''
+|{{Upkeep|25}} Monthly 
+|-
+|'''Power'''
+| {{Power|3}}
+|-
+|'''Time'''
+|14 (28) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Laboratory (XCOM 2)|Laboratory]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility Laboratory.png|256px]] 
+| rowspan="5" style="text-align: left;" |{{#section:Laboratory_(XCOM_2)|Functionality}}
+|-
+|'''Cost'''
+|{{Supplies|150}} ({{Supplies|175}})
+|-
+|'''Upkeep'''
+|{{Upkeep|35}} Monthly 
+|-
+|'''Power'''
+|{{Power|3}}
+|-
+|'''Time'''
+|20 (40) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Workshop (XCOM 2)|Workshop]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility Workshop.png|256px]] 
+| rowspan="5" style="text-align: left;" | {{#section:Workshop_(XCOM_2)|Functionality}}
+|-
+|'''Cost''' 
+|{{Supplies|250}} ({{Supplies|300}})
+|-
+|'''Upkeep'''
+|{{Upkeep|35}} Monthly
+|-
+|'''Power'''
+|{{Power|3}}
+|-
+|'''Time'''
+|20 (40) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Power Relay]]</h3> 
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility PowerRelay.png|256px]]
+| rowspan="5" style="text-align: left;" |{{#section:Power_Relay|Functionality}}
+|-
+|'''Cost'''
+|{{Supplies|80}} ({{Supplies|100}})
+|-
+|'''Upkeep'''
+|{{Upkeep|10}}
+|-
+|'''Power'''
+| -
+|-
+|'''Time'''
+| 12 (24) days
+|-
+! colspan="3" | <h3 style="margin-top: 10px;" class="MsoNormal">[[Resistance Comms]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility ResistanceComms.png|256px]]
+| rowspan="5" style="text-align: left;" |{{#section:Resistance_Comms|Functionality}}
+|-
+|'''Cost'''
+| {{Supplies|110}} ({{Supplies|160}})
+|-
+| '''Upkeep''' 
+|{{Upkeep|25}} Monthly
+|-
+| '''Power'''
+| {{Power|3}}
+|-
+| '''Time'''
+|16 (32) days
+|-
+! colspan="3" | <h3 style="margin-top: 10px;" class="MsoNormal">[[Defense Matrix (XCOM 2)|Defense Matrix]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility UFODefense.png|256px]]
+| rowspan="5" style="text-align: left;" | {{#section:Defense_Matrix_(XCOM_2)|Functionality}}
+|-
+|'''Cost'''
+| {{Supplies|75}} ({{Supplies|150}}) 
+|-
+|'''Upkeep'''
+|{{Upkeep|10}} Monthly
+|-
+|'''Power'''
+|{{Power|2}}
+|-
+|'''Time'''
+|14 (28) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal"> [[Psi Lab]] </h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility PsionicLab.png|256px]]
+| rowspan="5" style="text-align: left;" |{{#section:Psi_Lab|Functionality}}
+|-
+|'''Cost'''
+| {{Supplies|175}} ({{Supplies|250}})
+|-
+|'''Upkeep'''
+|{{Upkeep|55}} Monthly
+|-
+|'''Power'''
+|{{Power|5}}
+|-
+|'''Time'''
+|21 (42) days
+|-
+! colspan="3" |<h3 style="margin-top: 10px;" class="MsoNormal">[[Shadow Chamber]]</h3>
+|- style="text-align: center;" |
+| colspan="2" |[[File:ChooseFacility ShadowChamber.png|256px]]
+| rowspan="5" style="text-align: left;" |{{#section:Shadow_Chamber|Functionality}}
+|-
+|'''Cost'''
+|{{Supplies|125}} ({{Supplies|200}})
+|-
+|'''Upkeep'''
+|{{Upkeep|30}} Monthly
+|-
+|'''Power'''
+|{{Power|5}}
+|-
+|'''Time'''
+|14 (30) days
+|}
+
+===Notes===
+*Most facilities can be upgraded to provide extra output or access to new features. Upgrading a facility is instantaneous, there is no construction time.
+*Only 1 facility can be built of the same type, except for Resistance Comms and Power Relay.
+
+==Gallery==
+<gallery position="center">
+Xcom2 avenger landed.jpg|The Avenger landed in a field.
+Xcom 2 avenger flight.jpg|The Avenger in flight.
+XCOM2 J.jpg|Concept art of the Avenger's Armory.
+XCOM2 B.png|The Skyranger landing aboard the Avenger.
+XCOM-2-Hologlobe.jpg|Bridge
+XCOM2 AvengerDefenseMission.jpg|Avenger schematic displayed on bridge during Avenger Defense.
+</gallery>
+
+==Technical Notes==
+The ''Avenger's'' Rooms have hidden indexes that start from 3 and are row-major for the purposes of the [[Console (XCOM 2)|Console]].<ref>Glayn, February 8, 2016. https://www.reddit.com/r/Xcom/comments/44ioyc/comment/czs4vdh/?utm_source=share&utm_medium=web2x&context=3</ref>
+{| class="fandom-table"
+|3
+|4
+|5
+|-
+|6
+|7
+|8
+|-
+|9
+|10
+|11
+|-
+|12
+|13
+|14
+|}
+
+==Trivia==  
+*The ''Avenger'' is named after the final landing craft the ''XCOM'' can make in the original [[XCOM: UFO Defense|UFO Defense]]. In that game, it is a hybrid of human and alien technology and is capable of interplanetary flight, being able to reach the Alien Base on Mars. It is unknown if the current ''Avenger'' is space-worthy but, given its origin as an alien cargo ship, it's most likely that it is.
+*Though the ''Avenger'' can start in any location in a game of ''XCOM 2'', the canonical crash site and grounding location, as given by ''XCOM 2: Escalation'', is "in the shadow of India's Western Ghats"
+*The ''Avenger'' is outfitted with numerous stealth components, including front-edge stealth absorbtion and refractive index technologies, reducing its airborne spectral signature to that of a large crow.
+
+==References==
+<references />
+
+<noinclude>
+[[Category:Locations (XCOM 2)]]
+[[Category:XCOM aircraft (XCOM 2)]]
+[[Category:XCOM HQ]]
+</noinclude>

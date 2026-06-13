@@ -1,0 +1,318 @@
+﻿This page is intended for Transclusion; see the related documentation on [[mw:Labeled Section Transclusion]].
+==Weapons==
+===Specialist/Psi Operative===
+<section begin=Assault_Rifles />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Assault Rifles (Range: Medium)
+|-
+!Name!!Damage!!Clip Size!!Crit Chance!!Crit Damage!!style="width:130px;"|Mod Slots!!Notes
+|-
+|[[Assault Rifle (XCOM 2)|Assault Rifle]]||3-5||4|| ||2||1||rowspan="3"|
+|-
+|[[Magnetic Rifle]]||5-7||4|| ||3||2
+|-
+|[[Plasma Rifle (XCOM 2)|Plasma Rifle]]||7-9||4|| ||3||2
+|-
+|[[Bolt Caster|Plasma Bolt Caster]]*||10-12||1|| ||3||0||20% chance to inflict [[Stunned]], +15 aim, cannot be dodged
+|-
+|Prototype Plasma Rifle<sup>‡</sup>||7-9||4|| ||3||sup scope<br/>sup repeater||
+|-
+|[[Disruptor Rifle]]<sup>†</sup>||7-9||4|| ||4||sup laser sight<br/>sup exp mags<br/>sup hair trigger<br/>sup stock||Crits vs psionic enemies
+|}
+''* Alien Hunters DLC, <sup>†</sup> War of the Chosen, <sup>‡</sup> Tactical Legacy Pack''
+*The Guerilla Tactics School upgrade Cool Under Pressure provides Specialists with +10 aim.
+*Assault rifles are also usable by Rangers as their primary weapon, although they are less effective than Shotguns.
+<section end=Assault_Rifles />
+<section begin=Equipment />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Equipment (Range: Long)
+|-
+!style="width:130px;"|Name!!Combat Protocol!!Capacitor Discharge!!Aid Protocol Defense!!Hack!!Psi!!Notes
+|-
+|[[Psi Amp]]||rowspan="3"|n/a||rowspan="3"|n/a||rowspan="3"|n/a||rowspan="3"|n/a||+0||rowspan="3"|
+|-
+|[[Advanced Psi Amp]]||+20
+|-
+|[[Alien Psi Amp]]||+40
+|-
+|[[GREMLIN]]||2-3 (4-6)||3-6 (5-8)||20||+0||rowspan="3"|n/a||
+|-
+|[[GREMLIN Mark II]]||4 (7-8)||5-8 (8-11)||30||+20||
+|-
+|[[GREMLIN Mark III]]||6 (10-11)||7-10 (11-14)||40||+40||+1 Scanning Protocol charge
+|}
+*Combat Protocol and Capacitor Discharge damage are provided vs. Organic and (Robotic) enemies.
+<section end=Equipment />
+===Ranger===
+<section begin=Shotguns />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Shotguns (Range: Short)
+|-
+!Name!!Damage!!Clip Size!!Crit Chance!!Crit Damage!!style="width:130px;"|Mod Slots!!Notes
+|-
+|[[Shotgun (XCOM 2)|Shotgun]]||4-6||4||10%||3||1||rowspan="3"|
+|-
+|[[Shard Gun]]||6-8||4||10%||4||2
+|-
+|[[Storm Gun]]||8-10||4||10%||4||2
+|-
+|Energy Sweeper<sup>‡</sup>||8-10||4||10%||4||sup laser sight<br/>sup hair trigger||
+|-
+|[[Arashi]]<sup>†</sup>||8-10||4||10%||5||sup laser sight<br/>sup exp mags<br/>sup hair trigger<br/>sup stock||Lesser range penalty
+|}
+''<sup>†</sup> War of the Chosen, <sup>‡</sup> Tactical Legacy Pack''
+*The Guerilla Tactics School upgrade Hunter's Instinct provides +1 damage vs flanked enemies.
+*The Ranger ability Shadowstrike provides +25 aim and +25 crit chance when attacking while concealed.
+<section end=Shotguns />
+<section begin=Swords />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Swords (Range: Melee)
+|-
+!Name!!Damage!!Stun!!Burn!!Crit Chance!!Crit Damage!!Notes
+|-
+|[[Sword]]||3-5|| || ||10%||2||rowspan="3"|+20 aim
+|-
+|[[Arc Blade]]||4-6||25%|| ||10%||2
+|-
+|[[Fusion Blade]]||6-8|| ||100%||10%||3
+|-
+|[[Hunter's Axe]]*||4-6|| || ||10%||2|| rowspan="3"|Throw once for 0 AP, +20 aim
+|-
+|[[Hunter's Axe#Ionic Axe|Ionic Axe]]*||5-7||25%|| ||15%||2
+|-
+|[[Hunter's Axe#Fusion Axe|Fusion Axe]]*||6-8|| ||100%||20%||3
+|-
+|Advanced Blade<sup>‡</sup>||6-8|| ||100%||10%||3||+20 aim
+|-
+|[[Katana]]<sup>†</sup>||8-9|| || ||0%||3||Ignores 5 armor, +100 aim (never misses)
+|}
+''* Alien Hunters DLC, <sup>†</sup> War of the Chosen, <sup>‡</sup> Tactical Legacy Pack''
+*The Guerilla Tactics School upgrade Hunter's Instinct provides +10% crit chance.
+*The Ranger ability Blademaster provides +2 damage and +10 aim.
+*The Ranger ability Bladestorm provides free Sword strikes on any enemy entering into or attacking from melee range.
+<section end=Swords />
+===Sharpshooter===
+<section begin=Sniper_Rifles />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Sniper Rifles (Range: Long)
+|-
+!Name!!Damage!!Clip Size!!Crit Chance!!Crit Damage!!style="width:130px;"|Mod Slots!!Notes
+|-
+|[[Sniper Rifle (XCOM 2)|Sniper Rifle]]||4-6||3||10%||2||1||rowspan="3"|
+|-
+|[[Gauss Rifle]]||6-8||3||10%||3||2
+|-
+|[[Plasma Lance]]||8-10||3||10%||4||2
+|-
+|Energy AMR<sup>‡</sup>||8-10||3||10%||4||sup scope<br/>sup auto-loader||
+|-
+|[[Darklance]]<sup>†</sup>||8-10||3||10%||4||sup scope<br/>sup auto-loader<br/>sup hair trigger<br/>sup stock||Only reqs 1 AP to fire
+|}
+''<sup>†</sup> War of the Chosen, <sup>‡</sup> Tactical Legacy Pack''
+*The Guerilla Tactics School upgrade Deadshot provides +10% crit chance.
+*The Sharpshooter ability Deadeye provides +4-5 damage with a variable -0-30% aim penalty based on range.
+*The Sharpshooter ability Death From Above provides +1 AP after killing an enemy at a lower elevation.
+*The Sharpshooter ability Steady Hands provides +10 aim and +10 crit chance when remaining still.
+*The Sharpshooter ability Aim provides +20 aim after hunkering down on the first shot next turn.
+*The Sharpshooter ability Serial refunds AP cost after killing an enemy.
+<section end=Sniper_Rifles />
+<section begin=Pistols />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Pistols (Range: Medium)
+|-
+!Name!!Damage!!Clip Size!!Crit Chance!!Crit Damage!!Mod Slots!!Notes
+|-
+|[[Pistol (XCOM 2)|Pistol]]||2-3||n/a|| ||1||0||rowspan="3"|
+|-
+|[[Mag Pistol]]||3-4||n/a|| ||1||0
+|-
+|[[Beam Pistol]]||3-6||n/a|| ||2||0
+|-
+|[[Shadowkeeper#Powered Shadowkeeper|Powered Shadowkeeper]]*||3-6||n/a||15%||2||0||Grants Shadowfall ability, +10 aim
+|-
+|Energy Pistol<sup>‡</sup>||3-6||n/a|| ||2||0||
+|-
+|[[Darkclaw]]<sup>†</sup>||4-7||n/a|| ||2||0||Ignores 5 armor
+|}
+''* Alien Hunters DLC, <sup>†</sup> War of the Chosen, <sup>‡</sup> Tactical Legacy Pack''
+*The Sharpshooter ability Lightning Hands allows the pistol to be fired for 0 AP every 3 turns.
+*The Sharpshooter ability Quickdraw reduces the cost of firing a Pistol as the first action to 1 AP.
+<section end=Pistols />
+===Grenadier===
+<section begin=Cannons />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Cannons (Range: Medium)
+|-
+!Name!!Damage!!Clip Size!!Crit Damage!!Shreds!!style="width:130px;"|Mod Slots!!Notes
+|-
+|[[Cannon]]||4-6||3||2||1||1||rowspan="3"|
+|-
+|[[Mag Cannon]]||6-8||3||3||2||2
+|-
+|[[Beam Cannon]]||8-10||3||3||3||2
+|-
+|Energy Cannon<sup>‡</sup>||8-10||3||3||3||sup stock<br/>sup exp mags||
+|}
+''<sup>‡</sup> Tactical Legacy Pack''
+*The Grenadier ability Shredder is required in order for Cannons to shred enemy armor.
+*The Grenadier ability Holo Targeting provides +15 aim for all subsequent shots on the target.
+*The Grenadier ability Rupture deals critical damage and provides +3 damage for all subsequent shots on the target.
+<section end=Cannons />
+===Heavy Weapons===
+<section begin=Heavy_Weapons />
+{|class="wikitable" style="width:99%;text-align:center;"
+!colspan="7"|Heavy and Powered Weapons (Range: Varies)
+|-
+!Name!!Damage!!Crit Damage!!Shreds!!Radius!!Range!!Notes
+|-
+|[[Rocket Launcher (XCOM 2)|Rocket Launcher]]||4-7||2||2||4||27||Requires direct path to target
+|-
+|[[Flamethrower (XCOM 2)|Flamethrower]]||4-7||2|| ||7||25||rowspan="2"|Affects Biological units only, 20 degree cone, inflicts [[Burning]], chance to inflict [[Panic (XCOM 2)|Panic]]
+|-
+|[[Hellfire Projector (XCOM 2)|Hellfire Projector]]||6-9||2|| ||7||25
+|-
+|[[Shredder Gun]]||6-9||1||2||12||25||rowspan="2"|Ignores 1/2 armor, 20 degree cone
+|-
+|[[Shredstorm Cannon]]||8-11||2||4||12||25
+|-
+|[[Plasma Blaster]]||7-10||3|| ||12||25||Ignores 4 armor, passes through a straight line
+|-
+|[[Blaster Launcher (XCOM 2)|Blaster Launcher]]||7-10||2||3||6||45||Does not require direct line of sight, paths around corners
+|}
+*The Guerilla Tactics School upgrade Biggest Booms provides Explosives with +2 crit damage.
+*The SPARK ability Rainmaker provies +2 damage and +2 radius.
+*The Grenadier ability Salvo reduces the cost of firing Heavy Weapons and launching Grenades as the first action to 1 AP.
+*Heavy Weapons are usable by any class wearing Heavy Armor, although the Salvo ability makes them best suited to Grenadiers.
+<section end=Heavy_Weapons />
+===SPARK===
+<section begin=Autocannons />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |SPARK Autocannons (Range: Medium)
+|-
+!Name!!Damage!!Clip Size!!Crit Damage!!Shreds!!Mod Slots!!Notes
+|-
+|[[Heavy Autocannon]]<sup>§</sup>||4-6||3||2||1||1<sup>†</sup>|| rowspan="3" |
+|-
+|[[Helix Rail-Cannon]]<sup>§</sup>||6-8||3||3||2||2<sup>†</sup>
+|-
+|[[Elerium Phase-Cannon]]<sup>§</sup>||8-10||3||4||3||2<sup>†</sup>
+|}
+''<sup>†</sup> War of the Chosen, <sup>§</sup> Shen's Last Gift DLC''
+*The SPARK ability Overdrive provides +1 AP and reduces the cost of firing Autocannons to 1 AP with a -15 aim penalty for each subsequent shot taken every 4 turns.
+*The SPARK ability Adaptive Aim removes the -15 aim penalty of Overdrive.
+*The SPARK ability Strike functions as a melee attack which does 7/9/11 damage (2 crit damage) every 4 turns.
+*The SPARK ability Channeling Field provides +1 damage to the next shot each time the SPARK is targeted by an enemy.
+<section end=Autocannons />
+<section begin=BITS />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |SPARK BITS (Range: Long)
+|-
+!Name!!Bombard!!Radius!!Nova!!Radius!!Hack!!Notes
+|-
+|[[SPARK BIT]]<sup>§</sup>||3-4||3||6||3||+0|| rowspan="3" |Nova Ignores armor
+|-
+|[[Plated BIT]]<sup>§</sup>||5-6||3||6||3||+10
+|-
+|[[Powered BIT]]<sup>§</sup>||7-8||3||6||3||+20
+|}
+''<sup>§</sup> Shen's Last Gift DLC''
+<section end=BITS />
+===Reaper===
+<section begin=Vektor_Rifles />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |Vektor Rifles (Range: Medium)
+|-
+!Name!!Damage!!Clip Size!!Crit Chance!!Crit Damage!!Mod Slots!!Notes
+|-
+|[[Vektor Rifle]]<sup>†</sup>||3-4||3|| ||3||1|| rowspan="3" |
+|-
+|[[Temnotic Rifle]]<sup>†</sup>||4-5||3|| ||4||2
+|-
+|[[Shadow Lance]]<sup>†</sup>||5-6||3|| ||5||2
+|-
+|}
+''<sup>†</sup> War of the Chosen''
+*The Reaper ability Blood Trail deals +1 damage if the target has been wounded this turn.
+*The Reaper ability Needle ignores 2 armor on shots taken while in Shadow form.
+*The Reaper ability Soul Harvest increases crit chance by 5 per kill up to a maximum of 20.
+<section end=Vektor_Rifles />
+<section begin=Claymores />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |Claymores (Range: Medium)
+|-
+!Name!!Damage!!Shreds!!Radius!!Range!!Inflicts!!Notes
+|-
+|[[Claymore (XCOM 2)|Claymore]]<sup>†</sup>||5||2||3||10|| ||Thrown like a Grenade, does not break concealment
+|}
+''<sup>†</sup> War of the Chosen''
+*The Reaper ability Shrapnel provides +3 damage, +1 shredding and +1 radius
+*The Reaper ability Highlands provides 1 additional Claymore.
+<section end=Claymores />
+===Skirmisher===
+<section begin=Bullpups />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |Bullpups (Range: Short)
+|-
+!Name!!Damage!!Clip Size!!Crit Chance!!Crit Damage!!Mod Slots!!Notes
+|-
+|[[Kal-7 Bullpup]]<sup>†</sup>||3-4||3|| ||1||1|| rowspan="3" |
+|-
+|[[Kal-15 Bullpup]]<sup>†</sup>||5-6||3|| ||1||2
+|-
+|[[Kal-90 Bullpup]]<sup>†</sup>||6-7||3|| ||2||2
+|-
+|}
+''<sup>†</sup> War of the Chosen''
+*The Skirmisher ability Total Combat reduces the cost of firing the Bullpup, using items and throwing Grenades as the first action to 1 AP.
+*The Skirmisher ability Zero In provides +10 crit chance for each subsequent shots in the same turn and +10 aim against the same enemy.
+<section end=Bullpups />
+<section begin=Ripjacks />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |Ripjacks (Range: Melee)
+|-
+!Name!!Damage!!Stun!!Burn!!Crit Chance!!Crit Damage!!Notes
+|-
+|[[Ripjack]]<sup>†</sup>||4|| || || ||1|| rowspan="3" |+20 aim
+|-
+|[[Ionic Ripjack]]<sup>†</sup>||6||25%|| || ||2
+|-
+|[[Fusion Ripjack]]<sup>†</sup>||8|| ||100%|| ||3
+|-
+|}
+''<sup>†</sup> War of the Chosen''
+*The Skirmisher ability Retribution provides free Ripjack strikes on any enemy entering into or attacking from melee range.
+<section end=Ripjacks />
+===Templar===
+<section begin=Gauntlets />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |Gauntlets (Range: Melee)
+|-
+!Name!!Damage!!Stun!!Disorient!!Crit Chance!!Crit Damage!!Notes
+|-
+|[[Shard Gauntlets]]<sup>†</sup>||4-5||15%||5%||10%||2|| rowspan="3" |+100 aim (never misses), triggers Momentum<br />[needs verification; tempest stun%]
+|-
+|[[Tempest Gauntlets]]<sup>†</sup>||5-6||20%?||10%||10%||2
+|-
+|[[Celestial Gauntlets]]<sup>†</sup>||7-8||15%||15%||10%||2
+|}
+''<sup>†</sup> War of the Chosen''
+*When Templars gain Focus, Rend damage and mobility are increased by 1-3 points and dodge by 10/20/25, proportional to Focus.
+*The Templar ability Amplify increases most single-target damage from all sources against a marked target by 33% (minimum 2 damage).
+*The Templar ability Volt provides +15 aim for all subsequent shots on the target.
+<section end=Gauntlets />
+<section begin=Autopistols />
+{| class="wikitable" style="width:99%;text-align:center;"
+! colspan="7" |Autopistols (Range: Short)
+|-
+!Name!!Damage!!Clip Size!!Crit Chance!!Crit Damage!!Mod Slots!!Notes
+|-
+|[[Autopistol]]<sup>†</sup>||2-3||n/a|| ||1||0|| rowspan="3" |
+|-
+|[[Mag Autopistol]]<sup>†</sup>||3-4||n/a|| ||1||0
+|-
+|[[Beam Autopistol]]<sup>†</sup>||4-5||n/a|| ||2||0
+|}
+''<sup>†</sup> War of the Chosen''
+<section end=Autopistols />
+
+{{merge|Weapons (XCOM 2)}}

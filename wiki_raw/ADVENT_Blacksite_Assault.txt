@@ -1,0 +1,33 @@
+﻿{{Infobox mission
+|title1=
+|image1=Blacksite vial recovered.png
+|caption1=
+|game=''[[XCOM 2]]''
+|type=Facility assault
+|timed=No
+|starts_in_concealment=Yes
+|key_plot_point=Yes
+}}
+'''ADVENT Blacksite Assault''' is a [[Missions (XCOM 2)#Key Missions|key plot mission]] in ''[[XCOM 2]]''.
+
+==Background==
+[[The Spokesman]] contacts the [[Commander]] and informs them that increasing numbers of missing civilians are disappearing around the globe, and he suspects they are being taken to a nearby [[ADVENT]] Blacksite whose exact location is unknown. The Spokesman tells XCOM to establish contact with resistance cells, take charge of resistance operations, and shut down the Blacksite. The player must research [[Resistance Communications]], fly to the Blacksite region, and make contact with the region to reveal the Blacksite's location. XCOM can then send a squad to investigate the Blacksite.
+
+==Mission==
+The deployed squad starts in concealment. The map contains a facility and a predefined [[EVAC zone]]. Fighting their way through the enemies patrolling the area, the soldiers discover piles of containers containing humans preserved in stasis, confirming ADVENT has been behind the disappearances. 
+
+Within the facility, they discover humans being processed or refined. They take a vial containing a sample from the facility. After they take the vial, an ADVENT dropship deploys more forces on the map. The mission is successfully completed when all surviving XCOM soldiers reach the EVAC zone and evacuate.
+<!-- Enemy composition example (early campaign): the area is defended by 3 [[ADVENT Trooper]]s, 3 [[Viper (XCOM 2)|Viper]]s, 3 [[ADVENT Stun Lancer]]s, an [[ADVENT Turret]], and an [[MECs|ADVENT MEC]]. --> <!-- Some notes: On Legend there are more enemy units. The unit types are tied to the campaign timeline  (to-do: specify if the Skulljack mission objectives forces the spawn of Officer and Codex respectively) - the further the campaign the stronger the enemies (see [https://xcom.fandom.com/wiki/File:ADVENT_Blacksite.png example]). The enemy reinforcements are comprised of 2 dropships bringing 3 units with a gap between the drops, with the timer activating after picking up the Vial (or on the next turn -- to-do: specify); enemy reinforcements do not have loot; to-do: specify the enemy reinforcements composition - likely should be any ADVENT units (unless, if it is a thing, a Skulljack mission objective forces an Officer spawn). To-do: tests if Chosen is guaranteed to appear despite the cooldown for defeating it on a previous mission.-->
+
+==Outcome==
+The rewards for this mission are:
+*125 Supplies (all difficulties)
+*Reduced Avatar Project progress by 1 (2 on Legend)
+*[[Blacksite Vial]]
+
+Completing this mission triggers a cutscene where the Spokesman reveals his discovery that the Blacksite is part of a clandestine ADVENT operation called the [[Avatar Project]]. ADVENT is diverting resources and personnel to covert facilities worldwide. The Spokesman tells the Commander to disrupt the Avatar Project's progress, uncover the truth of its purpose, locate its source and destroy it. 
+
+The [[Avatar Project#Doom Counter|Doom Counter]] is activated by completion of this mission. 
+
+Once the [[Shadow Chamber]] is built, the [[Blacksite Vial (Research)|Blacksite Vial]] research project can be completed, making the [[ADVENT Forge Facility Assault]] mission available.
+[[Category:Missions (XCOM 2)]]
